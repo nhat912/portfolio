@@ -37,5 +37,6 @@ export const siteConfig = {
             href: 'mailto:nhatnguyen.wk@gmail.com',
             as: 'nhatnguyen.wk@gmail.com'
         }
-    }
+    },
+    url: 'http://localhost:3000'
 }
