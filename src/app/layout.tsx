@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn('min-h-screen antialiased text-sm lg:text-base flex w-full flex-col relative pb-10', fontSans.className)}
+        className={cn('min-h-screen antialiased text-sm lg:text-base flex w-full flex-col relative pb-10 text-accent', fontSans.className)}
       >
         <Header />
         {children}

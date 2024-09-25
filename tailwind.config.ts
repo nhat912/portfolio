@@ -19,17 +19,21 @@ const config: Config = {
 			center: true,
 			padding: '1rem',
 			screens: {
-				'lg': '1112px',
-				'xl': '1112px',
-				'2xl': '1112px',
+				'lg': '1072px',
+				'xl': '1072px',
+				'2xl': '1072px',
+				'3xl': '1072px',
+				'4xl': '1072px',
+				'5xl': '1072px',
 			},
 		},
 		extend: {
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
-				primary: '#F2D76F',
-				secondary: '#e97f96',
+				primary: 'var(--primary)',
+				secondary: 'var(--secondary)',
+				accent: 'var(--accent)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

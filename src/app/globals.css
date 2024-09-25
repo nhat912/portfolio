@@ -7,6 +7,7 @@
 	--foreground: #171717;
 	--primary: #f2d76f;
 	--secondary: #e97f96;
+	--accent: #fbfbfb;
 	--radius: 0.5rem;
 }
 
@@ -24,10 +25,14 @@
 	* {
 	}
 	body {
-		@apply bg-background text-white;
+		@apply bg-background text-accent;
 	}
 
 	.bg-gradient {
 		@apply bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent;
+	}
+
+	.text-32 {
+		@apply text-[32px] leading-9;
 	}
 }

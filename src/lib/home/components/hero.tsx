@@ -17,8 +17,8 @@ export default function HeroSection() {
             </div>
 
             <div className="space-y-3">
-                <h1 className="font-bold h-full text-3xl/[32px]">Nhat Nguyen,</h1>
-                <h2 className="bg-gradient text-3xl/[32px] font-bold">Product Designer</h2>
+                <h1 className="font-bold h-full text-32">Nhat Nguyen,</h1>
+                <h2 className="bg-gradient text-32 font-bold">Product Designer</h2>
                 <h3 className="text-lg space-x-1">
                     <span>based in</span>
                     <span className="font-bold">Ho Chi Minh City, Vietnam</span>
