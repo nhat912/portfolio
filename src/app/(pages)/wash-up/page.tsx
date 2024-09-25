@@ -1,4 +1,4 @@
-import { WASHUP_FEATURES } from "@/src/components/washUpPageFooter";
+import { WASHUP_FEATURES } from "@/src/lib/wash-up/constants";
 import { redirect } from "next/navigation";
 
 export default function page() {
