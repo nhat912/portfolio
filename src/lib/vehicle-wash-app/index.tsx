@@ -3,20 +3,21 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
 import WashUpPageFooter from "@/src/components/washUpPageFooter";
+import WashUpTitle from "@/src/components/washUpTitle";
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
 import Image from "next/image";
 
 
-export default function CarWashBookingAppPage() {
+export default function VehicleWashAppPage() {
     const isClientMobile = useClientMediaQuery('(max-width: 640px)')
 
     return (
         <>
-            <main className="pb-[60px]">
-                <h1 className="gap-3 font-bold text-32 container mt-5 lg:items-baseline lg:leading-tight mb-14 lg:mb-28 flex flex-col lg:flex-row lg:text-[60px]">
-                    <div>Washup:</div>
-                    <div className="bg-gradient w-fit">Car wash booking app</div>
-                </h1>
+            <main className="">
+                <WashUpTitle
+                    title="Washup:"
+                    subtitle="Car wash booking app"
+                />
 
                 <div className="space-y-10 lg:space-y-20">
                     <ChildSectionLayout value="Introduction" className="container">

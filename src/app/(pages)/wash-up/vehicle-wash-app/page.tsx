@@ -1,7 +1,7 @@
-import CarWashBookingAppPage from "@/src/lib/vehicle-wash-app";
+import VehicleWashAppPage from "@/src/lib/vehicle-wash-app";
 
-export default function CartWashBookApp() {
+export default function Page() {
     return (
-        <CarWashBookingAppPage />
+        <VehicleWashAppPage />
     )
 }

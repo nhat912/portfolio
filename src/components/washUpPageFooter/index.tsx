@@ -34,7 +34,7 @@ function WashUpPageFooter({ className, value }: WashUpPageFooterProps) {
     const pathName = usePathname()
 
     return (
-        <footer className={cn('container space-y-8', className)}>
+        <footer className={cn('container space-y-8 pb-[60px] mt-10 lg:mt-20', className)}>
             <ChildSectionLayout value="Other Feature" className="">
                 <p>Here are some other WASHUP_features/apps of the Washup ecosystem.</p>
                 <div className="grid grid-cols-2 gap-5">
