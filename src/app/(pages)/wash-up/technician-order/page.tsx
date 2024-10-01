@@ -2,14 +2,14 @@ import Conclusion from "@/src/app/(pages)/wash-up/technician-order/components/co
 import Overview from "@/src/app/(pages)/wash-up/technician-order/components/overview";
 import SomeUxPoints from "@/src/app/(pages)/wash-up/technician-order/components/some-ux-points";
 import WashUpPageFooter from "@/src/components/washUpPageFooter";
-import WashUpTitle from "@/src/components/washUpTitle";
+import Title from "@/src/components/title";
 import { Fragment } from "react";
 
 export default function Page() {
     return (
         <Fragment>
             <main className="">
-                <WashUpTitle
+                <Title
                     title="Washup:"
                     subtitle="Technician Order"
                 />

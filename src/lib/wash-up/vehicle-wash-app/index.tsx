@@ -3,7 +3,7 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
 import WashUpPageFooter from "@/src/components/washUpPageFooter";
-import WashUpTitle from "@/src/components/washUpTitle";
+import Title from "@/src/components/title";
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
 import Image from "next/image";
 import { Fragment } from "react";
@@ -15,7 +15,7 @@ export default function VehicleWashAppPage() {
     return (
         <Fragment>
             <main className="">
-                <WashUpTitle
+                <Title
                     title="Washup:"
                     subtitle="Car wash booking app"
                 />

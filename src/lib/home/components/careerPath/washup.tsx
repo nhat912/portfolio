@@ -24,7 +24,7 @@ export default function WashUpSection() {
             </div>
 
             <div className="flex flex-col gap-5 lg:flex-row lg:gap-8 mt-5 lg:mt-[50px]">
-                <div className="space-y-3 flex-1">
+                <div className="flex-1">
                     <Card
                         hasBorderBottom
                         href="/wash-up/vehicle-wash-app"
@@ -43,7 +43,7 @@ export default function WashUpSection() {
                         <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
                     </Card>
                 </div>
-                <div className="space-y-3 flex-1">
+                <div className="flex-1">
                     <Card
                         hasBorderBottom
                         href="/wash-up/technician-app"

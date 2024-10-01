@@ -1,5 +1,5 @@
+import Footer from "@/src/components/footer";
 import CareerPathSection from "@/src/lib/home/components/careerPath";
-import Footer from "@/src/lib/home/components/footer";
 import HeroSection from "@/src/lib/home/components/hero";
 import { Fragment } from "react";
 
