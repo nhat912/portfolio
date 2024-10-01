@@ -7,10 +7,12 @@ export default function BuymedSection() {
         <section>
             <div className="space-y-2">
                 <div className="text-lg">10/2022 - Now</div>
-                <div className="font-bold text-2xl">UX/UI Designer at</div>
-                <div className="bg-gradient font-bold text-2xl w-fit">Buymed</div>
+                <div className="flex flex-col lg:flex-row gap-1 font-bold lg:gap-2 text-2xl lg:text-[40px] lg:leading-normal">
+                    <div className="">UX/UI Designer at</div>
+                    <div className="bg-gradient w-fit">Buymed</div>
+                </div>
             </div>
-            <div className="space-y-2 mt-4">
+            <div className="space-y-2 lg:space-y-5 mt-4 lg:mt-5">
                 <p className='space-x-1'>
                     <span>Develop a design system to shorten project development and deployment time while ensuring consistent product design across the Buymed ecosystem, including</span>
                     <span className="font-bold">Thuocsi</span>
@@ -29,27 +31,71 @@ export default function BuymedSection() {
                     <span className="font-bold"></span>
                 </p>
             </div>
-            <div className="mt-4 space-y-3">
-                <p className="mt-4 text-2xl font-bold">Circa</p>
+            <div className="mt-4 lg:mt-[60px] grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 ">
                 <Card
                     hasBorderBottom
                 >
-                    <div className="w-full h-[179px] relative">
+                    <div className="w-full h-[179px] lg:h-[262px] relative">
+                        <Image
+                            fill
+                            src='/home/images/medship.png'
+                            alt='medship'
+                            className="object-cover"
+                        />
+                    </div>
+                    <h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+                        Medship - Health Care Platform
+                    </h4>
+                    <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
+                </Card>
+                <Card
+                    hasBorderBottom
+                >
+                    <div className="w-full h-[179px] lg:h-[262px] relative">
+                        <Image
+                            fill
+                            src='/home/images/thuoc-si.png'
+                            alt='thuoc-si'
+                            className="object-cover"
+                        />
+                    </div>
+                    <h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+                        Pharmaceutical e-commerce
+                    </h4>
+                    <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
+                </Card>
+                <Card
+                    hasBorderBottom
+                >
+                    <div className="w-full h-[179px] lg:h-[262px] relative">
                         <Image
                             fill
                             src='/home/images/circa.png'
                             alt='circa'
-                            className=""
+                            className="object-cover"
                         />
                     </div>
                     <h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
-                        Circa - Healthcare app
+                        Circa - B2C Medical Ecommerce
                     </h4>
                     <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
                 </Card>
-                <div className="grid grid-cols-3 gap-3">
-
-                </div>
+                <Card
+                    hasBorderBottom
+                >
+                    <div className="w-full h-[179px] lg:h-[262px] relative">
+                        <Image
+                            fill
+                            src='/home/images/homepage.png'
+                            alt='homepage'
+                            className="object-cover"
+                        />
+                    </div>
+                    <h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+                        Homepage - Circa Franchise Information
+                    </h4>
+                    <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
+                </Card>
             </div>
         </section>
     )

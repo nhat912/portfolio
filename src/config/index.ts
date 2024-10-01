@@ -38,5 +38,5 @@ export const siteConfig = {
             as: 'nhatnguyen.wk@gmail.com'
         }
     },
-    url: 'http://localhost:3000'
+    url: 'http://localhost:3001'
 }

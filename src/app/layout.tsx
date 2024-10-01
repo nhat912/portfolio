@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from 'next/font/google';
 import { cn } from "../lib/utils";
 import "./globals.css";
+import { AppProvider } from "@/src/providers/app-provider";
+import PasswordDialog from "@/src/components/passwordDialog";
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -20,10 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn('min-h-screen antialiased text-sm lg:text-base flex w-full flex-col relative pb-10 text-accent', fontSans.className)}
+        className={cn('min-h-screen antialiased text-sm lg:text-lg flex w-full flex-col relative text-accent', fontSans.className)}
       >
-        <Header />
-        {children}
+        <AppProvider>
+          <Header />
+          {children}
+          <PasswordDialog />
+        </AppProvider>
       </body>
     </html>
   );

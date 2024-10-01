@@ -4,10 +4,11 @@ import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import WashUpTitle from "@/src/components/washUpTitle";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 import Image from "next/image";
+import { Fragment } from "react";
 
 function BorderBot() {
     return (
-        <div className="h-5 lg:h-[60px] border-b-2 border-dashed border-accent"></div>
+        <div className="h-0 lg:h-[60px] border-b-2 border-dashed border-accent"></div>
     )
 }
 
@@ -15,7 +16,7 @@ export default async function Page() {
     const isMobile = await isMobileDevice()
 
     return (
-        <>
+        <Fragment>
             <main className="">
                 <WashUpTitle
                     title="Washup:"
@@ -25,7 +26,7 @@ export default async function Page() {
                 <div className="space-y-10 lg:space-y-[60px]">
                     <ChildSectionLayout value="Introduction" className="container">
                         <div className="space-y-3 lg:space-y-5">
-                            <p className="space-x-1">
+                            <p className="">
                                 The objective is to extend the platform&apos;s business scope while simultaneously developing a solution to streamline the purchase and management of insurance contracts for users.
                             </p>
                             <p>The vehicle insurance feature allows users to purchase insurance for their motorbikes or cars directly through the app and manage their policies efficiently.
@@ -37,13 +38,25 @@ export default async function Page() {
 
                     <ChildSectionLayout value="User Flow" className="container">
                         <div className="space-y-3 lg:space-y-5">
-                            <div className="w-full h-[106px] lg:h-[285px] relative">
-                                <Image
-                                    fill
-                                    src='/insurance-feature/user-flow.svg'
-                                    alt='User Flow'
-                                />
-                            </div>
+                            {isMobile ? (
+                                <div className="w-full h-[500px] mx-auto relative">
+                                    <Image
+                                        fill
+                                        src='/insurance-feature/mobi-user-flow.png'
+                                        alt='User Flow'
+                                        quality={100}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            ) : (
+                                <div className="w-full h-[285px] relative">
+                                    <Image
+                                        fill
+                                        src='/insurance-feature/user-flow.png'
+                                        alt='User Flow'
+                                    />
+                                </div>
+                            )}
                             <p>Some aspects of the user flow have been omitted to ensure the confidentiality of the project.</p>
                         </div>
                     </ChildSectionLayout>
@@ -105,10 +118,10 @@ export default async function Page() {
                                 </p>
 
                                 <div className="py-3">
-                                    <div className="w-full h-[300px] mx-auto lg:h-[500px] relative">
+                                    <div className="w-[213px] lg:w-[355px] h-[300px] mx-auto lg:h-[500px] relative">
                                         <Image
                                             fill
-                                            src='/insurance-feature/phone-1.svg'
+                                            src='/insurance-feature/phone-1.png'
                                             alt='Phone 1'
                                         />
                                     </div>
@@ -135,20 +148,20 @@ export default async function Page() {
                                 <p>However, this data is still at a reference level because it is based on publicly available documents online. Further advice and adjustments from the partnering insurance companies are required to ensure its accuracy and suitability.
                                 </p>
 
-                                <div className="py-1 lg:py-3 w-full h-[274px] lg:h-[500px] relative">
+                                <div className="py-1 lg:py-3 w-full mx-auto lg:w-[654px] h-[274px] lg:h-[500px] relative">
                                     <Image
                                         fill
-                                        src='/insurance-feature/phone-2.1.svg'
+                                        src='/insurance-feature/phone-2.1.png'
                                         alt='Phone 2.1'
                                     />
                                 </div>
 
                                 <p>The interface for the specific insurance information form is shown above. On review, it became apparent that the number of fields to be completed on this screen is excessive, making it challenging to review again. While researching this aspect of other competing applications, I found the process also encountered the same situation. I have implemented several user interface improvements, including reducing the boldness of the heading field colours and highlighting information as it is entered. I have also grouped the information fields that are related to each other into sections, as shown in the screenshot below. These include the Period of Insurance, Contact Details, and Vehicle Information sections. </p>
 
-                                <div className="py-1 lg:py-3 w-full h-[300px] lg:h-[500px] relative">
+                                <div className="py-1 mx-auto lg:py-3 w-[149px] lg:w-[249px] h-[300px] lg:h-[500px] relative">
                                     <Image
                                         fill
-                                        src='/insurance-feature/phone-2.2.svg'
+                                        src='/insurance-feature/phone-2.2.png'
                                         alt='Phone 2.2'
                                     />
                                 </div>
@@ -177,14 +190,14 @@ export default async function Page() {
                                     <div className="py-1 w-full h-[750px] relative">
                                         <Image
                                             fill
-                                            src='/insurance-feature/mobi-phone-3.1.svg'
+                                            src='/insurance-feature/mobi-phone-3.1.png'
                                             alt='Phone 3.1'
                                         />
                                     </div>) : (
                                     <div className="py-3 w-full h-[500px] relative">
                                         <Image
                                             fill
-                                            src='/insurance-feature/phone-3.1.svg'
+                                            src='/insurance-feature/phone-3.1.png'
                                             alt='Phone 3.1'
                                         />
                                     </div>
@@ -200,7 +213,7 @@ export default async function Page() {
                                         <div className="w-full lg:w-[328px] h-[80px] relative">
                                             <Image
                                                 fill
-                                                src='/insurance-feature/phone-3.2.svg'
+                                                src='/insurance-feature/phone-3.2.png'
                                                 alt='Phone 3.2'
                                                 className="object-cover"
                                             />
@@ -211,7 +224,7 @@ export default async function Page() {
                                         <div className="w-full lg:w-[328px] h-[80px] relative">
                                             <Image
                                                 fill
-                                                src='/insurance-feature/phone-3.3.svg'
+                                                src='/insurance-feature/phone-3.3.png'
                                                 alt='Phone 3.3'
                                                 className="object-cover"
                                             />
@@ -235,7 +248,7 @@ export default async function Page() {
                                 <div className="w-full h-[300px] relative">
                                     <Image
                                         fill
-                                        src='/insurance-feature/mobi-contract.svg'
+                                        src='/insurance-feature/mobi-contract.png'
                                         alt='contract'
                                     />
                                 </div>
@@ -243,7 +256,7 @@ export default async function Page() {
                                 <div className="w-full h-[500px] relative">
                                     <Image
                                         fill
-                                        src='/insurance-feature/contract.svg'
+                                        src='/insurance-feature/contract.png'
                                         alt='contract'
                                     />
                                 </div>
@@ -269,6 +282,6 @@ export default async function Page() {
                 value="Thank you for taking the time to read!."
             >
             </WashUpPageFooter>
-        </>
+        </Fragment>
     )
 }

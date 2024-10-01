@@ -2,12 +2,15 @@ import Card from "@/src/components/card";
 import Image from "next/image";
 
 export default function WashUpSection() {
+
     return (
         <section>
             <div className="space-y-2">
                 <div className="text-lg">12/2023 - 02/2024</div>
-                <div className="font-bold text-2xl">Freelance UX/UI Designer at</div>
-                <div className="bg-gradient font-bold text-2xl w-fit">Washup</div>
+                <div className="flex flex-col font-bold gap-1 lg:flex-row lg:gap-2 text-2xl lg:text-[40px] lg:leading-normal">
+                    <div className="">Freelance UX/UI Designer at</div>
+                    <div className="bg-gradient w-fit">Washup</div>
+                </div>
             </div>
             <div className="space-y-2 mt-4">
                 <p>
@@ -19,61 +22,33 @@ export default function WashUpSection() {
                     <li>Enhanced the order reception process for technicians.</li>
                 </ul>
             </div>
-            <p className="mt-4 text-2xl font-bold">Team size</p>
-            <div className="flex justify-between gap-x-1 font-semibold">
-                <div className="flex gap-x-2">
-                    <span>1</span>
-                    <span>CTO</span>
-                </div>
-                <div className="flex gap-x-2">
-                    <span>1</span>
-                    <span>UX/UI Designer</span>
-                </div>
-                <div className="flex gap-x-2">
-                    <span>1</span>
-                    <span>QC</span>
-                </div>
-                <div className="flex gap-x-2">
-                    <span>2</span>
-                    <span>Engineers</span>
-                </div>
-            </div>
 
-            <div className="space-y-5 mt-5">
-                <div className="space-y-3">
+            <div className="flex flex-col gap-5 lg:flex-row lg:gap-8 mt-5 lg:mt-[50px]">
+                <div className="space-y-3 flex-1">
                     <Card
                         hasBorderBottom
+                        href="/wash-up/vehicle-wash-app"
                     >
-                        <div className="w-full h-[179px] relative">
+                        <div className="w-full h-[179px] lg:h-[262px] relative">
                             <Image
                                 fill
                                 src='/home/images/car-wash.png'
-                                alt='car-wash'
+                                alt='vehicle-wash-app'
                                 className=""
                             />
                         </div>
                         <h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
-                            Washup - Car wash booking app
+                            Washup - Vehicle wash app
                         </h4>
                         <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
                     </Card>
-                    <Card className="flex justify-center items-center gap-x-2 h-20">
-                        <Image
-                            src='/home/icons/lock.svg'
-                            alt='lock'
-                            width={14}
-                            height={19}
-                        />
-                        <div className="font-semibold bg-gradient">
-                            Insurance Feature
-                        </div>
-                    </Card>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 flex-1">
                     <Card
                         hasBorderBottom
+                        href="/wash-up/technician-app"
                     >
-                        <div className="w-full h-[179px] relative">
+                        <div className="w-full h-[179px] lg:h-[262px] relative">
                             <Image
                                 fill
                                 src='/home/images/technician.png'
@@ -85,17 +60,6 @@ export default function WashUpSection() {
                             Washup - Technician app
                         </h4>
                         <div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
-                    </Card>
-                    <Card className="flex justify-center items-center gap-x-2 h-20">
-                        <Image
-                            src='/home/icons/lock.svg'
-                            alt='lock'
-                            width={14}
-                            height={19}
-                        />
-                        <div className="font-semibold bg-gradient">
-                            Technician Task Detail
-                        </div>
                     </Card>
                 </div>
             </div>

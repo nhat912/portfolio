@@ -6,13 +6,14 @@ import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import WashUpTitle from "@/src/components/washUpTitle";
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
 import Image from "next/image";
+import { Fragment } from "react";
 
 
 export default function VehicleWashAppPage() {
     const isClientMobile = useClientMediaQuery('(max-width: 640px)')
 
     return (
-        <>
+        <Fragment>
             <main className="">
                 <WashUpTitle
                     title="Washup:"
@@ -82,7 +83,7 @@ export default function VehicleWashAppPage() {
                             <div className="w-full h-[151px] relative">
                                 <Image
                                     fill
-                                    src='/vehicle-wash-app/pc-user-journeys.svg'
+                                    src='/vehicle-wash-app/pc-user-journeys.png'
                                     alt='User Journeys'
                                 />
                             </div>
@@ -90,7 +91,7 @@ export default function VehicleWashAppPage() {
                             <div className="w-full h-[230px] relative">
                                 <Image
                                     fill
-                                    src='/vehicle-wash-app/user-journeys.svg'
+                                    src='/vehicle-wash-app/user-journeys.png'
                                     alt='User Journeys'
                                 />
                             </div>
@@ -102,15 +103,15 @@ export default function VehicleWashAppPage() {
                             <div className="w-full h-[332px] relative">
                                 <Image
                                     fill
-                                    src='/vehicle-wash-app/pc-user-flow.svg'
+                                    src='/vehicle-wash-app/pc-user-flow.png'
                                     alt='User Flow'
                                 />
                             </div>
                         ) : (
-                            <div className="w-full h-[500px] relative">
+                            <div className="w-[203px] h-[500px] mx-auto relative">
                                 <Image
                                     fill
-                                    src='/vehicle-wash-app/user-flow.svg'
+                                    src='/vehicle-wash-app/user-flow.png'
                                     alt='User Flow'
                                 />
                             </div>
@@ -162,31 +163,31 @@ export default function VehicleWashAppPage() {
                             <p className="font-bold">Color styles</p>
                             <div className="flex justify-around items-center lg:justify-start lg:gap-x-10">
                                 <Image
-                                    src="/vehicle-wash-app/1E3768.svg"
+                                    src="/vehicle-wash-app/1E3768.png"
                                     alt="1E3768"
                                     width={55}
                                     height={67}
                                 />
                                 <Image
-                                    src="/vehicle-wash-app/F8901F.svg"
+                                    src="/vehicle-wash-app/F8901F.png"
                                     alt="F8901F"
                                     width={55}
                                     height={67}
                                 />
                                 <Image
-                                    src="/vehicle-wash-app/FAFAFA.svg"
+                                    src="/vehicle-wash-app/FAFAFA.png"
                                     alt="FAFAFA"
                                     width={55}
                                     height={67}
                                 />
                                 <Image
-                                    src="/vehicle-wash-app/999999.svg"
+                                    src="/vehicle-wash-app/999999.png"
                                     alt="999999"
                                     width={55}
                                     height={67}
                                 />
                                 <Image
-                                    src="/vehicle-wash-app/262626.svg"
+                                    src="/vehicle-wash-app/262626.png"
                                     alt="262626"
                                     width={55}
                                     height={67}
@@ -198,7 +199,7 @@ export default function VehicleWashAppPage() {
                     <div className="w-full h-[260px] lg:h-[960px] pt-10 lg:pt-20 relative border-y border-accent">
                         <Image
                             fill
-                            src="/vehicle-wash-app/app-mobile.svg"
+                            src="/vehicle-wash-app/app-mobile.png"
                             alt="App Mobile"
                             className="object-cover"
                         />
@@ -212,6 +213,6 @@ export default function VehicleWashAppPage() {
                 value="Thanks for reading through."
             >
             </WashUpPageFooter>
-        </>
+        </Fragment>
     )
 }

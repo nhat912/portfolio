@@ -10,8 +10,8 @@ export default function Header() {
 
     return (
         <header className="w-full overflow-hidden">
-            <div className="flex gap-1 h-[52px] lg:h-20 items-center container text-xs lg:text-lg font-semibold">
-                <Link href="/" className="shrink-0 grow-0">
+            <div className="flex gap-1 h-[52px] lg:h-20 items-center container text-xs lg:text-lg">
+                <Link href="/" className="shrink-0 grow-0  font-semibold">
                     @nhatdesign
                 </Link>
                 <nav className="flex-1">
@@ -19,7 +19,7 @@ export default function Header() {
                         {Object.keys(siteConfig.paths).map((key) => {
                             const path = siteConfig.paths[key as keyof typeof siteConfig.paths];
                             return (
-                                <li key={path.as} className={cn("px-2", pathName === path.href ? 'bg-gradient' : 'bg-transparent')}>
+                                <li key={path.as} className={cn("px-2  lg:px-6", pathName === path.href ? 'bg-gradient' : 'bg-transparent')}>
                                     <Link href={path.href} className="inline-block">
                                         {path.as}
                                     </Link>

@@ -1,16 +1,17 @@
 import CareerPathSection from "@/src/lib/home/components/careerPath";
 import Footer from "@/src/lib/home/components/footer";
 import HeroSection from "@/src/lib/home/components/hero";
+import { Fragment } from "react";
 
 function HomePage() {
     return (
-        <>
-            <main>
+        <Fragment>
+            <main className="pb-10 lg:pb-[100px]">
                 <HeroSection />
                 <CareerPathSection />
             </main>
             <Footer />
-        </>
+        </Fragment>
     );
 }
 
