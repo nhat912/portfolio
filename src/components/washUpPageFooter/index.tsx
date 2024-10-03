@@ -2,6 +2,7 @@
 
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import FeatureCard from "@/src/components/featureCard";
+import FooterNote from "@/src/components/footerNote";
 import { cn } from "@/src/lib/utils";
 import { WASHUP_FEATURES } from "@/src/lib/wash-up/constants";
 import { usePathname } from "next/navigation";
@@ -33,11 +34,7 @@ function WashUpPageFooter({ className, value }: WashUpPageFooterProps) {
                     ))}
                 </div>
             </ChildSectionLayout>
-            <div className="flex items-center justify-between gap-x-3">
-                <div className="flex-1 h-px bg-accent"></div>
-                <div className="whitespace-nowrap font-semibold">{value}</div>
-                <div className="flex-1 h-px bg-accent"></div>
-            </div>
+            <FooterNote value={value} />
         </footer>
     );
 }

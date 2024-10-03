@@ -36,7 +36,6 @@ function PasswordDialog() {
     const codeErr = form?.formState?.errors?.code
 
     const onSubmit = (data: z.infer<typeof FormSchema>) => {
-        console.log("🚀 ~ onSubmit ~ data:", data)
         if (data.code === process.env.NEXT_PUBLIC_PRIVATE_CODE) {
             onChangeOpenPasswordDialog(false)
         } else {

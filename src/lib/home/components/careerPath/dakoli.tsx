@@ -38,7 +38,7 @@ export default function DakoliSection() {
                         <div className="w-full h-[179px] lg:h-[262px] relative">
                             <Image
                                 fill
-                                src='/home/images/Dakoli.png'
+                                src='/home/images/dakoli.png'
                                 alt='Dakoli'
                                 className=""
                             />
