@@ -7,10 +7,11 @@ import Title from "@/src/components/title";
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
 import Image from "next/image";
 import { Fragment } from "react";
+import { siteConfig } from "@/src/config";
 
 
 export default function VehicleWashAppPage() {
-    const isClientMobile = useClientMediaQuery('(max-width: 640px)')
+    const isClientMobile = useClientMediaQuery(siteConfig.mobileWidth)
 
     return (
         <Fragment>

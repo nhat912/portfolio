@@ -33,7 +33,8 @@ const config: Config = {
 				foreground: 'var(--foreground)',
 				primary: 'var(--primary)',
 				secondary: 'var(--secondary)',
-				accent: 'var(--accent)'
+				accent: 'var(--accent)',
+				'24': '#242427'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

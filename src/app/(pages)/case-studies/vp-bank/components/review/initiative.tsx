@@ -3,6 +3,7 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import ReviewTitle from "@/src/app/(pages)/case-studies/vp-bank/components/review/review-title"
+import { siteConfig } from "@/src/config"
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery"
 import Image from "next/image"
 import { useMemo } from "react"
@@ -17,7 +18,7 @@ const DESKTOP_IMAGES = [
     '/case-studies/vp-bank/i-2.png',
 ]
 export default function InitiativeSection() {
-    const isClientMobile = useClientMediaQuery('(max-width: 640px)')
+    const isClientMobile = useClientMediaQuery(siteConfig.mobileWidth)
     const imageList = useMemo(() => isClientMobile ? MOBI_IMAGES : DESKTOP_IMAGES, [isClientMobile])
 
     return (

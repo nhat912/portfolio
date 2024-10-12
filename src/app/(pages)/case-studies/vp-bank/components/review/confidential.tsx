@@ -1,5 +1,4 @@
 import ReviewTitle from '@/src/app/(pages)/case-studies/vp-bank/components/review/review-title'
-import React from 'react'
 
 export default function ConfidentialSection() {
     return (

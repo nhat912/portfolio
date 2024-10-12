@@ -1,6 +1,5 @@
 import Card from '@/src/components/card'
 import Image from 'next/image'
-import React from 'react'
 
 export default function BuymedSection() {
     return (

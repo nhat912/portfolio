@@ -19,7 +19,7 @@ const errorMessage = "Invalid code"
 const OTP_LENGTH = 4
 
 const FormSchema = z.object({
-    code: z.string()
+    keyword: z.string()
         .min(OTP_LENGTH, { message: errorMessage })
         .max(OTP_LENGTH, { message: errorMessage }),
 })
@@ -30,16 +30,21 @@ function PasswordDialog() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
-            code: "",
+            keyword: "",
         },
     })
-    const codeErr = form?.formState?.errors?.code
+    const codeErr = form?.formState?.errors?.keyword
 
-    const onSubmit = (data: z.infer<typeof FormSchema>) => {
-        if (data.code === process.env.NEXT_PUBLIC_PRIVATE_CODE) {
+    const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+        if (data.keyword === process.env.NEXT_PUBLIC_PRIVATE_CODE) {
             onChangeOpenPasswordDialog(false)
+            await fetch('/api/set-keyword', {
+                method: 'POST',
+                body: JSON.stringify({ keyword: data.keyword }),
+            });
+
         } else {
-            form.setError("code", {
+            form.setError("keyword", {
                 type: "manual",
                 message: errorMessage,
             })
@@ -47,10 +52,10 @@ function PasswordDialog() {
     }
 
     const handleOtpChange = async (value: string) => {
-        form.setValue('code', value);
+        form.setValue('keyword', value);
         if (value.length === OTP_LENGTH) {
             // Manually trigger validation for the code field
-            const isValid = await form.trigger('code');
+            const isValid = await form.trigger('keyword');
 
             // Check if the field is valid and the value length is 4 before submitting
             if (isValid) {
@@ -92,7 +97,7 @@ function PasswordDialog() {
                         <div className="mt-4">
                             <FormField
                                 control={form.control}
-                                name="code"
+                                name="keyword"
                                 render={({ field }) => (
                                     <FormItem className="grid place-items-center">
                                         <FormControl>

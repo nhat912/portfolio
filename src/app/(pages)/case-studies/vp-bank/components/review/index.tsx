@@ -4,7 +4,6 @@ import InitiativeSection from '@/src/app/(pages)/case-studies/vp-bank/components
 import SimplifySection from '@/src/app/(pages)/case-studies/vp-bank/components/review/simplify'
 import TransparencySection from '@/src/app/(pages)/case-studies/vp-bank/components/review/transparency'
 import ChildSectionLayout from '@/src/components/childSectionLayout'
-import React from 'react'
 
 export default function ReviewSection() {
     return (

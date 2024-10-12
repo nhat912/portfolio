@@ -38,5 +38,6 @@ export const siteConfig = {
             as: 'nhatnguyen.wk@gmail.com'
         }
     },
-    url: 'http://localhost:3001'
+    url: 'http://localhost:3001',
+    mobileWidth: '(max-width: 640px)'
 }

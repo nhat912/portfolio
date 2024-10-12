@@ -58,7 +58,7 @@ export default function Page() {
                         <div className="flex-1">
                             <Card
                                 hasBorderBottom
-                                href="/case-studies/wave-b"
+                                href="/case-studies/waveb"
                             >
                                 <div className="w-full h-[179px] lg:h-[262px] relative">
                                     <Image

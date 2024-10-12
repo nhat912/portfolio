@@ -33,6 +33,18 @@
 	}
 
 	.text-32 {
-		@apply text-[32px] leading-9;
+		@apply text-[32px] leading-tight;
+	}
+
+	.text-40 {
+		@apply text-[40px] leading-tight;
+	}
+
+	.text-60 {
+		@apply text-[60px] leading-tight;
+	}
+
+	.border-pj {
+		@apply border-dashed border-[#4B4B53];
 	}
 }

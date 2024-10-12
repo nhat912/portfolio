@@ -1,5 +1,4 @@
 import ChildSectionLayout from '@/src/components/childSectionLayout'
-import React from 'react'
 
 export default function Overview() {
     return (

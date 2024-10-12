@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel"
 import { type CarouselApi } from "@/components/ui/carousel"
 import ReviewTitle from '@/src/app/(pages)/case-studies/vp-bank/components/review/review-title'
+import { siteConfig } from "@/src/config"
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery"
 import { cn } from "@/src/lib/utils"
 import Image from "next/image"
@@ -27,7 +28,7 @@ const DESKTOP_IMAGES = [
 ]
 
 export default function FriendlyUISection() {
-    const isClientMobile = useClientMediaQuery('(max-width: 640px)')
+    const isClientMobile = useClientMediaQuery(siteConfig.mobileWidth)
 
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(1)
