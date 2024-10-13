@@ -1,19 +1,20 @@
+import { siteConfig } from '@/src/config';
 import { cookies } from 'next/headers';
 
 export async function POST(request: Request) {
-    const body = (await request.json()) as { keyword: string };
+    const body = (await request.json()) as { key: string };
     const cookieStore = cookies();
 
     try {
-        const { keyword } = body;
-        if (!keyword) {
-            cookieStore.delete('keyword');
+        const { key } = body;
+        if (!key) {
+            cookieStore.delete('key');
 
             return Response.json(
                 {
                     status: 'OK',
-                    message: 'Deleted keyword successfully',
-                    data: [],
+                    message: 'Deleted key successfully',
+                    data: null,
                 },
                 {
                     status: 200,
@@ -21,19 +22,24 @@ export async function POST(request: Request) {
             );
         }
 
-        cookieStore.set('keyword', keyword, {
-            path: '/',
+        const expires = new Date();
+        expires.setDate(expires.getDate() + 3);
+
+        cookieStore.set('key', key, {
+            path: siteConfig.pageList.home.href,
             httpOnly: true,
             sameSite: 'lax',
             secure: true,
-            expires: new Date(),
+            expires,
         });
 
         return Response.json(
             {
                 status: 'OK',
-                message: 'Set keyword successfully',
-                data: [],
+                message: 'Set key successfully',
+                data: {
+                    key,
+                },
             },
             {
                 status: 200,
@@ -44,7 +50,7 @@ export async function POST(request: Request) {
         return Response.json(
             {
                 status: 'ERROR',
-                message: error.message || 'Set keyword failed',
+                message: error.message || 'Set key failed',
                 errorCode: error.errorCode || 'ERROR',
                 data: null,
             },

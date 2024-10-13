@@ -1,10 +1,10 @@
-import ColorStylesSection from '@/src/app/(pages)/case-studies/waveb/components/color-styles';
-import FontStyleSection from '@/src/app/(pages)/case-studies/waveb/components/font-style';
-import IntroductionSection from '@/src/app/(pages)/case-studies/waveb/components/introduction';
-import LogoSection from '@/src/app/(pages)/case-studies/waveb/components/logo';
-import SitemapSection from '@/src/app/(pages)/case-studies/waveb/components/sitemap-section';
-import UserFlowSection from '@/src/app/(pages)/case-studies/waveb/components/user-flow';
-import WireframeSection from '@/src/app/(pages)/case-studies/waveb/components/wireframe';
+import ColorStylesSection from '@/src/app/(pages)/case-studies/wave-b/components/color-styles';
+import FontStyleSection from '@/src/app/(pages)/case-studies/wave-b/components/font-style';
+import IntroductionSection from '@/src/app/(pages)/case-studies/wave-b/components/introduction';
+import LogoSection from '@/src/app/(pages)/case-studies/wave-b/components/logo';
+import SitemapSection from '@/src/app/(pages)/case-studies/wave-b/components/sitemap-section';
+import UserFlowSection from '@/src/app/(pages)/case-studies/wave-b/components/user-flow';
+import WireframeSection from '@/src/app/(pages)/case-studies/wave-b/components/wireframe';
 import FooterNote from '@/src/components/footerNote';
 import Title from '@/src/components/title';
 import { Fragment } from 'react';

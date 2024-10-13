@@ -19,7 +19,7 @@ export const siteConfig = {
             href: '/',
             as: 'Home'
         },
-        studies: {
+        caseStudies: {
             href: '/case-studies',
             as: 'Case Studies'
         },
@@ -39,5 +39,51 @@ export const siteConfig = {
         }
     },
     url: 'http://localhost:3001',
-    mobileWidth: '(max-width: 640px)'
+    mobileWidth: '(max-width: 640px)',
+    pageList: {
+        home: {
+            href: '/',
+            as: 'Home'
+        },
+        caseStudies: {
+            href: '/case-studies',
+            as: 'Case Studies',
+            vpBank: {
+                href: '/case-studies/vp-bank',
+                as: 'VP Bank'
+            },
+            waveB: {
+                href: '/case-studies/wave-b',
+                as: 'Wave B'
+            }
+        },
+        about: {
+            href: '/about',
+            as: 'About'
+        },
+        washUp: {
+            href: '/wash-up',
+            as: 'Wash Up',
+            insuranceFeature: {
+                href: '/wash-up/insurance-feature',
+                as: 'Insurance Feature'
+            },
+            technicianApp: {
+                href: '/wash-up/technician-app',
+                as: 'Technician App'
+            },
+            technicianOrder: {
+                href: '/wash-up/technician-order',
+                as: 'Technician Order'
+            },
+            vehicleWashApp: {
+                href: '/wash-up/vehicle-wash-app',
+                as: 'Vehicle Wash App'
+            }
+        },
+        setKey: {
+            href: '/api/set-key',
+            as: 'Set Key'
+        }
+    }
 }
