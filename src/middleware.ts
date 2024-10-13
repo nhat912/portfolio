@@ -5,6 +5,7 @@ import { NextResponse } from 'next/server';
 const privatePaths = [
     siteConfig.pageList.caseStudies.href,
     siteConfig.pageList.washUp.href,
+    siteConfig.pageList.dakoli.href,
 ];
 
 

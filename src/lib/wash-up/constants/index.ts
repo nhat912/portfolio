@@ -1,18 +1,20 @@
+import { siteConfig } from "@/src/config";
+
 export const WASHUP_FEATURES = [
     {
-        href: '/wash-up/vehicle-wash-app',
+        href: siteConfig.pageList.washUp.vehicleWashApp.href,
         title: 'Vehicle wash app'
     },
     {
-        href: '/wash-up/insurance-feature',
+        href: siteConfig.pageList.washUp.insuranceFeature.href,
         title: 'Insurance Feature'
     },
     {
-        href: '/wash-up/technician-app',
+        href: siteConfig.pageList.washUp.technicianApp.href,
         title: 'Technician app'
     },
     {
-        href: '/wash-up/technician-order',
+        href: siteConfig.pageList.washUp.technicianOrder.href,
         title: 'Technician Order'
     }
 ]

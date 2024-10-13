@@ -1,4 +1,5 @@
 import Card from '@/src/components/card';
+import { siteConfig } from '@/src/config';
 import Image from 'next/image';
 
 export default function DakoliSection() {
@@ -35,7 +36,10 @@ export default function DakoliSection() {
 
 			<div className="flex flex-col gap-5 lg:flex-row lg:gap-8 mt-5 lg:mt-[50px]">
 				<div className="space-y-3 w-full lg:w-1/2">
-					<Card hasBorderBottom>
+					<Card
+						hasBorderBottom
+						href={siteConfig.pageList.dakoli.href}
+					>
 						<div className="w-full h-[179px] lg:h-[262px] relative">
 							<Image
 								fill

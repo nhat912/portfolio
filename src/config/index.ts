@@ -81,6 +81,10 @@ export const siteConfig = {
                 as: 'Vehicle Wash App'
             }
         },
+        dakoli: {
+            href: '/dakoli',
+            as: 'Dakoli',
+        },
         setKey: {
             href: '/api/set-key',
             as: 'Set Key'
