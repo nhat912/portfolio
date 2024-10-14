@@ -1,6 +1,11 @@
 import Footer from "@/src/components/footer";
 import Title from "@/src/components/title";
+import { Metadata } from "next";
 import { Fragment } from "react";
+
+export const metadata: Metadata = {
+    title: 'Danh sách sản phẩm',
+};
 
 const PROJECTS_N_FIELDS = [
     {

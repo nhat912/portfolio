@@ -21,7 +21,6 @@ export default function Card({
 				'rounded-2xl block overflow-hidden w-full border-[1px] border-gray-600 shadow-md shadow-black relative',
 				className
 			)}
-			scroll={false}
 		>
 			{children}
 			{hasBorderBottom && (

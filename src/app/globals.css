@@ -47,4 +47,43 @@
 	.border-pj {
 		@apply border-dashed border-[#4B4B53];
 	}
+
+	/* Container for images */
+	.image-container {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	.images {
+		display: flex;
+		width: 200%; /* Adjust this based on the number of images */
+		transition: transform 0.3s ease; /* Smooth scroll effect */
+	}
+
+	.images img {
+		width: calc(100% / 7); /* Display 7 images in the container */
+	}
+
+	/* Scroll bar container */
+	.scroll-bar {
+		width: 100%;
+		height: 10px;
+		background-color: #ccc;
+		position: relative;
+		cursor: pointer;
+	}
+
+	/* The draggable thumb */
+	.scroll-thumb {
+		width: 30px;
+		height: 30px;
+		background-color: #333;
+		border-radius: 50%;
+		position: absolute;
+		top: -10px;
+		left: 0;
+		cursor: pointer;
+	}
 }
