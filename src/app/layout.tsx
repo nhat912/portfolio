@@ -1,17 +1,13 @@
+import { inter } from '@/src/app/fonts';
 import Header from '@/src/components/header';
-import { cookies } from 'next/headers';
+import PasswordDialog from '@/src/components/passwordDialog';
 import { siteConfig } from '@/src/config';
+import { AppProvider } from '@/src/providers/app-provider';
 import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
+import { cookies } from 'next/headers';
 import { cn } from '../lib/utils';
 import './globals.css';
-import { AppProvider } from '@/src/providers/app-provider';
-import PasswordDialog from '@/src/components/passwordDialog';
 
-const fontSans = FontSans({
-	subsets: ['latin'],
-	weight: ['300', '400', '500', '600', '700']
-});
 
 export const metadata: Metadata = siteConfig.seo;
 
@@ -28,7 +24,7 @@ export default function RootLayout({
 			<body
 				className={cn(
 					'min-h-screen antialiased text-sm lg:text-lg flex w-full flex-col relative text-accent',
-					fontSans.className
+					inter.className,
 				)}
 			>
 				<AppProvider keyValue={keyValue}>

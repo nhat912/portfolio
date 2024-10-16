@@ -5,14 +5,14 @@ import Image from "next/image";
 const ColorColumn = ({ img, name }: { img: string, name: string }) => {
     return (
         <div className="space-y-5">
-            <div className="size-[60px] relative">
+            <div className="size-[60px] lg:size-[100px] relative">
                 <Image
                     fill
                     src={img}
                     alt={name}
                 />
             </div>
-            <div className="font-semibold">
+            <div className="font-semibold lg:text-lg">
                 {name}
             </div>
         </div>
@@ -29,21 +29,21 @@ export default function ColorStylesSection() {
                 <p className="space-x-1">
                     Additionally, since the primary color tone leans towards yellow, we opted to replace the usual yellow in notifications with orange, instead of using the common red-green-yellow color scheme.
                 </p>
-                <div className="flex flex-col lg:flex-row">
-                    <div className="flex flex-col">
-                        <div className="py-4 border-b-2 border-pj">
-                            <div className="w-1/2">
-                                <div className="text-base font-bold">
+                <div className="flex flex-col">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-[100px] lg:border-b-2 lg:border-pj">
+                        <div className="py-4 lg:py-5 border-b-2 border-pj lg:border-none">
+                            <div className="w-1/2 lg:w-[300px]">
+                                <div className="text-base lg:text-2xl font-bold">
                                     Primary
                                 </div>
-                                <div className="w-full h-[60px] relative my-5">
+                                <div className="w-full h-[60px] lg:h-[100px] relative my-5 lg:mb-5 lg:mt-8">
                                     <Image
                                         fill
                                         src="/case-studies/waveb/primary.png"
                                         alt="Primary color"
                                     />
                                 </div>
-                                <div className="flex justify-between font-semibold">
+                                <div className="flex justify-between font-semibold lg:text-lg">
                                     <span className="">
                                         #F9E800
                                     </span>
@@ -53,11 +53,11 @@ export default function ColorStylesSection() {
                                 </div>
                             </div>
                         </div>
-                        <div className="py-5 border-b-2 border-pj">
-                            <div className="text-base font-bold">
+                        <div className="py-5 border-b-2 border-pj lg:border-none">
+                            <div className="text-base lg:text-2xl font-bold">
                                 Notification
                             </div>
-                            <div className="mt-8 flex gap-x-[57px]">
+                            <div className="mt-8 flex gap-x-[57px] lg:gap-x-[100px]">
                                 <ColorColumn
                                     img="/case-studies/waveb/5EF00C.png"
                                     name="#5EF00C"
@@ -72,14 +72,16 @@ export default function ColorStylesSection() {
                                 />
                             </div>
                         </div>
-                        <div className="py-5 border-b-2 border-pj">
-                            <p>
-                                There’s nothing particularly special about the neutral colors we chose, but we adhered to the principle of avoiding pure white (#FFFFFF) and pure black (#000000).
-                            </p>
-                            <div className="text-base font-bold mt-4">
+                    </div>
+                    <p className="mt-5 mb-4 lg:mt-10 lg:mb-8">
+                        There’s nothing particularly special about the neutral colors we chose, but we adhered to the principle of avoiding pure white (#FFFFFF) and pure black (#000000).
+                    </p>
+                    <div className="flex flex-col gap-x-5 lg:flex-row lg:items-center lg:gap-x-[100px]">
+                        <div className="pb-5 border-b-2 border-pj lg:border-none">
+                            <div className="text-base lg:text-2xl font-bold">
                                 Neutral
                             </div>
-                            <div className="mt-8 flex gap-x-[57px]">
+                            <div className="mt-8 flex gap-x-[57px] lg:gap-x-[100px]">
                                 <ColorColumn
                                     img="/case-studies/waveb/F2F2F2.png"
                                     name="#F2F2F2"
@@ -94,7 +96,7 @@ export default function ColorStylesSection() {
                                 />
                             </div>
                         </div>
-                        <div className="pt-4 flex gap-x-[57px]">
+                        <div className="pt-4 lg:pt-10 flex gap-x-[57px] lg:gap-x-[100px]">
                             <ColorColumn
                                 img="/case-studies/waveb/686868.png"
                                 name="#686868"

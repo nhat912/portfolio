@@ -2,8 +2,15 @@ import Card from '@/src/components/card';
 import ChildSectionLayout from '@/src/components/childSectionLayout';
 import Footer from '@/src/components/footer';
 import Title from '@/src/components/title';
+import { siteConfig } from '@/src/config';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Fragment } from 'react';
+
+export const metadata: Metadata = {
+	metadataBase: new URL(siteConfig.url),
+	title: 'Case Studies',
+};
 
 export default function Page() {
 	return (

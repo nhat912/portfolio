@@ -19,15 +19,18 @@ export default function Header() {
 						{Object.keys(siteConfig.paths).map((item) => {
 							const path =
 								siteConfig.paths[
-									item as keyof typeof siteConfig.paths
+								item as keyof typeof siteConfig.paths
 								];
+							const isActive = pathName === '/' && path.href === '/'
+								? true
+								: pathName.startsWith(path.href) && path.href !== '/';
 
 							return (
 								<li
 									key={path.as}
 									className={cn(
 										'px-2  lg:px-6',
-										pathName === path.href
+										isActive
 											? 'bg-gradient'
 											: 'bg-transparent'
 									)}

@@ -3,7 +3,14 @@ import CustomerSection from '@/src/app/(pages)/dakoli/components/customer';
 import OverviewSection from '@/src/app/(pages)/dakoli/components/overview';
 import FooterNote from '@/src/components/footerNote';
 import Title from '@/src/components/title';
+import { siteConfig } from '@/src/config';
+import { Metadata } from 'next';
 import { Fragment } from 'react';
+
+export const metadata: Metadata = {
+	metadataBase: new URL(siteConfig.url),
+	title: 'Dakoli',
+};
 
 export default function Page() {
 	return (

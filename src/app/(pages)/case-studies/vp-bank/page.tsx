@@ -4,7 +4,14 @@ import ProblemAnalysisSection from '@/src/app/(pages)/case-studies/vp-bank/compo
 import ReviewSection from '@/src/app/(pages)/case-studies/vp-bank/components/review';
 import FooterNote from '@/src/components/footerNote';
 import Title from '@/src/components/title';
+import { siteConfig } from '@/src/config';
+import { Metadata } from 'next';
 import { Fragment } from 'react';
+
+export const metadata: Metadata = {
+	metadataBase: new URL(siteConfig.url),
+	title: 'VPBank',
+};
 
 export default function Page() {
 	return (

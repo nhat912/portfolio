@@ -5,6 +5,13 @@ import Title from "@/src/components/title";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 import Image from "next/image";
 import { Fragment } from "react";
+import { Metadata } from "next";
+import { siteConfig } from "@/src/config";
+
+export const metadata: Metadata = {
+    metadataBase: new URL(siteConfig.url),
+    title: 'Insurance Feature',
+};
 
 function BorderBot() {
     return (

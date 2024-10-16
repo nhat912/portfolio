@@ -38,7 +38,7 @@ export const siteConfig = {
             as: 'nhatnguyen.wk@gmail.com'
         }
     },
-    url: 'http://localhost:3001',
+    url: 'http://jamesnguyendesign.com',
     mobileWidth: '(max-width: 640px)',
     pageList: {
         home: {

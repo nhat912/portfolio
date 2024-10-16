@@ -1,14 +1,14 @@
 import { cn } from "@/src/lib/utils";
 import { PropsWithChildren } from "react";
 
-export function SectionTitle({ value }: { value: string }) {
+export function SectionTitle({ value }: { value: string | JSX.Element }) {
     return (
         <h2 className="text-xl font-bold lg:text-[40px] lg:leading-normal">{value}</h2>
     )
 }
 
 interface ChildSectionLayoutProps extends PropsWithChildren {
-    value: string;
+    value: string | JSX.Element;
     className?: string;
 }
 

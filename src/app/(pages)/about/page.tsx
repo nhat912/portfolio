@@ -1,10 +1,12 @@
 import Footer from "@/src/components/footer";
 import Title from "@/src/components/title";
+import { siteConfig } from "@/src/config";
 import { Metadata } from "next";
 import { Fragment } from "react";
 
 export const metadata: Metadata = {
-    title: 'Danh sách sản phẩm',
+    metadataBase: new URL(siteConfig.url),
+    title: 'Giới thiệu',
 };
 
 const PROJECTS_N_FIELDS = [

@@ -7,7 +7,14 @@ import UserFlowSection from '@/src/app/(pages)/case-studies/wave-b/components/us
 import WireframeSection from '@/src/app/(pages)/case-studies/wave-b/components/wireframe';
 import FooterNote from '@/src/components/footerNote';
 import Title from '@/src/components/title';
+import { siteConfig } from '@/src/config';
+import { Metadata } from 'next';
 import { Fragment } from 'react';
+
+export const metadata: Metadata = {
+	metadataBase: new URL(siteConfig.url),
+	title: 'WaveB',
+};
 
 export default function Page() {
 	return (
@@ -19,7 +26,7 @@ export default function Page() {
 					className="flex-row lg:leading-normal"
 				/>
 
-				<div className="space-y-10 lg:space-y-[60px]">
+				<div className="space-y-10 lg:space-y-20">
 					<IntroductionSection />
 					<LogoSection />
 					<ColorStylesSection />
@@ -31,7 +38,7 @@ export default function Page() {
 			</main>
 
 			<FooterNote
-				value="Thank you for taking the time to read!"
+				value="Thanks for reading through."
 				className=""
 			/>
 		</Fragment>

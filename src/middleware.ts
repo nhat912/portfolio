@@ -2,10 +2,10 @@ import { siteConfig } from '@/src/config';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-const privatePaths = [
-    siteConfig.pageList.caseStudies.href,
-    siteConfig.pageList.washUp.href,
-    siteConfig.pageList.dakoli.href,
+const privatePaths: string[] = [
+    // siteConfig.pageList.caseStudies.href,
+    // siteConfig.pageList.washUp.href,
+    // siteConfig.pageList.dakoli.href,
 ];
 
 
