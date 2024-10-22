@@ -1,11 +1,11 @@
+import QualityImage from "@/src/components/qualityImage";
 import SectionLayout from "@/src/components/sectionLayout";
-import Image from "next/image";
 
 export default function HeroSection() {
     return (
         <SectionLayout className="flex flex-col gap-5 lg:flex-row-reverse lg:items-center lg:gap-1">
             <div className="w-[358px] lg:w-1/2 lg:h-auto lg:aspect-square h-[340px] grow-0 shrink-0 relative">
-                <Image
+                <QualityImage
                     fill
                     priority
                     quality={100}

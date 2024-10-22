@@ -1,5 +1,5 @@
 import Card from '@/src/components/card';
-import Image from 'next/image';
+import QualityImage from '@/src/components/qualityImage';
 
 export default function BuymedSection() {
 	return (
@@ -45,59 +45,59 @@ export default function BuymedSection() {
 				</p>
 			</div>
 			<div className="mt-4 lg:mt-[60px] grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 ">
-				<Card hasBorderBottom>
+				{/* <Card hasBorderBottom>
 					<div className="w-full h-[179px] lg:h-[262px] relative">
-						<Image
+						<QualityImage
 							fill
 							src="/home/images/medship.png"
 							alt="medship"
 							className="object-cover"
 						/>
 					</div>
-					<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+					<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
 						Medship - Health Care Platform
 					</h4>
 					<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
-				</Card>
+				</Card> */}
 				<Card hasBorderBottom>
 					<div className="w-full h-[179px] lg:h-[262px] relative">
-						<Image
-							fill
-							src="/home/images/thuoc-si.png"
-							alt="thuoc-si"
-							className="object-cover"
-						/>
-					</div>
-					<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
-						Pharmaceutical e-commerce
-					</h4>
-					<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
-				</Card>
-				<Card hasBorderBottom>
-					<div className="w-full h-[179px] lg:h-[262px] relative">
-						<Image
+						<QualityImage
 							fill
 							src="/home/images/circa.png"
 							alt="circa"
 							className="object-cover"
 						/>
 					</div>
-					<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+					<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
 						Circa - B2C Medical Ecommerce
 					</h4>
 					<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
 				</Card>
 				<Card hasBorderBottom>
 					<div className="w-full h-[179px] lg:h-[262px] relative">
-						<Image
+						<QualityImage
 							fill
 							src="/home/images/homepage.png"
 							alt="homepage"
 							className="object-cover"
 						/>
 					</div>
-					<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
-						Homepage - Circa Franchise Information
+					<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
+						Circa Franchise
+					</h4>
+					<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
+				</Card>
+				<Card hasBorderBottom>
+					<div className="w-full h-[179px] lg:h-[262px] relative">
+						<QualityImage
+							fill
+							src="/home/images/thuoc-si.png"
+							alt="thuoc-si"
+							className="object-cover"
+						/>
+					</div>
+					<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
+						Thuocsi - B2B Medical E-Commerce
 					</h4>
 					<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
 				</Card>

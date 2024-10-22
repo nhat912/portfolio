@@ -1,5 +1,5 @@
+import QualityImage from "@/src/components/qualityImage";
 import { siteConfig } from "@/src/config";
-import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -20,7 +20,7 @@ export default function Footer() {
                 </p>
                 <p className="flex items-center gap-x-1">
                     <span>I hope to collaborate with you in the future.</span>
-                    <Image
+                    <QualityImage
                         src="/home/icons/rocket.svg"
                         alt="rocket"
                         width={20}

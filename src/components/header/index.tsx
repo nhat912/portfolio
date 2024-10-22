@@ -12,7 +12,7 @@ export default function Header() {
 		<header className="w-full overflow-hidden">
 			<div className="flex gap-1 h-[52px] lg:h-20 items-center container text-xs lg:text-lg">
 				<Link href="/" className="shrink-0 grow-0  font-semibold">
-					@nhatdesign
+					@jamesnguyendesign
 				</Link>
 				<nav className="flex-1">
 					<ul className="flex items-center justify-end">
@@ -37,7 +37,7 @@ export default function Header() {
 								>
 									<Link
 										href={path.href}
-										className="inline-block"
+										className={cn("inline-block", isActive ? "font-bold" : "font-normal")}
 									>
 										{path.as}
 									</Link>

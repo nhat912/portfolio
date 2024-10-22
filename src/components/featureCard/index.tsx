@@ -1,6 +1,6 @@
 
+import QualityImage from "@/src/components/qualityImage";
 import { cn } from "@/src/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 
@@ -21,7 +21,7 @@ function FeatureCard({
         >
             <div className={cn("flex items-center rounded-lg justify-center py-4 lg:py-7 gap-2 lg:gap-3 bg-background")}>
                 {!isActive && (
-                    <Image
+                    <QualityImage
                         src="/home/icons/lock.svg"
                         alt="Lock"
                         width={12}

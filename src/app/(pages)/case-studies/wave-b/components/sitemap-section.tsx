@@ -1,6 +1,6 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
+import QualityImage from "@/src/components/qualityImage";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import Image from "next/image";
 
 export default async function SitemapSection() {
     const isMobile = await isMobileDevice()
@@ -13,14 +13,14 @@ export default async function SitemapSection() {
                 </p>
                 <div className="w-full h-[157px] lg:h-[455px] relative">
                     {isMobile ? (
-                        <Image
+                        <QualityImage
                             fill
                             quality={100}
                             src="/case-studies/waveb/site-map.png"
                             alt="Sitemap"
                         />
                     ) : (
-                        <Image
+                        <QualityImage
                             fill
                             quality={100}
                             src="/case-studies/waveb/pc-site-map.png"

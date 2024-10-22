@@ -1,12 +1,12 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
+import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
-import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import Title from "@/src/components/title";
-import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import Image from "next/image";
-import { Fragment } from "react";
-import { Metadata } from "next";
+import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import { siteConfig } from "@/src/config";
+import { isMobileDevice } from "@/src/helpers/isMobileDevice";
+import { Metadata } from "next";
+import { Fragment } from "react";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
@@ -82,7 +82,7 @@ export default async function Page() {
                         <div className="space-y-3 lg:space-y-5">
                             {isMobile ? (
                                 <div className="w-full h-[275px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/technician-app/mobi-user-journeys.png'
                                         alt='User journeys'
@@ -91,7 +91,7 @@ export default async function Page() {
                                 </div>
                             ) : (
                                 <div className="w-full h-[158px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/technician-app/user-journeys.png'
                                         alt='User Fljourneysw'
@@ -106,7 +106,7 @@ export default async function Page() {
                         <div className="space-y-3 lg:space-y-5">
                             {isMobile ? (
                                 <div className="w-[215px] mx-auto h-[500px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/technician-app/mobi-user-flow.png'
                                         alt='User Flow'
@@ -115,7 +115,7 @@ export default async function Page() {
                                 </div>
                             ) : (
                                 <div className="w-full h-[320px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/technician-app/user-flow.png'
                                         alt='User Flow'
@@ -134,7 +134,7 @@ export default async function Page() {
                             </p>
                             {isMobile ? (
                                 <div className="w-full h-[1628px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/technician-app/mobi-final-design.png'
                                         alt='Final Design'
@@ -143,7 +143,7 @@ export default async function Page() {
                                 </div>
                             ) : (
                                 <div className="w-full h-[1580px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/technician-app/final-design.png'
                                         alt='Final Design'
@@ -156,7 +156,7 @@ export default async function Page() {
                             </p>
 
                             <div className="relative h-[397px] lg:h-[1153px]">
-                                <Image
+                                <QualityImage
                                     fill
                                     src='/technician-app/final-design-2.png'
                                     alt='Final Design'

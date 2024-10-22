@@ -1,6 +1,6 @@
 import Card from '@/src/components/card';
+import QualityImage from '@/src/components/qualityImage';
 import { siteConfig } from '@/src/config';
-import Image from 'next/image';
 
 export default function WashUpSection() {
 	return (
@@ -42,14 +42,14 @@ export default function WashUpSection() {
 						href={siteConfig.pageList.washUp.vehicleWashApp.href}
 					>
 						<div className="w-full h-[179px] lg:h-[262px] relative">
-							<Image
+							<QualityImage
 								fill
 								src="/home/images/car-wash.png"
 								alt="vehicle-wash-app"
 								className=""
 							/>
 						</div>
-						<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+						<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
 							Washup - Vehicle wash app
 						</h4>
 						<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
@@ -61,14 +61,14 @@ export default function WashUpSection() {
 						href={siteConfig.pageList.washUp.technicianApp.href}
 					>
 						<div className="w-full h-[179px] lg:h-[262px] relative">
-							<Image
+							<QualityImage
 								fill
 								src="/home/images/technician.png"
 								alt="technician"
 								className=""
 							/>
 						</div>
-						<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+						<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
 							Washup - Technician app
 						</h4>
 						<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>

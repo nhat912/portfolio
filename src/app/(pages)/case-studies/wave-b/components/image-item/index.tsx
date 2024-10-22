@@ -1,7 +1,7 @@
 'use client'
 
+import QualityImage from "@/src/components/qualityImage"
 import { cn } from "@/src/lib/utils"
-import Image from "next/image"
 import { useState } from "react"
 
 interface ImageItemProps {
@@ -51,25 +51,25 @@ export default function ImageItem({ className = '', wfSrc, hoverWFSrc, hoverUISr
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <Image
+            <QualityImage
                 fill
                 src={wfSrc}
                 alt="Wireframe Image"
                 className={cn("", mode === btnEnum.WF && !isHovering ? 'block' : 'hidden')}
             />
-            <Image
+            <QualityImage
                 fill
                 src={hoverWFSrc}
                 alt="Wireframe Image"
                 className={cn("", mode === btnEnum.WF && isHovering ? 'block' : 'hidden')}
             />
-            <Image
+            <QualityImage
                 fill
                 src={uiSrc}
                 alt="Wireframe Image"
                 className={cn("", mode === btnEnum.UI && !isHovering ? 'block' : 'hidden')}
             />
-            <Image
+            <QualityImage
                 fill
                 src={hoverUISrc}
                 alt="Wireframe Image"

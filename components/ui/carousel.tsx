@@ -6,8 +6,8 @@ import useEmblaCarousel, {
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
+import QualityImage from "@/src/components/qualityImage"
 import { cn } from "@/src/lib/utils"
-import Image from "next/image"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -220,7 +220,7 @@ const CarouselPrevious = React.forwardRef<
         <>
           {hasIcon && (
             <div className="w-[14px] lg:w-5 h-[6px] lg:h-2 relative">
-              <Image
+              <QualityImage
                 fill
                 quality={80}
                 priority
@@ -264,7 +264,7 @@ const CarouselNext = React.forwardRef<
           <span className="font-semibold text-xs lg:text-lg">{text || 'Next slide'}</span>
           {hasIcon && (
             <div className="w-[14px] lg:w-5 h-[6px] lg:h-2 relative">
-              <Image
+              <QualityImage
                 fill
                 quality={80}
                 priority

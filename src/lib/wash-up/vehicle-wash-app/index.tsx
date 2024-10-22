@@ -1,13 +1,13 @@
 'use client'
 
 import ChildSectionLayout from "@/src/components/childSectionLayout";
+import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
-import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import Title from "@/src/components/title";
-import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
-import Image from "next/image";
-import { Fragment } from "react";
+import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import { siteConfig } from "@/src/config";
+import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
+import { Fragment } from "react";
 
 
 export default function VehicleWashAppPage() {
@@ -82,7 +82,7 @@ export default function VehicleWashAppPage() {
                     <ChildSectionLayout value="User Journeys" className="container">
                         {!isClientMobile ? (
                             <div className="w-full h-[151px] relative">
-                                <Image
+                                <QualityImage
                                     fill
                                     src='/vehicle-wash-app/pc-user-journeys.png'
                                     alt='User Journeys'
@@ -90,7 +90,7 @@ export default function VehicleWashAppPage() {
                             </div>
                         ) : (
                             <div className="w-full h-[230px] relative">
-                                <Image
+                                <QualityImage
                                     fill
                                     src='/vehicle-wash-app/user-journeys.png'
                                     alt='User Journeys'
@@ -102,7 +102,7 @@ export default function VehicleWashAppPage() {
                     <ChildSectionLayout value="User Flow" className="container">
                         {!isClientMobile ? (
                             <div className="w-full h-[332px] relative">
-                                <Image
+                                <QualityImage
                                     fill
                                     src='/vehicle-wash-app/pc-user-flow.png'
                                     alt='User Flow'
@@ -110,7 +110,7 @@ export default function VehicleWashAppPage() {
                             </div>
                         ) : (
                             <div className="w-[203px] h-[500px] mx-auto relative">
-                                <Image
+                                <QualityImage
                                     fill
                                     src='/vehicle-wash-app/user-flow.png'
                                     alt='User Flow'
@@ -163,31 +163,31 @@ export default function VehicleWashAppPage() {
                         <section className="space-y-3">
                             <p className="font-bold">Color styles</p>
                             <div className="flex justify-around items-center lg:justify-start lg:gap-x-10">
-                                <Image
+                                <QualityImage
                                     src="/vehicle-wash-app/1E3768.png"
                                     alt="1E3768"
                                     width={55}
                                     height={67}
                                 />
-                                <Image
+                                <QualityImage
                                     src="/vehicle-wash-app/F8901F.png"
                                     alt="F8901F"
                                     width={55}
                                     height={67}
                                 />
-                                <Image
+                                <QualityImage
                                     src="/vehicle-wash-app/FAFAFA.png"
                                     alt="FAFAFA"
                                     width={55}
                                     height={67}
                                 />
-                                <Image
+                                <QualityImage
                                     src="/vehicle-wash-app/999999.png"
                                     alt="999999"
                                     width={55}
                                     height={67}
                                 />
-                                <Image
+                                <QualityImage
                                     src="/vehicle-wash-app/262626.png"
                                     alt="262626"
                                     width={55}
@@ -198,7 +198,7 @@ export default function VehicleWashAppPage() {
                     </ChildSectionLayout>
 
                     <div className="w-full h-[260px] lg:h-[960px] pt-10 lg:pt-20 relative border-y border-accent">
-                        <Image
+                        <QualityImage
                             fill
                             src="/vehicle-wash-app/app-mobile.png"
                             alt="App Mobile"

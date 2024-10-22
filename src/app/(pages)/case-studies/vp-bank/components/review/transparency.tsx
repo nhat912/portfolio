@@ -1,6 +1,6 @@
 import ReviewTitle from "@/src/app/(pages)/case-studies/vp-bank/components/review/review-title";
+import QualityImage from "@/src/components/qualityImage";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import Image from "next/image";
 
 export default async function TransparencySection() {
     const isMobile = await isMobileDevice()
@@ -17,14 +17,14 @@ export default async function TransparencySection() {
             </div>
             <div className="mt-5 relative w-full h-[500px]">
                 {isMobile ? (
-                    <Image
+                    <QualityImage
                         fill
                         quality={100}
                         src="/case-studies/vp-bank/m-t.png"
                         alt="Transparency"
                     />
                 ) : (
-                    <Image
+                    <QualityImage
                         fill
                         quality={100}
                         src="/case-studies/vp-bank/t.png"

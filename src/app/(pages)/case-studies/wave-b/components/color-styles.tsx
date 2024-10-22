@@ -1,12 +1,12 @@
 
 import ChildSectionLayout from "@/src/components/childSectionLayout";
-import Image from "next/image";
+import QualityImage from "@/src/components/qualityImage";
 
 const ColorColumn = ({ img, name }: { img: string, name: string }) => {
     return (
         <div className="space-y-5">
             <div className="size-[60px] lg:size-[100px] relative">
-                <Image
+                <QualityImage
                     fill
                     src={img}
                     alt={name}
@@ -37,7 +37,7 @@ export default function ColorStylesSection() {
                                     Primary
                                 </div>
                                 <div className="w-full h-[60px] lg:h-[100px] relative my-5 lg:mb-5 lg:mt-8">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src="/case-studies/waveb/primary.png"
                                         alt="Primary color"

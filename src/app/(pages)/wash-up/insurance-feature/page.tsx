@@ -1,12 +1,12 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
+import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
-import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import Title from "@/src/components/title";
-import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import Image from "next/image";
-import { Fragment } from "react";
-import { Metadata } from "next";
+import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import { siteConfig } from "@/src/config";
+import { isMobileDevice } from "@/src/helpers/isMobileDevice";
+import { Metadata } from "next";
+import { Fragment } from "react";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
@@ -47,7 +47,7 @@ export default async function Page() {
                         <div className="space-y-3 lg:space-y-5">
                             {isMobile ? (
                                 <div className="w-full h-[500px] mx-auto relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/insurance-feature/mobi-user-flow.png'
                                         alt='User Flow'
@@ -57,7 +57,7 @@ export default async function Page() {
                                 </div>
                             ) : (
                                 <div className="w-full h-[285px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/insurance-feature/user-flow.png'
                                         alt='User Flow'
@@ -126,7 +126,7 @@ export default async function Page() {
 
                                 <div className="py-3">
                                     <div className="w-[213px] lg:w-[355px] h-[300px] mx-auto lg:h-[500px] relative">
-                                        <Image
+                                        <QualityImage
                                             fill
                                             src='/insurance-feature/phone-1.png'
                                             alt='Phone 1'
@@ -156,7 +156,7 @@ export default async function Page() {
                                 </p>
 
                                 <div className="py-1 lg:py-3 w-full mx-auto lg:w-[654px] h-[274px] lg:h-[500px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/insurance-feature/phone-2.1.png'
                                         alt='Phone 2.1'
@@ -166,7 +166,7 @@ export default async function Page() {
                                 <p>The interface for the specific insurance information form is shown above. On review, it became apparent that the number of fields to be completed on this screen is excessive, making it challenging to review again. While researching this aspect of other competing applications, I found the process also encountered the same situation. I have implemented several user interface improvements, including reducing the boldness of the heading field colours and highlighting information as it is entered. I have also grouped the information fields that are related to each other into sections, as shown in the screenshot below. These include the Period of Insurance, Contact Details, and Vehicle Information sections. </p>
 
                                 <div className="py-1 mx-auto lg:py-3 w-[149px] lg:w-[249px] h-[300px] lg:h-[500px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/insurance-feature/phone-2.2.png'
                                         alt='Phone 2.2'
@@ -195,14 +195,14 @@ export default async function Page() {
                                 </p>
                                 {isMobile ? (
                                     <div className="py-1 w-full h-[750px] relative">
-                                        <Image
+                                        <QualityImage
                                             fill
                                             src='/insurance-feature/mobi-phone-3.1.png'
                                             alt='Phone 3.1'
                                         />
                                     </div>) : (
                                     <div className="py-3 w-full h-[500px] relative">
-                                        <Image
+                                        <QualityImage
                                             fill
                                             src='/insurance-feature/phone-3.1.png'
                                             alt='Phone 3.1'
@@ -218,7 +218,7 @@ export default async function Page() {
                                     <div className="flex flex-col lg:flex-col-reverse lg:items-center gap-3 lg:gap-5 px-[11px] lg:px-0">
                                         <div className="text-primary text-lg font-semibold">Expectation</div>
                                         <div className="w-full lg:w-[328px] h-[80px] relative">
-                                            <Image
+                                            <QualityImage
                                                 fill
                                                 src='/insurance-feature/phone-3.2.png'
                                                 alt='Phone 3.2'
@@ -229,7 +229,7 @@ export default async function Page() {
                                     <div className="flex flex-col lg:flex-col-reverse lg:items-center gap-3 lg:gap-5 px-[11px] lg:px-0">
                                         <div className="text-primary text-lg font-semibold">Expectation</div>
                                         <div className="w-full lg:w-[328px] h-[80px] relative">
-                                            <Image
+                                            <QualityImage
                                                 fill
                                                 src='/insurance-feature/phone-3.3.png'
                                                 alt='Phone 3.3'
@@ -253,7 +253,7 @@ export default async function Page() {
                             </p>
                             {isMobile ? (
                                 <div className="w-full h-[300px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/insurance-feature/mobi-contract.png'
                                         alt='contract'
@@ -261,7 +261,7 @@ export default async function Page() {
                                 </div>
                             ) : (
                                 <div className="w-full h-[500px] relative">
-                                    <Image
+                                    <QualityImage
                                         fill
                                         src='/insurance-feature/contract.png'
                                         alt='contract'

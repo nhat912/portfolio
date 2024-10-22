@@ -1,10 +1,10 @@
 import Card from '@/src/components/card';
 import ChildSectionLayout from '@/src/components/childSectionLayout';
 import Footer from '@/src/components/footer';
+import QualityImage from '@/src/components/qualityImage';
 import Title from '@/src/components/title';
 import { siteConfig } from '@/src/config';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import { Fragment } from 'react';
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ export default function Page() {
 						<div className="flex-1">
 							<Card hasBorderBottom href="/case-studies/vp-bank">
 								<div className="w-full h-[179px] lg:h-[262px] relative">
-									<Image
+									<QualityImage
 										fill
 										src="/case-studies/vp.png"
 										alt="VP Bank"
@@ -65,7 +65,7 @@ export default function Page() {
 						<div className="flex-1">
 							<Card hasBorderBottom href="/case-studies/wave-b">
 								<div className="w-full h-[179px] lg:h-[262px] relative">
-									<Image
+									<QualityImage
 										fill
 										src="/case-studies/waveb.png"
 										alt="Wave B"

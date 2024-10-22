@@ -18,7 +18,7 @@ export default function Card({
 		<Link
 			href={encodeURI(href)}
 			className={cn(
-				'rounded-2xl block overflow-hidden w-full border-[1px] border-gray-600 shadow-md shadow-black relative',
+				'rounded-2xl block overflow-hidden w-full border-[1px] border-gray-600 shadow-md shadow-black relative group',
 				className
 			)}
 		>

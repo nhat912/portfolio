@@ -4,7 +4,7 @@ import IntroductionSection from '@/src/app/(pages)/case-studies/wave-b/component
 import LogoSection from '@/src/app/(pages)/case-studies/wave-b/components/logo';
 import SitemapSection from '@/src/app/(pages)/case-studies/wave-b/components/sitemap-section';
 import UserFlowSection from '@/src/app/(pages)/case-studies/wave-b/components/user-flow';
-import WireframeSection from '@/src/app/(pages)/case-studies/wave-b/components/wireframe';
+import WireFrameSection from '@/src/app/(pages)/case-studies/wave-b/components/wireframe';
 import FooterNote from '@/src/components/footerNote';
 import Title from '@/src/components/title';
 import { siteConfig } from '@/src/config';
@@ -33,7 +33,7 @@ export default function Page() {
 					<FontStyleSection />
 					<SitemapSection />
 					<UserFlowSection />
-					<WireframeSection />
+					<WireFrameSection />
 				</div>
 			</main>
 

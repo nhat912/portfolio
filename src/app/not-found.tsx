@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image";
+import QualityImage from "@/src/components/qualityImage";
 import { useRouter } from "next/navigation";
 
 export default function NotFound() {
@@ -9,7 +9,7 @@ export default function NotFound() {
     return (
         <main className="h-[calc(100vh-52px)] lg:h-[calc(100vh-60px)] bg-background flex flex-col justify-center items-center container">
             <div className="relative w-full h-[278px] lg:w-[515px] lg:h-[400px]">
-                <Image
+                <QualityImage
                     fill
                     priority
                     quality={90}

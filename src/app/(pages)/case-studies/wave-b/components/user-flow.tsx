@@ -1,6 +1,6 @@
 import ChildSectionLayout from '@/src/components/childSectionLayout'
+import QualityImage from '@/src/components/qualityImage'
 import { isMobileDevice } from '@/src/helpers/isMobileDevice'
-import Image from 'next/image'
 
 export default async function UserFlowSection() {
     const isMobile = await isMobileDevice()
@@ -13,14 +13,14 @@ export default async function UserFlowSection() {
                 </p>
                 <div className="w-full h-[745px] lg:h-[345px] relative">
                     {isMobile ? (
-                        <Image
+                        <QualityImage
                             fill
                             quality={100}
                             src="/case-studies/waveb/user-flow.png"
                             alt="Userflow"
                         />
                     ) : (
-                        <Image
+                        <QualityImage
                             fill
                             quality={100}
                             src="/case-studies/waveb/pc-user-flow.png"

@@ -6,13 +6,13 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
+    type CarouselApi,
 } from "@/components/ui/carousel"
-import { type CarouselApi } from "@/components/ui/carousel"
 import ReviewTitle from '@/src/app/(pages)/case-studies/vp-bank/components/review/review-title'
+import QualityImage from "@/src/components/qualityImage"
 import { siteConfig } from "@/src/config"
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery"
 import { cn } from "@/src/lib/utils"
-import Image from "next/image"
 import { useEffect, useMemo, useState } from "react"
 
 const MOBI_IMAGES = [
@@ -84,7 +84,7 @@ export default function FriendlyUISection() {
                     {imageList.map((image, index) => (
                         <CarouselItem key={index} className="">
                             <div className="p-1 relative w-full mx-auto h-[500px]">
-                                <Image
+                                <QualityImage
                                     fill
                                     quality={100}
                                     src={image}

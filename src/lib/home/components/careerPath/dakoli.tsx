@@ -1,6 +1,6 @@
 import Card from '@/src/components/card';
+import QualityImage from '@/src/components/qualityImage';
 import { siteConfig } from '@/src/config';
-import Image from 'next/image';
 
 export default function DakoliSection() {
 	return (
@@ -41,14 +41,14 @@ export default function DakoliSection() {
 						href={siteConfig.pageList.dakoli.href}
 					>
 						<div className="w-full h-[179px] lg:h-[262px] relative">
-							<Image
+							<QualityImage
 								fill
 								src="/home/images/dakoli.png"
 								alt="Dakoli"
 								className=""
 							/>
 						</div>
-						<h4 className="h-20 flex items-center justify-center bg-gradient font-semibold">
+						<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
 							Dakoli - B2B Ecommerce Platform
 						</h4>
 						<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>

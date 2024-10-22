@@ -1,11 +1,11 @@
 import AdminTitle from '@/src/app/(pages)/dakoli/components/admin/admin-title'
-import Image from 'next/image'
+import QualityImage from '@/src/components/qualityImage'
 
 export default function FirstSlide() {
     return (
         <div className='flex gap-x-10 justify-between w-[1040px] shrink-0'>
             <div className="w-1/2 h-[620px] relative">
-                <Image
+                <QualityImage
                     fill
                     src="/dakoli/admin-1.png"
                     alt="Admin"

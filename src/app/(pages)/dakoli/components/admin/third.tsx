@@ -1,8 +1,8 @@
 'use client'
 
 import AdminTitle from '@/src/app/(pages)/dakoli/components/admin/admin-title'
+import QualityImage from '@/src/components/qualityImage'
 import { cn } from '@/src/lib/utils'
-import Image from 'next/image'
 import { useState } from 'react'
 
 const LIST = [
@@ -54,7 +54,7 @@ export default function ThirdSlide() {
         <div className='flex gap-x-10 justify-between w-[1040px] shrink-0'>
             <div className="w-1/2 h-[620px] relative">
                 {current === 0 &&
-                    <Image
+                    <QualityImage
                         fill
                         src="/dakoli/admin-3.1.png"
                         alt="Admin"
@@ -62,7 +62,7 @@ export default function ThirdSlide() {
                     />
                 }
                 {current === 1 &&
-                    <Image
+                    <QualityImage
                         fill
                         src="/dakoli/admin-3.2.png"
                         alt="Admin"
@@ -70,7 +70,7 @@ export default function ThirdSlide() {
                     />
                 }
                 {current === 2 &&
-                    <Image
+                    <QualityImage
                         fill
                         src="/dakoli/admin-3.3.png"
                         alt="Admin"

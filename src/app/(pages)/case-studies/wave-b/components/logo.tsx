@@ -1,6 +1,6 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
+import QualityImage from "@/src/components/qualityImage";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import Image from "next/image";
 
 export default async function LogoSection() {
     const isMobile = await isMobileDevice()
@@ -16,14 +16,14 @@ export default async function LogoSection() {
                 </p>
                 <div className="relative w-full h-[200px] lg:h-[311px]">
                     {isMobile ? (
-                        <Image
+                        <QualityImage
                             fill
                             quality={100}
                             src="/case-studies/waveb/logo.png"
                             alt="Logo sketches"
                         />
                     ) : (
-                        <Image
+                        <QualityImage
                             fill
                             quality={100}
                             src="/case-studies/waveb/desk-logo.png"

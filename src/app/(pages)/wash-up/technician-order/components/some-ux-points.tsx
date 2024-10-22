@@ -1,6 +1,6 @@
 import ChildSectionLayout from "@/src/components/childSectionLayout";
+import QualityImage from "@/src/components/qualityImage";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import Image from "next/image";
 import { Fragment } from "react";
 
 export default async function SomeUxPoints() {
@@ -21,7 +21,7 @@ export default async function SomeUxPoints() {
                     </p>
 
                     <div className="relative w-full h-[300px]">
-                        <Image
+                        <QualityImage
                             fill
                             src='/technician-order/device-info.png'
                             alt='Device information'
@@ -38,7 +38,7 @@ export default async function SomeUxPoints() {
         return (
             <div className="flex items-stretch justify-between gap-x-10">
                 <div className="w-full h-[812px] relative">
-                    <Image
+                    <QualityImage
                         fill
                         src='/technician-order/desk-device-info.png'
                         alt='Device information'
@@ -46,7 +46,7 @@ export default async function SomeUxPoints() {
                     />
                 </div>
                 <div className="w-[625px] relative grow-0 shrink-0">
-                    <Image
+                    <QualityImage
                         width={377}
                         height={812}
                         src='/technician-order/some-ux-points.png'
