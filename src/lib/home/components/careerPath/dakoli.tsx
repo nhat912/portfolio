@@ -48,7 +48,7 @@ export default function DakoliSection() {
 								className=""
 							/>
 						</div>
-						<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold group-hover:bg-clip-border group-hover:text-background transition-all">
+						<h4 className="h-20 lg:h-[120px] flex items-center justify-center bg-gradient font-semibold lg:group-hover:bg-clip-border lg:group-hover:text-background transition-all">
 							Dakoli - B2B Ecommerce Platform
 						</h4>
 						<div className="h-0.5 w-full bg-black/30 absolute bottom-0 left-0"></div>
