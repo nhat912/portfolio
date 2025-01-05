@@ -78,7 +78,7 @@ function PasswordDialog() {
 			onOpenChange={onChangeOpenPasswordDialog}
 		>
 			<DialogContent
-				className="w-[300px] lg:w-[400px] h-[185px] lg:h-[200px] p-0 flex flex-col text-sm lg:text-lg justify-center items-center bg-[#242427] border-none rounded-lg"
+				className="w-[300px] lg:w-[400px] h-[185px] lg:h-[200px] p-0 flex flex-col text-sm lg:text-lg justify-center items-center bg-24 border-none rounded-lg"
 				onInteractOutside={() => router.replace(pathName)}
 			>
 				<Form {...form}>

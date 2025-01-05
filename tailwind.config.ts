@@ -34,7 +34,11 @@ const config: Config = {
 				primary: 'var(--primary)',
 				secondary: 'var(--secondary)',
 				accent: 'var(--accent)',
-				'24': '#242427'
+				'24': '#242427',
+				'd9': '#D9D9DE',
+				'f7': '#F7F7F8',
+				'5e': '#5E5E6B',
+				'3a': '#3A3A40',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -71,6 +75,18 @@ const config: Config = {
 				'caret-blink': 'caret-blink 1.25s ease-out infinite',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			"washUp-container": {
+				center: true,
+				padding: '1rem',
+				screens: {
+					lg: '1272px',
+					xl: '1272px',
+					'2xl': '1272px',
+					'3xl': '1272px',
+					'4xl': '1272px',
+					'5xl': '1272px'
+				}
 			}
 		}
 	},

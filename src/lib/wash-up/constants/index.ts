@@ -18,3 +18,10 @@ export const WASHUP_FEATURES = [
         title: 'Technician Order'
     }
 ]
+
+export interface Item {
+    id: string;
+    title: string;
+}
+
+

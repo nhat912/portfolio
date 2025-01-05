@@ -3,7 +3,7 @@ import { siteConfig } from "@/src/config";
 
 export default function Footer() {
     return (
-        <div className="py-5 lg:py-[60px] bg-[#242427]">
+        <div className="py-5 lg:py-[60px] bg-24">
             <footer className="container space-y-4 lg:space-y-3">
                 <h2 className="font-bold text-2xl">Contact me via</h2>
                 <p className="space-x-1 items-baseline">
