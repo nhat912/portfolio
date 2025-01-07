@@ -1,7 +1,7 @@
 'use client'
 
-import WashUpLayout from "@/src/app/(pages)/wash-up/components/washup-layout";
-import WashUpSection from "@/src/app/(pages)/wash-up/components/washup-section";
+import WashUpLayout from "@/src/app/(wash-up)/wash-up/components/washup-layout";
+import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";

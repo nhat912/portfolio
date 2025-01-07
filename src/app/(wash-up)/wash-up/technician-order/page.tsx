@@ -1,15 +1,15 @@
-import Conclusion from "@/src/app/(pages)/wash-up/technician-order/components/conclusion";
-import Overview from "@/src/app/(pages)/wash-up/technician-order/components/overview";
-import SomeUxPoints from "@/src/app/(pages)/wash-up/technician-order/components/some-ux-points";
+import Conclusion from "@/src/app/(wash-up)/wash-up/technician-order/components/conclusion";
+import Overview from "@/src/app/(wash-up)/wash-up/technician-order/components/overview";
+import SomeUxPoints from "@/src/app/(wash-up)/wash-up/technician-order/components/some-ux-points";
 import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import Title from "@/src/components/title";
 import { Fragment } from "react";
 import { Metadata } from "next";
 import { siteConfig } from "@/src/config";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import WashUpLayout from "@/src/app/(pages)/wash-up/components/washup-layout";
+import WashUpLayout from "@/src/app/(wash-up)/wash-up/components/washup-layout";
 import { Item } from "@/src/lib/wash-up/constants";
-import WashUpSection from "@/src/app/(pages)/wash-up/components/washup-section";
+import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
 import Image from "next/image";
 
 export const metadata: Metadata = {

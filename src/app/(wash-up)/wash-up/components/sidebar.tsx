@@ -1,3 +1,4 @@
+import WashUpWrapper from "@/src/app/(wash-up)/wash-up/components/washup-wrapper";
 import { cn } from "@/src/lib/utils";
 import { Item } from "@/src/lib/wash-up/constants";
 import Link from "next/link";
@@ -40,16 +41,18 @@ function WashUpSidebar({ items }: WashUpSidebarProps) {
     if (!items.length) return null;
 
     return (
-        <div className="w-[250px] grow-0 shrink-0 h-fit bg-24 rounded-[8px] sticky top-28">
-            {items.map((item) => (
-                <Link key={item.id} href={`#${item.id}`}
-                    className={cn("flex items-center gap-x-3 w-[250px] h-[64px] text-[#5E5E6B] hover:text-f7 px-5", activeId === item.id && "text-f7")}
-                >
-                    {activeId === item.id && <span className="block size-2 rounded-full bg-f7"></span>}
-                    <span className="text-lg font-bold">{item.title}</span>
-                </Link>
-            ))}
-        </div>
+        <WashUpWrapper className="sticky top-28">
+            <div className="w-[250px] grow-0 shrink-0 h-fit bg-24 rounded-[8px]">
+                {items.map((item) => (
+                    <Link key={item.id} href={`#${item.id}`}
+                        className={cn("flex items-center gap-x-3 w-[250px] h-[64px] text-[#5E5E6B] hover:text-f7 px-5", activeId === item.id && "text-f7")}
+                    >
+                        <span className={cn("block size-2 rounded-full", activeId === item.id ? 'bg-f7' : 'bg-24')}></span>
+                        <span className="text-lg font-bold">{item.title}</span>
+                    </Link>
+                ))}
+            </div>
+        </WashUpWrapper>
     );
 }
 

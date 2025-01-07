@@ -5,8 +5,8 @@ import { siteConfig } from '@/src/config';
 import { AppProvider } from '@/src/providers/app-provider';
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { cn } from '../lib/utils';
-import './globals.css';
+import '../globals.css';
+import { cn } from '@/src/lib/utils';
 
 
 export const metadata: Metadata = siteConfig.seo;
