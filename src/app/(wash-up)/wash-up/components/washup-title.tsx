@@ -15,7 +15,7 @@ const WashUpTitle: React.FC<WashUpTitleProps> = ({ id = '', value, tag = 'h2', h
     return (
         <Tag
             id={id}
-            className={cn("text-[32px] text-accent font-extrabold text-3xl", hasBottomBorder && "pb-4 border-b border-[#42424A]", className)}>
+            className={cn("text-[32px] text-accent font-extrabold text-3xl capitalize", hasBottomBorder && "pb-4 border-b border-[#42424A]", className)}>
             {value}
         </Tag>
     );

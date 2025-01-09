@@ -55,39 +55,37 @@ function WashUpSidebar({ items }: WashUpSidebarProps) {
     if (!items.length) return null;
 
     return (
-        <WashUpWrapper className="sticky top-28">
-            <div className="w-[250px] grow-0 shrink-0 h-fit bg-24 rounded-[8px]">
-                {items.map((item) => (
-                    <button
-                        key={item.id}
-                        type="button"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            handleClick(item.id);
-                        }}
+        <div className="sticky top-28 w-[250px] grow-0 shrink-0 h-fit rounded-[8px]">
+            {items.map((item) => (
+                <button
+                    key={item.id}
+                    type="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleClick(item.id);
+                    }}
+                    className={cn(
+                        "flex items-center gap-x-3 w-[250px] h-[64px] text-[#5E5E6B] hover:text-f7 px-5",
+                        activeId === item.id && "text-f7"
+                    )}
+                >
+                    <span
                         className={cn(
-                            "flex items-center gap-x-3 w-[250px] h-[64px] text-[#5E5E6B] hover:text-f7 px-5",
-                            activeId === item.id && "text-f7"
+                            "block size-2 rounded-full",
+                            activeId === item.id ? "bg-f7" : "bg-transparent"
+                        )}
+                    ></span>
+                    <span
+                        className={cn(
+                            "text-lg",
+                            activeId === item.id && "font-semibold"
                         )}
                     >
-                        <span
-                            className={cn(
-                                "block size-2 rounded-full",
-                                activeId === item.id ? "bg-f7" : "bg-24"
-                            )}
-                        ></span>
-                        <span
-                            className={cn(
-                                "text-lg",
-                                activeId === item.id && "font-semibold"
-                            )}
-                        >
-                            {item.title}
-                        </span>
-                    </button>
-                ))}
-            </div>
-        </WashUpWrapper>
+                        {item.title}
+                    </span>
+                </button>
+            ))}
+        </div>
     );
 }
 

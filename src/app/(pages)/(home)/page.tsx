@@ -1,7 +1,15 @@
-import HomePage from "@/src/lib/home";
+import DesktopHomePage from "@/src/app/(pages)/(home)/components/(desktop)/desktop-home-page";
+import MobileHomePage from "@/src/app/(pages)/(home)/components/(mobile)/mobile-home-page";
+import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 
-export default function Home() {
+export default async function Home() {
+  const isMobile = await isMobileDevice()
+
+  if (isMobile) {
+    return <MobileHomePage />
+  }
+
   return (
-    <HomePage />
+    <DesktopHomePage />
   );
 }
