@@ -499,7 +499,7 @@ export default async function Page() {
 
                 <WashUpSection
                     id={insuranceFeatureMenu[1].id}
-                    title={insuranceFeatureMenu[1].id}
+                    title={insuranceFeatureMenu[1].title}
                 >
                     <div className="mt-10 space-y-10">
                         {keyFeatures.map((feature) => (
