@@ -1,3 +1,4 @@
+import WashUpBreadcrumbs from "@/src/app/(wash-up)/wash-up/components/washup-breadcrumbs";
 import WashUpLayout from "@/src/app/(wash-up)/wash-up/components/washup-layout";
 import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
 import ProblemSolution from "@/src/app/(wash-up)/wash-up/insurance-feature/components/problemSolution";
@@ -457,111 +458,122 @@ export default async function Page() {
     }
 
     return (
-        <WashUpLayout
-            menu={insuranceFeatureMenu}
-        >
-            <WashUpSection
-                id={insuranceFeatureMenu[0].id}
-                tag='h1'
-                title='Insurance Feature'
-                hasBottomBorder={false}
+        <>
+            <WashUpBreadcrumbs items={[
+                {
+                    label: 'Project Highlights',
+                    href: '/wash-up',
+                },
+                {
+                    label: siteConfig.pageList.insuranceFeature.as,
+                },
+            ]} />
+            <WashUpLayout
+                menu={insuranceFeatureMenu}
             >
-                <div className="mt-10 space-y-5">
-                    <p>
-                        The goal is to expand the platform&apos;s reach and make it easier for users to buy and manage insurance.
-                    </p>
-                    <p>
-                        The vehicle insurance feature lets users buy and manage motorcycles or car insurance directly in the app. Unlike other apps that require code checks on websites or emails, our feature simplifies access to insurance records without searching or remembering contract codes.
-                    </p>
-                    <p>
-                        If you&apos;re pulled over on the highway by traffic police and asked for your vehicle&apos;s insurance information, would it be easier to find it through multiple emails or an app?
-                    </p>
-                </div>
-                <div className="mt-10 relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
-                    {/* <Image
-                            fill
-                            src="/vehicle-wash-app/user-flow.png"
-                            alt="User Flow"
-                        /> */}
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={insuranceFeatureMenu[1].id}
-                title={insuranceFeatureMenu[1].id}
-            >
-                <div className="mt-10 space-y-10">
-                    {keyFeatures.map((feature) => (
-                        <div
-                            key={feature.title}
-                            className="flex gap-x-10 justify-between items-center">
-                            <div className="flex-1">
-                                <h3 className="text-2xl font-extrabold text-f7">
-                                    {feature.title}
-                                </h3>
-                                <p>
-                                    {feature.description}
-                                </p>
-                            </div>
-                            <div className="size-[200px] grow-0 shrink-0 relative">
-                                <Image
-                                    fill
-                                    src={feature.icon}
-                                    alt={feature.title}
-                                />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={insuranceFeatureMenu[2].id}
-                title={insuranceFeatureMenu[2].title}
-            >
-                <div className="mt-10 relative w-full h-[260.73px]">
-                    <Image
-                        fill
-                        src="/insurance-feature/user-flow.webp"
-                        alt="User flow"
-                    />
-                </div>
-            </WashUpSection>
-
-            <ProblemSolution
-                id={insuranceFeatureMenu[3].id}
-                title={insuranceFeatureMenu[3].title}
-                items={problemsSolutions}
-            />
-
-            <WashUpSection
-                id={insuranceFeatureMenu[4].id}
-                title={insuranceFeatureMenu[4].title}
-            >
-                <div className="mt-10 space-y-10">
-                    <p>
-                        The insurance management feature prioritizes easy access, a user-friendly interface, quick search tools, and automatic renewal reminders for maximum customer convenience. Below is a summary table showcasing the details of the Insurance Package, coverage period, owner information, and insured vehicle details.
-                    </p>
-                    <div className="relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
+                <WashUpSection
+                    id={insuranceFeatureMenu[0].id}
+                    tag='h1'
+                    title='Insurance Feature'
+                    hasBottomBorder={false}
+                >
+                    <div className="mt-10 space-y-5">
+                        <p>
+                            The goal is to expand the platform&apos;s reach and make it easier for users to buy and manage insurance.
+                        </p>
+                        <p>
+                            The vehicle insurance feature lets users buy and manage motorcycles or car insurance directly in the app. Unlike other apps that require code checks on websites or emails, our feature simplifies access to insurance records without searching or remembering contract codes.
+                        </p>
+                        <p>
+                            If you&apos;re pulled over on the highway by traffic police and asked for your vehicle&apos;s insurance information, would it be easier to find it through multiple emails or an app?
+                        </p>
+                    </div>
+                    <div className="mt-10 relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
                         {/* <Image
                             fill
                             src="/vehicle-wash-app/user-flow.png"
                             alt="User Flow"
                         /> */}
                     </div>
-                </div>
-            </WashUpSection>
+                </WashUpSection>
 
-            <WashUpSection
-                id={insuranceFeatureMenu[5].id}
-                title={insuranceFeatureMenu[5].title}
-            >
-                <div className="mt-10 space-y-10">
-                    <p>
-                        Finally, the app&apos;s insurance sales capabilities provide a comprehensive solution for purchasing and managing insurance policies. With research tools, real-time support and automatic renewal reminders, the app increases convenience and customer satisfaction. By streamlining the insurance process, saving time, and improving accessibility, the app simplifies insurance administration and fosters more engaging interactions between insurers and their customers.
-                    </p>
-                </div>
-            </WashUpSection>
-        </WashUpLayout>
+                <WashUpSection
+                    id={insuranceFeatureMenu[1].id}
+                    title={insuranceFeatureMenu[1].id}
+                >
+                    <div className="mt-10 space-y-10">
+                        {keyFeatures.map((feature) => (
+                            <div
+                                key={feature.title}
+                                className="flex gap-x-10 justify-between items-center">
+                                <div className="flex-1">
+                                    <h3 className="text-2xl font-extrabold text-f7">
+                                        {feature.title}
+                                    </h3>
+                                    <p>
+                                        {feature.description}
+                                    </p>
+                                </div>
+                                <div className="size-[200px] grow-0 shrink-0 relative">
+                                    <Image
+                                        fill
+                                        src={feature.icon}
+                                        alt={feature.title}
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={insuranceFeatureMenu[2].id}
+                    title={insuranceFeatureMenu[2].title}
+                >
+                    <div className="mt-10 relative w-full h-[260.73px]">
+                        <Image
+                            fill
+                            src="/insurance-feature/user-flow.webp"
+                            alt="User flow"
+                        />
+                    </div>
+                </WashUpSection>
+
+                <ProblemSolution
+                    id={insuranceFeatureMenu[3].id}
+                    title={insuranceFeatureMenu[3].title}
+                    items={problemsSolutions}
+                />
+
+                <WashUpSection
+                    id={insuranceFeatureMenu[4].id}
+                    title={insuranceFeatureMenu[4].title}
+                >
+                    <div className="mt-10 space-y-10">
+                        <p>
+                            The insurance management feature prioritizes easy access, a user-friendly interface, quick search tools, and automatic renewal reminders for maximum customer convenience. Below is a summary table showcasing the details of the Insurance Package, coverage period, owner information, and insured vehicle details.
+                        </p>
+                        <div className="relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
+                            {/* <Image
+                            fill
+                            src="/vehicle-wash-app/user-flow.png"
+                            alt="User Flow"
+                        /> */}
+                        </div>
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={insuranceFeatureMenu[5].id}
+                    title={insuranceFeatureMenu[5].title}
+                >
+                    <div className="mt-10 space-y-10">
+                        <p>
+                            Finally, the app&apos;s insurance sales capabilities provide a comprehensive solution for purchasing and managing insurance policies. With research tools, real-time support and automatic renewal reminders, the app increases convenience and customer satisfaction. By streamlining the insurance process, saving time, and improving accessibility, the app simplifies insurance administration and fosters more engaging interactions between insurers and their customers.
+                        </p>
+                    </div>
+                </WashUpSection>
+            </WashUpLayout>
+        </>
     )
 }

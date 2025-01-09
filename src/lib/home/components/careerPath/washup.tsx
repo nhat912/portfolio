@@ -39,7 +39,7 @@ export default function WashUpSection() {
 				<div className="flex-1">
 					<Card
 						hasBorderBottom
-						href={siteConfig.pageList.washUp.vehicleWashApp.href}
+						href={siteConfig.pageList.vehicleWashApp.href}
 					>
 						<div className="w-full h-[179px] lg:h-[262px] relative">
 							<QualityImage
@@ -58,7 +58,7 @@ export default function WashUpSection() {
 				<div className="flex-1">
 					<Card
 						hasBorderBottom
-						href={siteConfig.pageList.washUp.technicianApp.href}
+						href={siteConfig.pageList.technicianApp.href}
 					>
 						<div className="w-full h-[179px] lg:h-[262px] relative">
 							<QualityImage

@@ -169,7 +169,7 @@ export default function VehicleWashAppPage() {
                                 <div className="w-full h-[230px] relative">
                                     <QualityImage
                                         fill
-                                        src='/vehicle-wash-app/user-journeys.png'
+                                        src='/vehicle-wash-app/user-journeys.svg'
                                         alt='User Journeys'
                                     />
                                 </div>
@@ -392,7 +392,7 @@ export default function VehicleWashAppPage() {
                 <div className="mt-10 relative w-full h-[160px]">
                     <Image
                         fill
-                        src="/vehicle-wash-app/user-journeys.png"
+                        src="/vehicle-wash-app/user-journeys.webp"
                         alt="User Journeys"
                     />
                 </div>

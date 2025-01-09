@@ -11,6 +11,7 @@ import WashUpLayout from "@/src/app/(wash-up)/wash-up/components/washup-layout";
 import { Item } from "@/src/lib/wash-up/constants";
 import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
 import Image from "next/image";
+import WashUpBreadcrumbs from "@/src/app/(wash-up)/wash-up/components/washup-breadcrumbs";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
@@ -60,49 +61,60 @@ export default async function Page() {
     }
 
     return (
-        <WashUpLayout
-            menu={technicianOrderMenu}
-        >
-            <WashUpSection
-                id={technicianOrderMenu[0].id}
-                tag='h1'
-                title='Technician task'
-                hasBottomBorder={false}
+        <>
+            <WashUpBreadcrumbs items={[
+                {
+                    label: 'Project Highlights',
+                    href: '/wash-up',
+                },
+                {
+                    label: siteConfig.pageList.technicianOrder.as,
+                },
+            ]} />
+            <WashUpLayout
+                menu={technicianOrderMenu}
             >
-                <p className="mt-10">
-                    To standardize service quality, technicians follow a set of instructions for each task and capture evaluation photos for their performance records.
-                </p>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianOrderMenu[1].id}
-                title={technicianOrderMenu[1].title}
-            >
-                <div className="mt-10 space-y-10">
-                    <p>
-                        Technicians can also proactively receive a specific order directly from a customer by scanning the QR code in the customer&apos;s order details or by clicking the “Import order” button and entering the Order ID.
+                <WashUpSection
+                    id={technicianOrderMenu[0].id}
+                    tag='h1'
+                    title='Technician task'
+                    hasBottomBorder={false}
+                >
+                    <p className="mt-10">
+                        To standardize service quality, technicians follow a set of instructions for each task and capture evaluation photos for their performance records.
                     </p>
-                    <div className="relative w-full h-[812px]">
-                        <Image
-                            fill
-                            src="/technician-order/to.webp"
-                            alt="Technician Order"
-                        />
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianOrderMenu[1].id}
+                    title={technicianOrderMenu[1].title}
+                >
+                    <div className="mt-10 space-y-10">
+                        <p>
+                            Technicians can also proactively receive a specific order directly from a customer by scanning the QR code in the customer&apos;s order details or by clicking the “Import order” button and entering the Order ID.
+                        </p>
+                        <div className="relative w-full h-[812px]">
+                            <Image
+                                fill
+                                src="/technician-order/to.webp"
+                                alt="Technician Order"
+                            />
+                        </div>
+                        <p>
+                            Moreover, to be able to accept orders, the technician must scroll to the bottom of the screen and click the &apos;Start&apos; button. This ensures that they review the information at least once.
+                        </p>
                     </div>
-                    <p>
-                        Moreover, to be able to accept orders, the technician must scroll to the bottom of the screen and click the &apos;Start&apos; button. This ensures that they review the information at least once.
-                    </p>
-                </div>
-            </WashUpSection>
+                </WashUpSection>
 
-            <WashUpSection
-                id={technicianOrderMenu[2].id}
-                title={technicianOrderMenu[2].title}
-            >
-                <p className="mt-10">
-                    The next steps involve the execution of the car wash process. However, there are no notable points as the feature is relatively straightforward and primarily aimed at system control and operation. In addition, to ensure the confidentiality of the project, I will not show the full user interface for these steps.
-                </p>
-            </WashUpSection>
-        </WashUpLayout>
+                <WashUpSection
+                    id={technicianOrderMenu[2].id}
+                    title={technicianOrderMenu[2].title}
+                >
+                    <p className="mt-10">
+                        The next steps involve the execution of the car wash process. However, there are no notable points as the feature is relatively straightforward and primarily aimed at system control and operation. In addition, to ensure the confidentiality of the project, I will not show the full user interface for these steps.
+                    </p>
+                </WashUpSection>
+            </WashUpLayout>
+        </>
     )
 }

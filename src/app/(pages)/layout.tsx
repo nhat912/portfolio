@@ -1,5 +1,4 @@
 import { inter } from '@/src/app/fonts';
-import Header from '@/src/components/header';
 import PasswordDialog from '@/src/components/passwordDialog';
 import { siteConfig } from '@/src/config';
 import { AppProvider } from '@/src/providers/app-provider';
@@ -28,7 +27,6 @@ export default function RootLayout({
 				)}
 			>
 				<AppProvider keyValue={keyValue}>
-					<Header />
 					{children}
 					<PasswordDialog />
 				</AppProvider>

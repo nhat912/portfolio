@@ -1,3 +1,4 @@
+import WashUpBreadcrumbs from "@/src/app/(wash-up)/wash-up/components/washup-breadcrumbs";
 import WashUpLayout from "@/src/app/(wash-up)/wash-up/components/washup-layout";
 import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
 import ChildSectionLayout from "@/src/components/childSectionLayout";
@@ -312,156 +313,167 @@ export default async function Page() {
     }
 
     return (
-        <WashUpLayout
-            menu={technicianAppMenu}
-        >
-            <WashUpSection
-                id={technicianAppMenu[0].id}
-                tag='h1'
-                title='Insurance Feature'
-                hasBottomBorder={false}
+        <>
+            <WashUpBreadcrumbs items={[
+                {
+                    label: 'Project Highlights',
+                    href: '/wash-up',
+                },
+                {
+                    label: siteConfig.pageList.technicianApp.as,
+                },
+            ]} />
+            <WashUpLayout
+                menu={technicianAppMenu}
             >
-                <div className="mt-10 space-y-5">
-                    <p>
-                        The application helps technicians manage remote orders, gather customer information, and proactively contact them before heading to the car wash location. Similar to ride-hailing apps, Washup’s order-receiving system works through random assignments within a radius, allowing technicians to accept or decline based on availability and proximity. Once an order is accepted, the technician receives a confirmation with order details and instructions.
-                    </p>
-                </div>
-                <div className="mt-10 relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
-                    {/* <Image
-                            fill
-                            src="/vehicle-wash-app/user-flow.png"
-                            alt="User Flow"
-                        /> */}
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianAppMenu[1].id}
-                title={technicianAppMenu[1].title}
-            >
-                <div className="mt-10 grid grid-cols-2 gap-10">
-                    {indentifyUsers.map(item => (
-                        <div key={item.title} className="flex col-span-1 gap-x-5">
-                            <div className="size-8 grow-0 shrink-0 relative">
-                                <Image
-                                    fill
-                                    src={item.icon}
-                                    alt={item.title}
-                                />
-                            </div>
-                            <div className="flex-1 space-y-2">
-                                <div className="font-bold text-f7">
-                                    {item.title}
-                                </div>
-                                <p>
-                                    {item.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianAppMenu[2].id}
-                title={technicianAppMenu[2].title}
-            >
-                <div className="mt-10 grid grid-cols-2 gap-10">
-                    {keyFeatures.map(item => (
-                        <div key={item.title} className="flex col-span-1 gap-x-5">
-                            <div className="size-8 grow-0 shrink-0 relative">
-                                <Image
-                                    fill
-                                    src={item.icon}
-                                    alt={item.title}
-                                />
-                            </div>
-                            <div className="flex-1 space-y-2">
-                                <div className="font-bold text-f7">
-                                    {item.title}
-                                </div>
-                                <p>
-                                    {item.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianAppMenu[3].id}
-                title={technicianAppMenu[3].title}
-            >
-                <div className="mt-10 relative w-full h-[160px]">
-                    <Image
-                        fill
-                        src="/technician-app/user-journeys.webp"
-                        alt="User Journeys"
-                    />
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianAppMenu[4].id}
-                title={technicianAppMenu[4].title}
-            >
-                <div className="mt-10 relative w-full h-[264.7px]">
-                    <Image
-                        fill
-                        src="/technician-app/user-flow.webp"
-                        alt="User flow"
-                    />
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianAppMenu[5].id}
-                title={technicianAppMenu[5].title}
-                className="px-0 pb-0"
-                titleClassName="px-8 border-none"
-            >
-                <div className="mx-8">
-                    <span className="inline-block h-px w-full bg-[#42424A]"></span>
-                </div>
-                <div className="mt-10 space-y-10">
-                    <p className="px-8">
-                        Below are user interfaces that provide an overview of the order entry process for technicians. They guide technicians through steps like activating availability, reviewing orders, and managing order status, streamlining the workflow and improving efficiency.
-                    </p>
-                    {taskReceptionUI.map((item, idx) => (
-                        <div key={idx} className={cn("flex items-center gap-x-[60px] justify-center py-[60px] w-full", idx % 2 === 0 ? "flex-row" : "flex-row-reverse bg-3a")}>
-                            <div className="relative w-[249.14px] h-[500px] grow-0 shrink-0">
-                                <Image
-                                    fill
-                                    src={item.image}
-                                    alt="Phone"
-                                />
-                            </div>
-                            <div className="w-[400px] grow-0 shrink-0">
-                                {item.description}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </WashUpSection>
-
-            <WashUpSection
-                id={technicianAppMenu[6].id}
-                title={technicianAppMenu[6].title}
-            >
-                <div className="mt-10 space-y-10">
-                    <p>
-                        Technicians can also proactively receive a specific order directly from a customer by scanning the QR code in the customer&apos;s order details or by clicking the “Import order” button and entering the Order ID.
-                    </p>
-                    <div className="relative w-full h-[1185px]">
+                <WashUpSection
+                    id={technicianAppMenu[0].id}
+                    tag='h1'
+                    title='Technician app'
+                    hasBottomBorder={false}
+                >
+                    <div className="mt-10 space-y-5">
+                        <p>
+                            The application helps technicians manage remote orders, gather customer information, and proactively contact them before heading to the car wash location. Similar to ride-hailing apps, Washup’s order-receiving system works through random assignments within a radius, allowing technicians to accept or decline based on availability and proximity. Once an order is accepted, the technician receives a confirmation with order details and instructions.
+                        </p>
+                    </div>
+                    <div className="mt-10 relative w-full h-[600px] rounded-[12px] overflow-hidden">
                         <Image
                             fill
-                            src="/technician-app/ioui.webp"
-                            alt="Import Order UI"
+                            src="/technician-app/ta.webp"
+                            alt="Technician App"
                         />
                     </div>
-                </div>
-            </WashUpSection>
-        </WashUpLayout>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianAppMenu[1].id}
+                    title={technicianAppMenu[1].title}
+                >
+                    <div className="mt-10 grid grid-cols-2 gap-10">
+                        {indentifyUsers.map(item => (
+                            <div key={item.title} className="flex col-span-1 gap-x-5">
+                                <div className="size-8 grow-0 shrink-0 relative">
+                                    <Image
+                                        fill
+                                        src={item.icon}
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="flex-1 space-y-2">
+                                    <div className="font-bold text-f7">
+                                        {item.title}
+                                    </div>
+                                    <p>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianAppMenu[2].id}
+                    title={technicianAppMenu[2].title}
+                >
+                    <div className="mt-10 grid grid-cols-2 gap-10">
+                        {keyFeatures.map(item => (
+                            <div key={item.title} className="flex col-span-1 gap-x-5">
+                                <div className="size-8 grow-0 shrink-0 relative">
+                                    <Image
+                                        fill
+                                        src={item.icon}
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="flex-1 space-y-2">
+                                    <div className="font-bold text-f7">
+                                        {item.title}
+                                    </div>
+                                    <p>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianAppMenu[3].id}
+                    title={technicianAppMenu[3].title}
+                >
+                    <div className="mt-10 relative w-full h-[160px]">
+                        <Image
+                            fill
+                            src="/technician-app/user-journeys.webp"
+                            alt="User Journeys"
+                        />
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianAppMenu[4].id}
+                    title={technicianAppMenu[4].title}
+                >
+                    <div className="mt-10 relative w-full h-[264.7px]">
+                        <Image
+                            fill
+                            src="/technician-app/user-flow.webp"
+                            alt="User flow"
+                        />
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianAppMenu[5].id}
+                    title={technicianAppMenu[5].title}
+                    className="px-0 pb-0"
+                    titleClassName="px-8 border-none"
+                >
+                    <div className="mx-8">
+                        <span className="inline-block h-px w-full bg-[#42424A]"></span>
+                    </div>
+                    <div className="mt-10 space-y-10">
+                        <p className="px-8">
+                            Below are user interfaces that provide an overview of the order entry process for technicians. They guide technicians through steps like activating availability, reviewing orders, and managing order status, streamlining the workflow and improving efficiency.
+                        </p>
+                        {taskReceptionUI.map((item, idx) => (
+                            <div key={idx} className={cn("flex items-center gap-x-[60px] justify-center py-[60px] w-full", idx % 2 === 0 ? "flex-row" : "flex-row-reverse bg-3a")}>
+                                <div className="relative w-[249.14px] h-[500px] grow-0 shrink-0">
+                                    <Image
+                                        fill
+                                        src={item.image}
+                                        alt="Phone"
+                                    />
+                                </div>
+                                <div className="w-[400px] grow-0 shrink-0">
+                                    {item.description}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </WashUpSection>
+
+                <WashUpSection
+                    id={technicianAppMenu[6].id}
+                    title={technicianAppMenu[6].title}
+                >
+                    <div className="mt-10 space-y-10">
+                        <p>
+                            Technicians can also proactively receive a specific order directly from a customer by scanning the QR code in the customer&apos;s order details or by clicking the “Import order” button and entering the Order ID.
+                        </p>
+                        <div className="relative w-full h-[1185px]">
+                            <Image
+                                fill
+                                src="/technician-app/ioui.webp"
+                                alt="Import Order UI"
+                            />
+                        </div>
+                    </div>
+                </WashUpSection>
+            </WashUpLayout>
+        </>
     )
 }

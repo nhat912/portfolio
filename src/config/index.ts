@@ -64,22 +64,22 @@ export const siteConfig = {
         washUp: {
             href: '/wash-up',
             as: 'Wash Up',
-            insuranceFeature: {
-                href: '/wash-up/insurance-feature',
-                as: 'Insurance Feature'
-            },
-            technicianApp: {
-                href: '/wash-up/technician-app',
-                as: 'Technician App'
-            },
-            technicianOrder: {
-                href: '/wash-up/technician-order',
-                as: 'Technician Order'
-            },
-            vehicleWashApp: {
-                href: '/wash-up/vehicle-wash-app',
-                as: 'Vehicle Wash App'
-            }
+        },
+        insuranceFeature: {
+            href: '/wash-up/insurance-feature',
+            as: 'Washup - Insurance feature'
+        },
+        technicianApp: {
+            href: '/wash-up/technician-app',
+            as: 'Washup - Technician app'
+        },
+        technicianOrder: {
+            href: '/wash-up/technician-order',
+            as: 'Washup - Technician order'
+        },
+        vehicleWashApp: {
+            href: '/wash-up/vehicle-wash-app',
+            as: 'Washup - Vehicle wash app'
         },
         dakoli: {
             href: '/dakoli',

@@ -1,7 +1,6 @@
 import WashUpWrapper from "@/src/app/(wash-up)/wash-up/components/washup-wrapper";
 import { cn } from "@/src/lib/utils";
 import { Item } from "@/src/lib/wash-up/constants";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export interface WashUpSidebarProps {
@@ -9,34 +8,49 @@ export interface WashUpSidebarProps {
 }
 
 function WashUpSidebar({ items }: WashUpSidebarProps) {
-    const [activeId, setActiveId] = useState<string>("");
+    const [activeId, setActiveId] = useState<string>(items[0].id);
 
     useEffect(() => {
         const handleScroll = () => {
             const sections = items.map(item => document.getElementById(item.id));
-            // const scrollPosition = window.scrollY + window.innerHeight / 2;
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-            let currentId = "";
-            let maxVisibleHeight = 0;
+            let currentId = activeId;
 
-            sections.forEach(section => {
-                if (section) {
-                    const rect = section.getBoundingClientRect();
-                    const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1) {
+                currentId = items[items.length - 1].id;
+            } else if (window.scrollY === 0) {
+                currentId = items[0].id;
+            } else {
+                sections.forEach((section) => {
+                    if (section) {
+                        const rect = section.getBoundingClientRect();
+                        const sectionTop = window.scrollY + rect.top;
+                        const sectionBottom = sectionTop + rect.height;
 
-                    if (visibleHeight > maxVisibleHeight) {
-                        maxVisibleHeight = visibleHeight;
-                        currentId = section.id;
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            currentId = section.id;
+                        }
                     }
-                }
-            });
+                });
+            }
 
-            setActiveId(currentId);
+            if (currentId !== activeId) {
+                setActiveId(currentId);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [items]);
+    }, [items, activeId]);
+
+    const handleClick = (id: string) => {
+        setActiveId(id);
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    };
 
     if (!items.length) return null;
 
@@ -44,12 +58,33 @@ function WashUpSidebar({ items }: WashUpSidebarProps) {
         <WashUpWrapper className="sticky top-28">
             <div className="w-[250px] grow-0 shrink-0 h-fit bg-24 rounded-[8px]">
                 {items.map((item) => (
-                    <Link key={item.id} href={`#${item.id}`}
-                        className={cn("flex items-center gap-x-3 w-[250px] h-[64px] text-[#5E5E6B] hover:text-f7 px-5", activeId === item.id && "text-f7")}
+                    <button
+                        key={item.id}
+                        type="button"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleClick(item.id);
+                        }}
+                        className={cn(
+                            "flex items-center gap-x-3 w-[250px] h-[64px] text-[#5E5E6B] hover:text-f7 px-5",
+                            activeId === item.id && "text-f7"
+                        )}
                     >
-                        <span className={cn("block size-2 rounded-full", activeId === item.id ? 'bg-f7' : 'bg-24')}></span>
-                        <span className="text-lg font-bold">{item.title}</span>
-                    </Link>
+                        <span
+                            className={cn(
+                                "block size-2 rounded-full",
+                                activeId === item.id ? "bg-f7" : "bg-24"
+                            )}
+                        ></span>
+                        <span
+                            className={cn(
+                                "text-lg",
+                                activeId === item.id && "font-semibold"
+                            )}
+                        >
+                            {item.title}
+                        </span>
+                    </button>
                 ))}
             </div>
         </WashUpWrapper>

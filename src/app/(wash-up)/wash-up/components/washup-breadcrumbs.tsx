@@ -14,20 +14,9 @@ interface WashUpBreadcrumbsProps {
     items: BreadCrumbItem[]
 }
 
-const BreadCrumb: BreadCrumbItem[] = [
-    {
-        label: 'Project Highlights',
-        href: '/wash-up',
-    },
-    {
-        label: 'Washup - Vehicle wash app',
-        href: '/'
-    },
-]
-
 function WashUpBreadcrumbs({ items }: WashUpBreadcrumbsProps) {
     return (
-        <nav className="flex items-center gap-x-5">
+        <nav className="flex items-center gap-x-5 absolute top-[108px] left-0">
             <Link href={siteConfig.pageList.home.href} className="size-5 relative">
                 <Image
                     fill
@@ -37,7 +26,7 @@ function WashUpBreadcrumbs({ items }: WashUpBreadcrumbsProps) {
             </Link>
             <span className="mx-2.5">&gt;</span>
             {
-                BreadCrumb.map((item, index) => (
+                items.map((item, index) => (
                     <Fragment key={index}>
                         {index > 0 && <span className="mx-2.5">&gt;</span>}
                         {index === items.length - 1 ? (
