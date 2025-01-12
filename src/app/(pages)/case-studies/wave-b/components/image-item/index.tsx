@@ -76,7 +76,7 @@ export default function ImageItem({ className = '', wfSrc, hoverWFSrc, hoverUISr
                 className={cn("", mode === btnEnum.UI && isHovering ? 'block' : 'hidden')}
             />
             {isHovering && (
-                <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full flex p-1 bg-[#4b4b53]">
+                <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full flex p-1 bg-4b">
                     {BUTTONS.map(btn => (
                         <button
                             key={btn.id}

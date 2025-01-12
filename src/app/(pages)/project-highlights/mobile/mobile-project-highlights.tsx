@@ -1,0 +1,20 @@
+import { ProjectHighLights } from "@/src/app/(pages)/project-highlights/constants";
+import ProjectCard from "@/src/components/projectCard";
+
+export default function MobileProjectHighLightsPage() {
+    return (
+        <main className="container pt-5 pb-10">
+            <h1 className="text-lg font-semibold text-f7 text-center">
+                Project HighLights
+            </h1>
+            <div className="mt-8 space-y-6">
+                {ProjectHighLights.map((project) => (
+                    <ProjectCard
+                        key={project.id}
+                        {...project}
+                    />
+                ))}
+            </div>
+        </main>
+    )
+}

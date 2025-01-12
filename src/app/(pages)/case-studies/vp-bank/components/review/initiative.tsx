@@ -22,7 +22,7 @@ export default function InitiativeSection() {
     const imageList = useMemo(() => isClientMobile ? MOBI_IMAGES : DESKTOP_IMAGES, [isClientMobile])
 
     return (
-        <div className="pt-6 lg:pt-[60px] border-t-2 border-dashed border-[#4b4b53]">
+        <div className="pt-6 lg:pt-[60px] border-t-2 border-dashed border-4b">
             <div className="space-y-2 lg:space-y-4">
                 <ReviewTitle
                     value="Initiative"

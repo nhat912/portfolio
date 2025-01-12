@@ -39,6 +39,11 @@ const config: Config = {
 				'f7': '#F7F7F8',
 				'5e': '#5E5E6B',
 				'3a': '#3A3A40',
+				'39': '#39393C',
+				'92': '#92929E',
+				'0f': '#0f0f10',
+				'26': '#26262B',
+				'4b': '#4B4B53',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -87,6 +92,9 @@ const config: Config = {
 					'4xl': '1272px',
 					'5xl': '1272px'
 				}
+			},
+			fontSize: {
+				'2xs': '10px',
 			}
 		}
 	},

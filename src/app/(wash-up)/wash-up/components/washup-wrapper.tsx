@@ -7,7 +7,7 @@ interface WashUpWrapperProps extends PropsWithChildren {
 
 function WashUpWrapper({ children, className = '' }: WashUpWrapperProps) {
     return (
-        <div className={cn("rounded-[8px] h-fit p-px bg-gradient-to-br from-[#4F4F4F] via-24 to-[#4F4F4F]", className)}>
+        <div className={cn("rounded-[8px] p-px bg-gradient-to-br from-[#4F4F4F] via-24 to-[#4F4F4F]", className)}>
             {children}
         </div>
     );

@@ -119,7 +119,7 @@ function PasswordDialog() {
 														<InputOTPSlot
 															key={index}
 															index={index}
-															className="size-[52px] border-none bg-[#4b4b53] !rounded-lg lg:text-base"
+															className="size-[52px] border-none bg-4b !rounded-lg lg:text-base"
 														/>
 													))}
 												</InputOTPGroup>

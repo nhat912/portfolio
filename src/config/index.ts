@@ -61,6 +61,10 @@ export const siteConfig = {
             href: '/about',
             as: 'About'
         },
+        projectHighlights: {
+            href: '/project-highlights',
+            as: 'Project Highlights'
+        },
         washUp: {
             href: '/wash-up',
             as: 'Wash Up',

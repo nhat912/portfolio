@@ -15,7 +15,7 @@ function AccordionSection({
     return (
         <AccordionItem
             value={value}
-            className="border-dashed border-b-0 border-t-2 border-[#4b4b53]"
+            className="border-dashed border-b-0 border-t-2 border-4b"
         >
             <AccordionTrigger
                 className="bg-gradient text-base font-semibold lg:text-2xl text-left gap-x-3"

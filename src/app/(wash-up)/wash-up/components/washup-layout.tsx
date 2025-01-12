@@ -1,6 +1,6 @@
 'use client'
 
-import WashUpSidebar from "@/src/app/(wash-up)/wash-up/components/sidebar";
+import WashUpSidebar from "@/src/app/(wash-up)/wash-up/components/washup-sidebar";
 import { Item } from "@/src/lib/wash-up/constants";
 import { PropsWithChildren } from "react";
 

@@ -6,7 +6,7 @@ export default async function TransparencySection() {
     const isMobile = await isMobileDevice()
 
     return (
-        <div className="py-6 lg:py-[60px] border-t-2 border-dashed border-[#4b4b53]">
+        <div className="py-6 lg:py-[60px] border-t-2 border-dashed border-4b">
             <div className="space-y-2 lg:space-y-4">
                 <ReviewTitle
                     value="Transparency"

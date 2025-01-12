@@ -208,7 +208,7 @@ function WireFrameDrawer({ selectId, open, onOpenChange }: WireFrameDrawerProps)
                                 {SLIDES[currentIndex]?.title}
                             </div>
 
-                            <div className="bg-[#4b4b53]  rounded-full flex items-center h-[31px] w-[112px] text-xs p-1">
+                            <div className="bg-4b  rounded-full flex items-center h-[31px] w-[112px] text-xs p-1">
                                 <button
                                     type="button"
                                     onClick={() => onClick('wf')}

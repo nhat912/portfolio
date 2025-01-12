@@ -2,7 +2,7 @@ import ReviewTitle from '@/src/app/(pages)/case-studies/vp-bank/components/revie
 
 export default function ConfidentialSection() {
     return (
-        <div className="pt-6 lg:pt-[60px] pb-[60px] border-t-2 border-dashed border-[#4b4b53]">
+        <div className="pt-6 lg:pt-[60px] pb-[60px] border-t-2 border-dashed border-4b">
             <div className="space-y-2 lg:space-y-4">
                 <ReviewTitle
                     value="Confidential"

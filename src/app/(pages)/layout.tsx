@@ -6,17 +6,21 @@ import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import '../globals.css';
 import { cn } from '@/src/lib/utils';
+import { isMobileDevice } from '@/src/helpers/isMobileDevice';
+import Sidebar from '@/src/app/(pages)/components/sidebar';
+import BottomNavigation from '@/src/app/(pages)/components/bottom-navigation';
 
 
 export const metadata: Metadata = siteConfig.seo;
 
-export default function RootLayout({
+export default async function RootLayout({
 	children
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
 	const cookieStore = cookies();
 	const keyValue = cookieStore.get('key')?.value;
+	const isMobile = await isMobileDevice()
 
 	return (
 		<html lang="en">
@@ -27,7 +31,17 @@ export default function RootLayout({
 				)}
 			>
 				<AppProvider keyValue={keyValue}>
-					{children}
+					{isMobile ? (
+						<div className='pb-[68px] text-sm'>
+							{children}
+							<BottomNavigation />
+						</div>
+					) : (
+						<div className="grid grid-cols-[84px,1fr] min-h-screen">
+							<Sidebar />
+							{children}
+						</div>
+					)}
 					<PasswordDialog />
 				</AppProvider>
 			</body>
