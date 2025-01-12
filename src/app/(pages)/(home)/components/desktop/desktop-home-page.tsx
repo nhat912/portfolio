@@ -1,6 +1,9 @@
+'use client'
+
 import { cn } from "@/src/lib/utils";
 import { Figma } from "lucide-react";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 export const Experience = [
     {
@@ -69,7 +72,12 @@ function DesktopHomePage() {
     return (
         <div className="p-10">
             <div className="flex gap-[11.5px] justify-between rounded-[48px] overflow-hidden">
-                <div className="flex-1 flex justify-between bg-0f rounded-[48px]">
+                <motion.div
+                    className="flex-1 flex justify-between bg-0f rounded-[48px]"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                >
                     <div className="flex-1 p-5 bg-24 rounded-br-[48px]">
                         <div className="w-full aspect-[8/10] h-auto relative rounded-[28px] overflow-hidden">
                             <Image
@@ -99,8 +107,13 @@ function DesktopHomePage() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="w-[40%] grow-0 shrink-0 bg-24 rounded-[48px] p-8 flex flex-col gap-8">
+                </motion.div>
+                <motion.div
+                    className="w-[40%] grow-0 shrink-0 bg-24 rounded-[48px] p-8 flex flex-col gap-8"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 0.5 }}
+                >
                     <HomePageTitle value="Experience" />
                     <div className="flex flex-col justify-between h-full">
                         {Experience.map((item, index) => (
@@ -125,10 +138,15 @@ function DesktopHomePage() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className="flex gap-3 justify-between rounded-[48px] overflow-hidden mt-3">
-                <div className="w-5/12 grow-0 shrink-0 rounded-[48px] bg-24 p-8 flex justify-between gap-x-10">
+                <motion.div
+                    className="w-5/12 grow-0 shrink-0 rounded-[48px] bg-24 p-8 flex justify-between gap-x-10"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2, duration: 0.5 }}
+                >
                     <div className="flex-1 space-y-3">
                         <HomePageTitle value="Tools I use" />
                         <div className="mt-auto text-d9">
@@ -160,8 +178,13 @@ function DesktopHomePage() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="flex-1 bg-24 rounded-[48px] p-8 space-y-3 flex flex-col justify-between">
+                </motion.div>
+                <motion.div
+                    className="flex-1 bg-24 rounded-[48px] p-8 space-y-3 flex flex-col justify-between"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.5, duration: 0.5 }}
+                >
                     <HomePageTitle value="Contact me via" />
                     <div className="grid grid-cols-4 gap-3 flex-1">
                         <div className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2]"}>
@@ -201,7 +224,7 @@ function DesktopHomePage() {
                             <div className="text-sm font-semibold">Dribble</div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div >
     );
