@@ -38,7 +38,7 @@ const InputOTPSlot = React.forwardRef<
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
   return (
-    <div className={cn("bg-gradient-to-tr from-secondary to-primary rounded-lg overflow-hidden", isActive ? 'p-px' : 'p-0')}>
+    <div className={cn("rounded-lg overflow-hidden", isActive ? 'p-px' : 'p-0')}>
       <div
         ref={ref}
         className={cn(

@@ -17,7 +17,7 @@ interface WashUpBreadcrumbsProps {
 
 function WashUpBreadcrumbs({ items }: WashUpBreadcrumbsProps) {
     return (
-        <nav className="flex items-center gap-x-5 absolute top-[108px] left-0">
+        <nav className="flex items-center gap-x-5 absolute top-[108px] left-4">
             <Link href={siteConfig.pageList.home.href} className="size-5 relative">
                 <Image
                     fill

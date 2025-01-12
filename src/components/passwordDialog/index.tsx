@@ -14,9 +14,16 @@ import {
 import { siteConfig } from '@/src/config';
 import { useAppContext } from '@/src/providers/app-provider';
 import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { cn } from '@/src/lib/utils';
+import Image from 'next/image';
 
 const errorMessage = 'Invalid code';
 const OTP_LENGTH = 4;
+enum Step {
+	FORM = 'FORM',
+	SUCCESS = 'SUCCESS'
+}
 
 const FormSchema = z.object({
 	key: z
@@ -28,6 +35,7 @@ const FormSchema = z.object({
 function PasswordDialog() {
 	const router = useRouter();
 	const pathName = usePathname();
+	const [step, setStep] = useState<Step>(Step.FORM)
 
 	const {
 		openPasswordDialog,
@@ -44,13 +52,16 @@ function PasswordDialog() {
 
 	const onSubmit = async (data: z.infer<typeof FormSchema>) => {
 		if (data.key === process.env.NEXT_PUBLIC_PRIVATE_CODE) {
-			onChangeOpenPasswordDialog(false);
 			await fetch(siteConfig.pageList.setKey.href, {
 				method: 'POST',
 				body: JSON.stringify({ key: data.key })
 			});
+			setStep(Step.SUCCESS);
 
-			router.refresh();
+			setTimeout(() => {
+				onChangeOpenPasswordDialog(false);
+				router.replace(pathName);
+			}, 2000);
 		} else {
 			form.setError('key', {
 				type: 'manual',
@@ -78,64 +89,91 @@ function PasswordDialog() {
 			onOpenChange={onChangeOpenPasswordDialog}
 		>
 			<DialogContent
-				className="w-[300px] lg:w-[400px] h-[185px] lg:h-[200px] p-0 flex flex-col text-sm lg:text-lg justify-center items-center bg-24 border-none rounded-lg"
+				className={cn("w-[410px] p-0 text-sm lg:text-lg bg-24 border-none !rounded-[24px] overflow-hidden", step === Step.SUCCESS ? "h-[190px]" : "h-[345px]")}
 				onInteractOutside={() => router.replace(pathName)}
 			>
-				<Form {...form}>
-					<form className="">
-						<div className="text-center">
-							<div className="space-x-1">
-								<span>Feel free to message me on</span>
-								<a
-									className="bg-gradient font-semibold"
-									href={siteConfig.contact.linkedin.href}
-								>
-									{siteConfig.contact.linkedin.as}
-								</a>
+				{step === Step.FORM ? (
+					<Form {...form}>
+						<form className="flex flex-col justify-center items-center gap-10">
+							<div className="flex flex-col justify-center items-center gap-4">
+								<div className="size-8 relative">
+									<Image
+										fill
+										src="/lock.svg"
+										alt="Lock" />
+								</div>
+								<div className="text-d9 font-semibold text-center">
+									Project highlights is locked
+								</div>
 							</div>
-							<div className="space-x-1">
-								<span>or send an</span>
-								<span className="font-semibold">Email</span>
-								<span>to get a code!</span>
-							</div>
-						</div>
 
-						<div className="mt-4">
-							<FormField
-								control={form.control}
-								name="key"
-								render={({ field }) => (
-									<FormItem className="grid place-items-center">
-										<FormControl>
-											<InputOTP
-												maxLength={OTP_LENGTH}
-												{...field}
-												onChange={handleOtpChange}
-											>
-												<InputOTPGroup className="gap-x-3">
-													{Array.from({
-														length: OTP_LENGTH
-													}).map((_, index) => (
-														<InputOTPSlot
-															key={index}
-															index={index}
-															className="size-[52px] border-none bg-4b !rounded-lg lg:text-base"
-														/>
-													))}
-												</InputOTPGroup>
-											</InputOTP>
-										</FormControl>
-										{codeErr && (
-											<div className="font-semibold text-red-500 text-sm lg:text-base">
-												{codeErr.message}
-											</div>
-										)}
-									</FormItem>
-								)}
-							/>
+							<div className="">
+								<FormField
+									control={form.control}
+									name="key"
+									render={({ field }) => (
+										<FormItem className="grid place-items-center">
+											<FormControl>
+												<InputOTP
+													maxLength={OTP_LENGTH}
+													{...field}
+													onChange={handleOtpChange}
+												>
+													<InputOTPGroup className="gap-x-3">
+														{Array.from({
+															length: OTP_LENGTH
+														}).map((_, index) => (
+															<InputOTPSlot
+																key={index}
+																index={index}
+																className={cn("size-[52px] border-2 bg-4b !rounded-lg lg:text-base", codeErr && 'border-[#F44235]')}
+															/>
+														))}
+													</InputOTPGroup>
+												</InputOTP>
+											</FormControl>
+										</FormItem>
+									)}
+								/>
+							</div>
+
+							<div className="text-center text-92 font-normal">
+								<div className="space-x-1">
+									<span>Feel free to message me on</span>
+									<a
+										className="text-gradient font-semibold"
+										href={siteConfig.contact.linkedin.href}
+									>
+										{siteConfig.contact.linkedin.as}
+									</a>
+								</div>
+								<div className="space-x-1">
+									<span>or send an</span>
+									<a
+										className="text-gradient font-semibold"
+										href={siteConfig.contact.email.href}
+									>
+										Email
+									</a>
+									<span>to get a code!</span>
+								</div>
+							</div>
+						</form>
+					</Form>
+				) : (
+					<div className="flex flex-col justify-center items-center gap-6">
+						<div className="size-8 relative">
+							<Image
+								fill
+								src="/lock-open.svg"
+								alt="Lock Open" />
 						</div>
-					</form>
-				</Form>
+						<div className="text-accent text-center">
+							Great! Now you can access
+							all these projects
+						</div>
+					</div>
+				)}
 			</DialogContent>
 		</Dialog>
 	);
