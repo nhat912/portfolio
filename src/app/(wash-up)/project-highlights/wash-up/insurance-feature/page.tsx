@@ -488,13 +488,6 @@ export default async function Page() {
                             If you&apos;re pulled over on the highway by traffic police and asked for your vehicle&apos;s insurance information, would it be easier to find it through multiple emails or an app?
                         </p>
                     </div>
-                    <div className="mt-10 relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
-                        {/* <Image
-                            fill
-                            src="/vehicle-wash-app/user-flow.png"
-                            alt="User Flow"
-                        /> */}
-                    </div>
                 </WashUpSection>
 
                 <WashUpSection
@@ -553,12 +546,12 @@ export default async function Page() {
                         <p>
                             The insurance management feature prioritizes easy access, a user-friendly interface, quick search tools, and automatic renewal reminders for maximum customer convenience. Below is a summary table showcasing the details of the Insurance Package, coverage period, owner information, and insured vehicle details.
                         </p>
-                        <div className="relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
-                            {/* <Image
-                            fill
-                            src="/vehicle-wash-app/user-flow.png"
-                            alt="User Flow"
-                        /> */}
+                        <div className="relative w-full h-[600px] rounded-[12px]">
+                            <Image
+                                fill
+                                src="/insurance-feature/uc.webp"
+                                alt="User Contracts"
+                            />
                         </div>
                     </div>
                 </WashUpSection>

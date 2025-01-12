@@ -76,7 +76,7 @@ function DesktopHomePage() {
                     className="flex-1 flex justify-between bg-0f rounded-[48px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
+                    transition={{ delay: 0.25, duration: 0.5 }}
                 >
                     <div className="flex-1 p-5 bg-24 rounded-br-[48px]">
                         <div className="w-full aspect-[8/10] h-auto relative rounded-[28px] overflow-hidden">
@@ -112,7 +112,7 @@ function DesktopHomePage() {
                     className="w-[40%] grow-0 shrink-0 bg-24 rounded-[48px] p-8 flex flex-col gap-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.5 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
                 >
                     <HomePageTitle value="Experience" />
                     <div className="flex flex-col justify-between h-full">
@@ -145,7 +145,7 @@ function DesktopHomePage() {
                     className="w-5/12 grow-0 shrink-0 rounded-[48px] bg-24 p-8 flex justify-between gap-x-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 2, duration: 0.5 }}
+                    transition={{ delay: 1, duration: 0.5 }}
                 >
                     <div className="flex-1 space-y-3">
                         <HomePageTitle value="Tools I use" />
@@ -183,7 +183,7 @@ function DesktopHomePage() {
                     className="flex-1 bg-24 rounded-[48px] p-8 space-y-3 flex flex-col justify-between"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 0.5 }}
+                    transition={{ delay: 0.75, duration: 0.5 }}
                 >
                     <HomePageTitle value="Contact me via" />
                     <div className="grid grid-cols-4 gap-3 flex-1">

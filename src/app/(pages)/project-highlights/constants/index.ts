@@ -44,7 +44,7 @@ export const ProjectHighLights = [
         title: 'Dakoli - B2B Ecommerce Platform',
         description: 'Your go-to platform for businesses and customers to shop a variety of products easily.',
         img: '/project-highlights/dk.webp',
-        isReady: true,
+        isReady: false,
         href: '/project-highlights/dakoli',
     },
 ]

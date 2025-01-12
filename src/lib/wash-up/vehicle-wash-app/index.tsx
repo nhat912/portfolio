@@ -417,12 +417,12 @@ export default function VehicleWashAppPage() {
                 title={""}
                 hasBottomBorder={false}
             >
-                <div className="relative w-full h-[408px] bg-gradient-to-r from-[#00416A] to-[#E4E5E6] rounded-[12px] overflow-hidden">
-                    {/* <Image
-                            fill
-                            src="/vehicle-wash-app/user-flow.png"
-                            alt="User Flow"
-                        /> */}
+                <div className="relative w-full h-[601.33px] rounded-[12px]">
+                    <Image
+                        fill
+                        src="/vehicle-wash-app/ud.webp"
+                        alt="UI Designer"
+                    />
                 </div>
             </WashUpSection>
         </WashUpLayout>

@@ -4,7 +4,7 @@ export const CaseStudies = [
         title: 'VP Bank App -  UX problems',
         description: 'I challenged myself to analyze UX improvements in the payroll banking app my company uses.',
         img: '/case-studies/vp.webp',
-        isReady: true,
+        isReady: false,
         href: '/case-studies/vp-bank-app',
     },
     {
