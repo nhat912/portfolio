@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
+import WashUpSection from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-section";
 import { cn } from "@/src/lib/utils";
 import Image from "next/image";
 import { useState } from "react";

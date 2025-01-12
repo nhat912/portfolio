@@ -1,5 +1,5 @@
-import WashUpTitle from "@/src/app/(wash-up)/wash-up/components/washup-title";
-import WashUpWrapper from "@/src/app/(wash-up)/wash-up/components/washup-wrapper";
+import WashUpTitle from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-title";
+import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
 import { cn } from "@/src/lib/utils";
 import { PropsWithChildren } from "react";
 

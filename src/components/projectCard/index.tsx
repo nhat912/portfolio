@@ -1,6 +1,6 @@
 'use client'
 
-import WashUpWrapper from "@/src/app/(wash-up)/wash-up/components/washup-wrapper";
+import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
 import { cn } from "@/src/lib/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -40,7 +40,7 @@ function ProjectCard({ img, title, description, isReady, href }: ProjectCardProp
                         <button
                             type="button"
                             onClick={() => isReady && router.push(href)}
-                            className={cn('rounded-[5.82px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs font-semibold', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
+                            className={cn('rounded-[5.82px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
                         >
                             {isReady ? 'Ready to view' : 'Coming soon'}
                         </button>

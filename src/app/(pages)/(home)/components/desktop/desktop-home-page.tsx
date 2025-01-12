@@ -71,7 +71,7 @@ function DesktopHomePage() {
             <div className="flex gap-[11.5px] justify-between rounded-[48px] overflow-hidden">
                 <div className="flex-1 flex justify-between bg-0f rounded-[48px]">
                     <div className="flex-1 p-5 bg-24 rounded-br-[48px]">
-                        <div className="w-full h-[570px] relative rounded-[28px] overflow-hidden">
+                        <div className="w-full aspect-[8/10] h-auto relative rounded-[28px] overflow-hidden">
                             <Image
                                 fill
                                 src="/home/images/hero.webp"
@@ -100,7 +100,7 @@ function DesktopHomePage() {
                         </div>
                     </div>
                 </div>
-                <div className="w-5/12 grow-0 shrink-0 bg-24 rounded-[48px] p-8 flex flex-col gap-8">
+                <div className="w-[40%] grow-0 shrink-0 bg-24 rounded-[48px] p-8 flex flex-col gap-8">
                     <HomePageTitle value="Experience" />
                     <div className="flex flex-col justify-between h-full">
                         {Experience.map((item, index) => (

@@ -1,4 +1,4 @@
-import WashUpPageSelector from "@/src/app/(wash-up)/wash-up/components/washup-page-selector";
+import WashUpPageSelector from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-page-selector";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 import Image from "next/image";
 import { PropsWithChildren } from "react";

@@ -13,7 +13,7 @@ export const ProjectHighLights = [
         description: 'Quickly book nearby motorbike and car washes with ease, wherever you are.',
         img: '/project-highlights/wuu.webp',
         isReady: true,
-        href: '/project-highlights/washup',
+        href: '/project-highlights/wash-up',
     },
     {
         id: 'Circa',

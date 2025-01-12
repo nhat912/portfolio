@@ -1,7 +1,7 @@
-import WashUpBreadcrumbs from "@/src/app/(wash-up)/wash-up/components/washup-breadcrumbs";
-import WashUpLayout from "@/src/app/(wash-up)/wash-up/components/washup-layout";
-import WashUpSection from "@/src/app/(wash-up)/wash-up/components/washup-section";
-import ProblemSolution from "@/src/app/(wash-up)/wash-up/insurance-feature/components/problem-solution";
+import WashUpBreadcrumbs from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-breadcrumbs";
+import WashUpLayout from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-layout";
+import WashUpSection from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-section";
+import ProblemSolution from "@/src/app/(wash-up)/project-highlights/wash-up/insurance-feature/components/problem-solution";
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
@@ -461,8 +461,8 @@ export default async function Page() {
         <>
             <WashUpBreadcrumbs items={[
                 {
-                    label: 'Project Highlights',
-                    href: '/wash-up',
+                    label: siteConfig.pageList.projectHighlights.as,
+                    href: siteConfig.pageList.projectHighlights.href,
                 },
                 {
                     label: siteConfig.pageList.insuranceFeature.as,

@@ -1,5 +1,5 @@
 import { Experience, HomePageTitle } from "@/src/app/(pages)/(home)/components/desktop/desktop-home-page";
-import WashUpWrapper from "@/src/app/(wash-up)/wash-up/components/washup-wrapper";
+import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
 import { cn } from "@/src/lib/utils";
 import { Figma } from "lucide-react";
 import Image from "next/image";

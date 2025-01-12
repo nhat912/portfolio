@@ -70,19 +70,19 @@ export const siteConfig = {
             as: 'Wash Up',
         },
         insuranceFeature: {
-            href: '/wash-up/insurance-feature',
+            href: '/project-highlights/wash-up/insurance-feature',
             as: 'Washup - Insurance feature'
         },
         technicianApp: {
-            href: '/wash-up/technician-app',
+            href: '/project-highlights/wash-up/technician-app',
             as: 'Washup - Technician app'
         },
         technicianOrder: {
-            href: '/wash-up/technician-order',
+            href: '/project-highlights/wash-up/technician-order',
             as: 'Washup - Technician order'
         },
         vehicleWashApp: {
-            href: '/wash-up/vehicle-wash-app',
+            href: '/project-highlights/wash-up/vehicle-wash-app',
             as: 'Washup - Vehicle wash app'
         },
         dakoli: {

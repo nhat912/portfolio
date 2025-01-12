@@ -36,7 +36,7 @@ function SidebarItem({ item }: SidebarItemProps) {
             onMouseEnter={() => setStatus(StatusEnum.hover)}
             onMouseLeave={() => setStatus(StatusEnum.normal)}
         >
-            <div className={cn("relative", currentStatus === StatusEnum.hover ? "size-10" : "size-5")}>
+            <div className={cn("relative", currentStatus === StatusEnum.hover ? "size-8" : "size-5")}>
                 <Image
                     fill
                     src={item.status[currentStatus].icon}

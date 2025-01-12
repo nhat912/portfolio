@@ -1,6 +1,7 @@
 'use client'
 
 import { siteConfig } from "@/src/config";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
@@ -24,11 +25,12 @@ function WashUpBreadcrumbs({ items }: WashUpBreadcrumbsProps) {
                     alt="home icon"
                 />
             </Link>
-            <span className="mx-2.5">&gt;</span>
+            <span className="mx-2.5"><ChevronRight /></span>
             {
                 items.map((item, index) => (
                     <Fragment key={index}>
-                        {index > 0 && <span className="mx-2.5">&gt;</span>}
+                        {index > 0 && <span className="mx-2.5">
+                            <ChevronRight /></span>}
                         {index === items.length - 1 ? (
                             <span className="text-f7 truncate">{item.label}</span>
                         ) : (

@@ -1,6 +1,6 @@
 'use client'
 
-import WashUpWrapper from "@/src/app/(wash-up)/wash-up/components/washup-wrapper";
+import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
 import { cn } from "@/src/lib/utils";
 import { WASHUP_FEATURES } from "@/src/lib/wash-up/constants";
 import Link from "next/link";
