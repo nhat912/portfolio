@@ -36,7 +36,15 @@ export const siteConfig = {
         email: {
             href: 'mailto:nhatnguyen.wk@gmail.com',
             as: 'nhatnguyen.wk@gmail.com'
-        }
+        },
+        behance: {
+            href: '/',
+            as: 'Behance'
+        },
+        dribble: {
+            href: '/',
+            as: 'Dribble'
+        },
     },
     url: 'http://jamesnguyendesign.com',
     mobileWidth: '(max-width: 640px)',

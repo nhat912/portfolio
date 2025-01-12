@@ -1,8 +1,12 @@
+'use client'
+
 import { Experience, HomePageTitle } from "@/src/app/(pages)/(home)/components/desktop/desktop-home-page";
 import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
+import { siteConfig } from "@/src/config";
 import { cn } from "@/src/lib/utils";
 import { Figma } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { PropsWithChildren } from "react";
 
 interface SectionWrapperProps extends PropsWithChildren {
@@ -101,7 +105,10 @@ function MobileHomePage() {
             <SectionWrapper>
                 <HomePageTitle value="Contact me via" />
                 <div className="mt-6 grid grid-cols-2 gap-3 flex-1">
-                    <div className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2] h-[87px]">
+                    <Link
+                        href={siteConfig.contact.linkedin.href} target="_blank"
+                        className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2] h-[87px]"
+                    >
                         <Image
                             src="/home/icons/li.svg"
                             alt="Linkedin"
@@ -109,8 +116,11 @@ function MobileHomePage() {
                             height={24}
                         />
                         <div className="text-sm font-semibold">Linkedin</div>
-                    </div>
-                    <div className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#C71610] h-[87px]">
+                    </Link>
+                    <Link
+                        href={siteConfig.contact.email.href} target="_blank"
+                        className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#C71610] h-[87px]"
+                    >
                         <Image
                             src="/home/icons/gm.svg"
                             alt="Email"
@@ -118,8 +128,11 @@ function MobileHomePage() {
                             height={24}
                         />
                         <div className="text-sm font-semibold">Email</div>
-                    </div>
-                    <div className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0057FF] h-[87px]">
+                    </Link>
+                    <Link
+                        href={siteConfig.contact.behance.href} target="_blank"
+                        className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0057FF] h-[87px]"
+                    >
                         <Image
                             src="/home/icons/be.svg"
                             alt="Behance"
@@ -127,8 +140,11 @@ function MobileHomePage() {
                             height={24}
                         />
                         <div className="text-sm font-semibold">Behance</div>
-                    </div>
-                    <div className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#EA4C89] h-[87px]">
+                    </Link>
+                    <Link
+                        href={siteConfig.contact.dribble.href} target="_blank"
+                        className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#EA4C89] h-[87px]"
+                    >
                         <Image
                             src="/home/icons/db.svg"
                             alt="Dribble"
@@ -136,7 +152,7 @@ function MobileHomePage() {
                             height={24}
                         />
                         <div className="text-sm font-semibold">Dribble</div>
-                    </div>
+                    </Link>
                 </div>
             </SectionWrapper>
         </div>

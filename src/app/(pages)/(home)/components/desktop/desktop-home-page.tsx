@@ -1,9 +1,11 @@
 'use client'
 
+import { siteConfig } from "@/src/config";
 import { cn } from "@/src/lib/utils";
+import { motion } from 'framer-motion';
 import { Figma } from "lucide-react";
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import Link from "next/link";
 
 export const Experience = [
     {
@@ -187,7 +189,10 @@ function DesktopHomePage() {
                 >
                     <HomePageTitle value="Contact me via" />
                     <div className="grid grid-cols-4 gap-3 flex-1">
-                        <div className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2]"}>
+                        <Link
+                            href={siteConfig.contact.linkedin.href} target="_blank"
+                            className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2]"
+                        >
                             <Image
                                 src='/home/icons/li.svg'
                                 alt='Linkedin'
@@ -195,8 +200,9 @@ function DesktopHomePage() {
                                 height={24}
                             />
                             <div className="text-sm font-semibold">Linkedin</div>
-                        </div>
-                        <div className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#C71610]"}>
+                        </Link>
+                        <Link href={siteConfig.contact.email.href} target="_blank"
+                            className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#C71610]"}>
                             <Image
                                 src='/home/icons/gm.svg'
                                 alt='Email'
@@ -204,8 +210,9 @@ function DesktopHomePage() {
                                 height={24}
                             />
                             <div className="text-sm font-semibold">Email</div>
-                        </div>
-                        <div className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0057FF]"}>
+                        </Link>
+                        <Link href={siteConfig.contact.behance.href} target="_blank"
+                            className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0057FF]"}>
                             <Image
                                 src='/home/icons/be.svg'
                                 alt='Behance'
@@ -213,8 +220,9 @@ function DesktopHomePage() {
                                 height={24}
                             />
                             <div className="text-sm font-semibold">Behance</div>
-                        </div>
-                        <div className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#EA4C89]"}>
+                        </Link>
+                        <Link href={siteConfig.contact.dribble.href} target="_blank"
+                            className={"rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#EA4C89]"}>
                             <Image
                                 src='/home/icons/db.svg'
                                 alt='Dribble'
@@ -222,7 +230,7 @@ function DesktopHomePage() {
                                 height={24}
                             />
                             <div className="text-sm font-semibold">Dribble</div>
-                        </div>
+                        </Link>
                     </div>
                 </motion.div>
             </div>
