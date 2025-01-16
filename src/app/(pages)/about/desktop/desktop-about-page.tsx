@@ -32,7 +32,7 @@ const DesktopProjectArea = [
 export default function DesktopAboutPage() {
     return (
         <div className="p-10 text-d9">
-            <div className="grid grid-cols-[62%,1fr] auto-rows-fr gap-x-3">
+            <div className="grid grid-cols-[54%,1fr] auto-rows-fr gap-x-3">
                 <AboutPageSection
                     title="More about me"
                     className="space-y-3"
@@ -116,12 +116,11 @@ export default function DesktopAboutPage() {
                     sectionClassName="h-full"
                 >
                     {Skills.map((item, index) => (
-                        <div key={index} className="flex items-center gap-x-3">
-                            <span>
+                        <div key={index} className="flex flex-wrap items-center gap-3">
+                            <span className="rounded-full px-5 py-3 bg-gradient-2 text-26 font-medium text-base whitespace-nowrap">
                                 {item.before}
                             </span>
-                            <span className="size-1 bg-f7 rounded-full"></span>
-                            <span>
+                            <span className="rounded-full px-5 py-3 bg-gradient-2 text-26 font-medium text-base whitespace-nowrap">
                                 {item.after}
                             </span>
                         </div>

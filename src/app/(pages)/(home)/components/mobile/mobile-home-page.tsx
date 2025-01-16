@@ -16,8 +16,8 @@ interface SectionWrapperProps extends PropsWithChildren {
 
 export function SectionWrapper({ children, wrapperClassName = '', divClassName = '' }: SectionWrapperProps) {
     return (
-        <WashUpWrapper className={cn("rounded-[28px] overflow-hidden", wrapperClassName)}>
-            <div className={cn("bg-24 px-4 py-5 rounded-[28px]", divClassName)}>
+        <WashUpWrapper className={cn("rounded-[20px] md:rounded-[24px] overflow-hidden", wrapperClassName)}>
+            <div className={cn("bg-24 px-4 py-5 rounded-[20px] md:rounded-[24px]", divClassName)}>
                 {children}
             </div>
         </WashUpWrapper>

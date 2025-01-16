@@ -149,11 +149,10 @@ export default function MobileAboutPage() {
             >
                 {Skills.map((item, index) => (
                     <div key={index} className="flex items-center gap-x-3">
-                        <span>
+                        <span className="rounded-full px-4 py-2 bg-gradient-2 text-26 font-medium text-xs whitespace-nowrap">
                             {item.before}
                         </span>
-                        <span className="size-1 bg-f7 rounded-full"></span>
-                        <span>
+                        <span className="rounded-full px-4 py-2 bg-gradient-2 text-26 font-medium text-xs whitespace-nowrap">
                             {item.after}
                         </span>
                     </div>

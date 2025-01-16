@@ -81,11 +81,12 @@ function DesktopHomePage() {
                     transition={{ delay: 0.25, duration: 0.5 }}
                 >
                     <div className="flex-1 p-5 bg-24 rounded-br-[24px]">
-                        <div className="w-full aspect-[8/10] h-auto relative rounded-[12px] overflow-hidden">
+                        <div className="w-full h-full relative rounded-[12px] overflow-hidden">
                             <Image
                                 fill
                                 src="/home/images/hero.webp"
                                 alt="Hero Image"
+                                className="object-cover"
                             />
                         </div>
                     </div>
@@ -94,7 +95,7 @@ function DesktopHomePage() {
                             <div className="p-8 flex-1">
                                 <h1 className="text-32 font-bold">Nhat Nguyen</h1>
                                 <h2 className="text-lg font-semibold text-92 mt-2">Product Designer</h2>
-                                <p className="mt-[26px] text-d9 text-balance">
+                                <p className="mt-5 text-d9 text-balance">
                                     With 2+ years of experience designing intuitive interfaces for pharmaceutical e-commerce platforms, I’ve boosted user engagement and satisfaction, helping attract nearly 200,000 users. I specialize in crafting seamless user journeys that enhance usability and align with business goals for impactful digital experiences.
                                 </p>
                             </div>
@@ -148,18 +149,18 @@ function DesktopHomePage() {
             </div>
             <div className="flex gap-3 justify-between rounded-[24px] overflow-hidden mt-3">
                 <motion.div
-                    className="w-5/12 grow-0 shrink-0 rounded-[24px] bg-24 p-8 flex justify-between gap-x-10"
+                    className="w-5/12 grow-0 shrink-0 rounded-[24px] bg-24 p-8 flex justify-between items-center gap-x-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 0.5 }}
                 >
-                    <div className="flex-1 space-y-3">
+                    <div className="flex-1 space-y-4">
                         <HomePageTitle value="Tools I use" />
                         <div className="mt-auto text-d9">
                             These are the tools I use to design interfaces, build prototypes, and collaborate effectively with teams.
                         </div>
                     </div>
-                    <div className="w-[210.5px] grow-0 shrink-0 flex justify-end gap-x-4">
+                    <div className="w-[210.5px] grow-0 shrink-0 flex justify-end items-center gap-x-4">
                         <div className="flex-1 bg-0f size-[135px] aspect-square rounded-[8px] grid place-items-center text-white">
                             <Figma size={72} />
                         </div>
@@ -186,7 +187,7 @@ function DesktopHomePage() {
                     </div>
                 </motion.div>
                 <motion.div
-                    className="flex-1 bg-24 rounded-[24px] p-8 space-y-3 flex flex-col justify-between"
+                    className="flex-1 bg-24 rounded-[24px] p-8 gap-5 flex flex-col justify-between"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.75, duration: 0.5 }}
