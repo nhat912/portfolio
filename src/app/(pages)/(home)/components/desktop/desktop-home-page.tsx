@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import { Figma } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export const Experience = [
     {
@@ -72,9 +71,6 @@ export function HomePageTitle({ value, className = '' }: { value: string; classN
 }
 
 function DesktopHomePage() {
-    const router = useRouter()
-
-
     return (
         <div className="p-10">
             <div className="flex gap-[11.5px] justify-between rounded-[24px] overflow-hidden">
