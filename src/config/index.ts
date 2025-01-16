@@ -30,7 +30,7 @@ export const siteConfig = {
     },
     contact: {
         linkedin: {
-            href: '/',
+            href: 'https://www.linkedin.com/in/nhatwork',
             as: 'Linkedin'
         },
         email: {
@@ -38,11 +38,11 @@ export const siteConfig = {
             as: 'nhatnguyen.wk@gmail.com'
         },
         behance: {
-            href: '/',
+            href: 'https://www.behance.net/nhat_nguyen_work',
             as: 'Behance'
         },
         dribble: {
-            href: '/',
+            href: 'https://dribbble.com/nhatnguyen_wk',
             as: 'Dribble'
         },
     },

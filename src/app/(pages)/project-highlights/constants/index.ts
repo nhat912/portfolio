@@ -19,7 +19,7 @@ export const ProjectHighLights = [
         id: 'Circa',
         title: 'Circa - B2C Medical Ecommerce',
         description: 'Seamlessly connect with trusted suppliers for all your medical essentials, delivered directly to you.',
-        img: '/project-highlights/ccc.webp',
+        img: '/project-highlights/cc.webp',
         isReady: false,
         href: '/project-highlights/circa',
     },

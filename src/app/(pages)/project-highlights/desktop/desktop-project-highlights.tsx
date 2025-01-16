@@ -1,162 +1,97 @@
 'use client'
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { EffectCoverflow, Pagination, Navigation } from 'swiper'
 
+import { useToast } from '@/hooks/use-toast';
+import { ProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
+import { cn } from '@/src/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import ProjectCard from '@/src/components/projectCard';
-import { ProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
-// import { ChevronLeft, ChevronRight } from 'lucide-react';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function DesktopProjectHighLightsPage() {
+    const router = useRouter();
+    const { toast } = useToast()
+
     return (
-        <main className="p-10">
+        <main className="p-10 overflow-hidden">
             <h1 className="text-32 font-bold text-f7 text-center">
-                Case Studies
+                Project Highlights
             </h1>
             <div className="mt-[60px] overflow-hidden">
-                <div className="w-fit grid grid-cols-2 mx-auto gap-8">
-                    {ProjectHighLights.map((project) => (
-                        <ProjectCard
-                            key={project.id}
-                            {...project}
-                        />
-                    ))}
-                </div>
-                {/* <Swiper
-                    effect={'coverflow'}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={'auto'}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 2.5,
-                    }}
-                    pagination={true}
-                    modules={[EffectCoverflow, Pagination]}
-                    className="swiper_container"
-                >
-                    {ProjectHighLights.map((project) => (
-                        <SwiperSlide key={project.id} className='!h-[306px] !w-[16rem] !relative'>
-                            <ProjectCard
-                                key={project.id}
-                                {...project}
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper> */}
-
-                {/* <Swiper
-                    effect={'coverflow'}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={'auto'}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 2.5,
-                    }}
-                    pagination={true}
-                    modules={[EffectCoverflow, Pagination]}
-                    className="mySwiper"
-                >
-                    {ProjectHighLights.map((project) => (
-                        <SwiperSlide key={project.id} className=''>
-                            <ProjectCard
-                                key={project.id}
-                                {...project}
-                            />
-                            <img src={project.img} alt="slide_image" />
-                        </SwiperSlide>
-                    ))}
-                </Swiper> */}
-                {/* <Swiper
+                <Swiper
                     grabCursor
                     centeredSlides
-                    effect={'coverflow'}
+                    preventClicks
+                    initialSlide={2}
+                    speed={600}
                     slidesPerView={'auto'}
+                    effect={'coverflow'}
                     coverflowEffect={{
                         rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 2.5,
-                    }}
-                    pagination={{ el: '.swiper-pagination', clickable: true }}
-                    navigation={{
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                        enabled: true,
-                    }}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
-                    className="swiper_container"
-                >
-                    {ProjectHighLights.map((project) => (
-                        <SwiperSlide key={project.id} className=''>
-                            <ProjectCard
-                                key={project.id}
-                                {...project}
-                            />
-                        </SwiperSlide>
-                    ))}
-
-                    <div className="slider-controler">
-                        <div className="swiper-button-prev slider-arrow">
-                            <ChevronLeft className="text-white fill-white" size={24} strokeWidth={2} />
-                        </div>
-                        <div className="swiper-button-next slider-arrow">
-                            <ChevronRight className="text-white fill-white" size={24} strokeWidth={2} />
-                        </div>
-                        <div className="swiper-pagination"></div>
-                    </div>
-                </Swiper> */}
-                {/* <Swiper
-                    loop
-                    grabCursor
-                    centeredSlides
-                    slidesPerView={'auto'}
-                    effect={'coverflow'}
-                    coverflowEffect={{
-                        rotate: 50,
-                        stretch: 0,
-                        depth: 200,
-                        modifier: 2.5,
+                        stretch: 80,
+                        depth: 350,
+                        modifier: 1,
                         slideShadows: true,
                     }}
+                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    className="!h-[379px] md:!h-[506.5px] lg:!h-[628px] !relative !w-full"
                     pagination={{ el: '.swiper-pagination', clickable: true }}
                     navigation={{
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                         enabled: true,
+
                     }}
-                    modules={[
-                        EffectCoverflow,
-                        Pagination, Navigation]}
-                    className="swiper_container !relative w-full !h-[628px]"
                 >
-                    {ProjectHighLights.map((project) => (
-                        <SwiperSlide key={project.id} className='!relative !w-[544px] !h-[516px]'>
-                            <ProjectCard
-                                key={project.id}
-                                {...project}
-                            />
+                    {ProjectHighLights.map(({ id, img, title, description, isReady, href }) => (
+                        <SwiperSlide key={id} className='rounded-[16px] md:rounded-[24px] lg:rounded-[32px] !w-[272px] !h-[267px] md:!w-[408px] md:!h-[394.5px] lg:!w-[544px] lg:!h-[516px] !relative overflow-hidden'>
+                            <div className="w-full h-[153px] md:h-[229.5px] lg:h-[306px] relative rounded-t-[32px]">
+                                <Image
+                                    fill
+                                    src={img}
+                                    alt={title}
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="py-4 md:py-5 lg:py-6 px-5 md:px-8 lg:px-10 bg-24 h-full">
+                                <div className="space-y-2 text-center">
+                                    <div className="text-xs md:text-lg lg:text-2xl font-bold md:font-semibold lg:font-bold text-f7">
+                                        {title}
+                                    </div>
+                                    <div className="text-d9 text-pretty lg:text-lg md:text-sm text-2xs">
+                                        {description}
+                                    </div>
+                                </div>
+                                <div className="mt-2 md:mt-4 lg:mt-5 flex justify-center">
+                                    <button
+                                        type="button"
+                                        onClick={() => isReady ? router.push(href) : toast({
+                                            description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
+                                        })}
+                                        className={cn('rounded-[4px] md:rounded-[5.82px] lg:rounded-[8px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
+                                    >
+                                        {isReady ? 'Ready to view' : 'Coming soon'}
+                                    </button>
+                                </div>
+                            </div>
                         </SwiperSlide>
                     ))}
 
-                    <div className="slider-controller relative bottom-4 flex items-center justify-center">
-                        <div className="swiper-button-prev slider-arrow text-white left-1">
-                            <ChevronLeft className="text-white fill-white" size={24} strokeWidth={2} />
+                    <div className="slider-controller">
+                        <div className="swiper-button-prev slider-arrow">
+                            <ChevronLeft className="" size={38} strokeWidth={2} />
                         </div>
-                        <div className="swiper-button-next slider-arrow text-white right-1">
-                            <ChevronRight className="text-white fill-white" size={24} strokeWidth={2} />
+                        <div className="swiper-button-next slider-arrow">
+                            <ChevronRight className="" size={38} strokeWidth={2} />
                         </div>
                         <div className="swiper-pagination"></div>
                     </div>
-                </Swiper> */}
+                </Swiper>
             </div>
         </main>
     )

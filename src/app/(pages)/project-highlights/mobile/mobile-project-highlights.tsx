@@ -7,10 +7,11 @@ export default function MobileProjectHighLightsPage() {
             <h1 className="text-lg font-semibold text-f7 text-center">
                 Project HighLights
             </h1>
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 flex flex-col space-y-6 items-center">
                 {ProjectHighLights.map((project) => (
                     <ProjectCard
                         key={project.id}
+                        className="!flex-1 w-full"
                         {...project}
                     />
                 ))}

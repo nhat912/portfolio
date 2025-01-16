@@ -9,6 +9,7 @@ import { cn } from '@/src/lib/utils';
 import { isMobileDevice } from '@/src/helpers/isMobileDevice';
 import Sidebar from '@/src/app/(pages)/components/sidebar';
 import BottomNavigation from '@/src/app/(pages)/components/bottom-navigation';
+import { Toaster } from '@/components/ui/toaster';
 
 
 export const metadata: Metadata = siteConfig.seo;
@@ -43,6 +44,7 @@ export default async function RootLayout({
 						</div>
 					)}
 					<PasswordDialog />
+					<Toaster />
 				</AppProvider>
 			</body>
 		</html>
