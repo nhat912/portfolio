@@ -1,28 +1,12 @@
 'use client'
 
 import { Experience, HomePageTitle } from "@/src/app/(pages)/(home)/components/desktop/desktop-home-page";
-import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
+import { SectionWrapper } from "@/src/components/sectionWrapper";
 import { siteConfig } from "@/src/config";
 import { cn } from "@/src/lib/utils";
 import { Figma } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { PropsWithChildren } from "react";
-
-interface SectionWrapperProps extends PropsWithChildren {
-    wrapperClassName?: string;
-    divClassName?: string;
-}
-
-export function SectionWrapper({ children, wrapperClassName = '', divClassName = '' }: SectionWrapperProps) {
-    return (
-        <WashUpWrapper className={cn("rounded-[20px] md:rounded-[24px] overflow-hidden", wrapperClassName)}>
-            <div className={cn("bg-24 px-4 py-5 rounded-[20px] md:rounded-[24px]", divClassName)}>
-                {children}
-            </div>
-        </WashUpWrapper>
-    );
-}
 
 function MobileHomePage() {
     return (
@@ -57,12 +41,12 @@ function MobileHomePage() {
                                     alt="Company Logo"
                                 />
                             </div>
-                            <div className="flex-1 flex flex-col justify-between">
-                                <div className="flex justify-between gap-x-2">
+                            <div className="flex-1 flex flex-col justify-between text-xs">
+                                <div className="flex justify-between gap-x-2 font-semibold text-f7">
                                     <div className="">{item.name}</div>
                                     <div className="">{item.role}</div>
                                 </div>
-                                <div className="mt-auto flex justify-between gap-x-2">
+                                <div className="mt-auto flex justify-between gap-x-2 text-2xs text-92">
                                     <div className="">{item.date}</div>
                                     {!!item.mode && <div className="">{item.mode}</div>}
                                 </div>

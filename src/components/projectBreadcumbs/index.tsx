@@ -11,11 +11,11 @@ interface BreadCrumbItem {
     href?: string;
 }
 
-interface WashUpBreadcrumbsProps {
+interface ProjectBreadcrumbsProps {
     items: BreadCrumbItem[]
 }
 
-function WashUpBreadcrumbs({ items }: WashUpBreadcrumbsProps) {
+function ProjectBreadcrumbs({ items }: ProjectBreadcrumbsProps) {
     return (
         <nav className="flex items-center gap-x-5 absolute top-[108px] left-4">
             <Link href={siteConfig.pageList.home.href} className="size-5 relative">
@@ -45,4 +45,4 @@ function WashUpBreadcrumbs({ items }: WashUpBreadcrumbsProps) {
     );
 }
 
-export default WashUpBreadcrumbs;
+export default ProjectBreadcrumbs;

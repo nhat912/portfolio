@@ -1,6 +1,6 @@
-import WashUpBreadcrumbs from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-breadcrumbs";
-import WashUpLayout from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-layout";
-import WashUpSection from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-section";
+import ProjectBreadcrumbs from "@/src/components/projectBreadcumbs";
+import ProjectLayout from "@/src/components/projectLayout";
+import ProjectSectionWrapper from "@/src/components/projectSectionWrapper";
 import ProblemSolution from "@/src/app/(wash-up)/project-highlights/wash-up/insurance-feature/components/problem-solution";
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import QualityImage from "@/src/components/qualityImage";
@@ -9,10 +9,10 @@ import Title from "@/src/components/title";
 import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import { siteConfig } from "@/src/config";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
-import { Item } from "@/src/lib/wash-up/constants";
 import { Metadata } from "next";
 import Image from "next/image";
 import { Fragment } from "react";
+import { Item } from "@/src/utils";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
@@ -459,7 +459,7 @@ export default async function Page() {
 
     return (
         <>
-            <WashUpBreadcrumbs items={[
+            <ProjectBreadcrumbs items={[
                 {
                     label: siteConfig.pageList.projectHighlights.as,
                     href: siteConfig.pageList.projectHighlights.href,
@@ -468,10 +468,10 @@ export default async function Page() {
                     label: siteConfig.pageList.insuranceFeature.as,
                 },
             ]} />
-            <WashUpLayout
+            <ProjectLayout
                 menu={insuranceFeatureMenu}
             >
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={insuranceFeatureMenu[0].id}
                     tag='h1'
                     title='Insurance Feature'
@@ -488,9 +488,9 @@ export default async function Page() {
                             If you&apos;re pulled over on the highway by traffic police and asked for your vehicle&apos;s insurance information, would it be easier to find it through multiple emails or an app?
                         </p>
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={insuranceFeatureMenu[1].id}
                     title={insuranceFeatureMenu[1].title}
                 >
@@ -517,9 +517,9 @@ export default async function Page() {
                             </div>
                         ))}
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={insuranceFeatureMenu[2].id}
                     title={insuranceFeatureMenu[2].title}
                 >
@@ -530,7 +530,7 @@ export default async function Page() {
                             alt="User flow"
                         />
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
                 <ProblemSolution
                     id={insuranceFeatureMenu[3].id}
@@ -538,7 +538,7 @@ export default async function Page() {
                     items={problemsSolutions}
                 />
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={insuranceFeatureMenu[4].id}
                     title={insuranceFeatureMenu[4].title}
                 >
@@ -554,9 +554,9 @@ export default async function Page() {
                             />
                         </div>
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={insuranceFeatureMenu[5].id}
                     title={insuranceFeatureMenu[5].title}
                 >
@@ -565,8 +565,8 @@ export default async function Page() {
                             Finally, the app&apos;s insurance sales capabilities provide a comprehensive solution for purchasing and managing insurance policies. With research tools, real-time support and automatic renewal reminders, the app increases convenience and customer satisfaction. By streamlining the insurance process, saving time, and improving accessibility, the app simplifies insurance administration and fosters more engaging interactions between insurers and their customers.
                         </p>
                     </div>
-                </WashUpSection>
-            </WashUpLayout>
+                </ProjectSectionWrapper>
+            </ProjectLayout>
         </>
     )
 }

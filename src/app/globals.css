@@ -100,6 +100,10 @@ body {
 		@apply bg-gradient-to-r from-[#CE80FF] via-[#80F0FF] to-[#B1FF80];
 	}
 
+	.section-border {
+		@apply bg-gradient-to-br from-[#4F4F4F] via-24 to-[#4F4F4F] p-px;
+	}
+
 	.slider-controller {
 		position: relative;
 		bottom: 2.5rem;

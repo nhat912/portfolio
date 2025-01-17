@@ -1,7 +1,7 @@
 'use client'
 
-import WashUpLayout from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-layout";
-import WashUpSection from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-section";
+import ProjectLayout from "@/src/components/projectLayout";
+import ProjectSectionWrapper from "@/src/components/projectSectionWrapper";
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
@@ -9,9 +9,9 @@ import Title from "@/src/components/title";
 import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import { siteConfig } from "@/src/config";
 import { useClientMediaQuery } from "@/src/helpers/useClientMediaQuery";
-import { Item } from "@/src/lib/wash-up/constants";
 import Image from "next/image";
 import { Fragment } from "react";
+import { Item } from "@/src/utils";
 
 const vehicleWashAppMenu: Item[] = [
     {
@@ -296,10 +296,10 @@ export default function VehicleWashAppPage() {
     }
 
     return (
-        <WashUpLayout
+        <ProjectLayout
             menu={vehicleWashAppMenu}
         >
-            <WashUpSection
+            <ProjectSectionWrapper
                 id={vehicleWashAppMenu[0].id}
                 tag='h1'
                 title='Vehicle wash app'
@@ -322,9 +322,9 @@ export default function VehicleWashAppPage() {
                         alt="vehicle-wash-app"
                     />
                 </div>
-            </WashUpSection>
+            </ProjectSectionWrapper>
 
-            <WashUpSection
+            <ProjectSectionWrapper
                 id={vehicleWashAppMenu[1].id}
 
                 title={vehicleWashAppMenu[1].title}
@@ -352,9 +352,9 @@ export default function VehicleWashAppPage() {
                         </div>
                     ))}
                 </div>
-            </WashUpSection>
+            </ProjectSectionWrapper>
 
-            <WashUpSection
+            <ProjectSectionWrapper
                 id={vehicleWashAppMenu[2].id}
 
                 title={vehicleWashAppMenu[2].title}
@@ -382,9 +382,9 @@ export default function VehicleWashAppPage() {
                         </div>
                     ))}
                 </div>
-            </WashUpSection>
+            </ProjectSectionWrapper>
 
-            <WashUpSection
+            <ProjectSectionWrapper
                 id={vehicleWashAppMenu[3].id}
 
                 title={vehicleWashAppMenu[3].title}
@@ -396,9 +396,9 @@ export default function VehicleWashAppPage() {
                         alt="User Journeys"
                     />
                 </div>
-            </WashUpSection>
+            </ProjectSectionWrapper>
 
-            <WashUpSection
+            <ProjectSectionWrapper
                 id={vehicleWashAppMenu[4].id}
 
                 title={vehicleWashAppMenu[4].title}
@@ -410,9 +410,9 @@ export default function VehicleWashAppPage() {
                         alt="User Flow"
                     />
                 </div>
-            </WashUpSection>
+            </ProjectSectionWrapper>
 
-            <WashUpSection
+            <ProjectSectionWrapper
                 id={vehicleWashAppMenu[5].id}
                 title={""}
                 hasBottomBorder={false}
@@ -424,7 +424,7 @@ export default function VehicleWashAppPage() {
                         alt="UI Designer"
                     />
                 </div>
-            </WashUpSection>
-        </WashUpLayout>
+            </ProjectSectionWrapper>
+        </ProjectLayout>
     )
 }

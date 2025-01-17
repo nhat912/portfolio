@@ -1,4 +1,4 @@
-import { WASHUP_FEATURES } from "@/src/lib/wash-up/constants";
+import { WASHUP_FEATURES } from "@/src/utils";
 import { redirect } from "next/navigation";
 
 export default function Page() {

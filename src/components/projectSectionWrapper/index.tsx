@@ -1,9 +1,9 @@
-import WashUpTitle from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-title";
-import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
+import SectionTitle from "@/src/components/sectionTitle";
+import BorderGradientWrapper from "@/src/components/borderGradientWrapper";
 import { cn } from "@/src/lib/utils";
 import { PropsWithChildren } from "react";
 
-interface WashUpSectionProps extends PropsWithChildren {
+interface ProjectSectionWrapperProps extends PropsWithChildren {
     className?: string
     tag?: keyof JSX.IntrinsicElements;
     title: string;
@@ -12,11 +12,11 @@ interface WashUpSectionProps extends PropsWithChildren {
     titleClassName?: string
 }
 
-function WashUpSection({ id, tag = 'h2', title, children, className = '', hasBottomBorder = true, titleClassName = '' }: WashUpSectionProps) {
+function ProjectSectionWrapper({ id, tag = 'h2', title, children, className = '', hasBottomBorder = true, titleClassName = '' }: ProjectSectionWrapperProps) {
     return (
-        <WashUpWrapper className="w-full">
+        <BorderGradientWrapper className="w-full">
             <section className={cn("p-8 rounded-[8px] bg-24 text-lg", className)}>
-                <WashUpTitle
+                <SectionTitle
                     id={id}
                     tag={tag}
                     value={title}
@@ -25,8 +25,8 @@ function WashUpSection({ id, tag = 'h2', title, children, className = '', hasBot
                 />
                 {children}
             </section>
-        </WashUpWrapper>
+        </BorderGradientWrapper>
     );
 }
 
-export default WashUpSection;
+export default ProjectSectionWrapper;

@@ -1,6 +1,6 @@
-import WashUpBreadcrumbs from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-breadcrumbs";
-import WashUpLayout from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-layout";
-import WashUpSection from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-section";
+import ProjectBreadcrumbs from "@/src/components/projectBreadcumbs";
+import ProjectLayout from "@/src/components/projectLayout";
+import ProjectSectionWrapper from "@/src/components/projectSectionWrapper";
 import ChildSectionLayout from "@/src/components/childSectionLayout";
 import QualityImage from "@/src/components/qualityImage";
 import SubChildSectionLayout from "@/src/components/subChildSectionLayout";
@@ -9,10 +9,10 @@ import WashUpPageFooter from "@/src/components/washUpPageFooter";
 import { siteConfig } from "@/src/config";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 import { cn } from "@/src/lib/utils";
-import { Item } from "@/src/lib/wash-up/constants";
 import { Metadata } from "next";
 import Image from "next/image";
 import { Fragment } from "react";
+import { Item } from "@/src/utils";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
@@ -314,7 +314,7 @@ export default async function Page() {
 
     return (
         <>
-            <WashUpBreadcrumbs items={[
+            <ProjectBreadcrumbs items={[
                 {
                     label: siteConfig.pageList.projectHighlights.as,
                     href: siteConfig.pageList.projectHighlights.href,
@@ -323,10 +323,10 @@ export default async function Page() {
                     label: siteConfig.pageList.technicianApp.as,
                 },
             ]} />
-            <WashUpLayout
+            <ProjectLayout
                 menu={technicianAppMenu}
             >
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[0].id}
                     tag='h1'
                     title='Technician app'
@@ -344,9 +344,9 @@ export default async function Page() {
                             alt="Technician App"
                         />
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[1].id}
                     title={technicianAppMenu[1].title}
                 >
@@ -371,9 +371,9 @@ export default async function Page() {
                             </div>
                         ))}
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[2].id}
                     title={technicianAppMenu[2].title}
                 >
@@ -398,9 +398,9 @@ export default async function Page() {
                             </div>
                         ))}
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[3].id}
                     title={technicianAppMenu[3].title}
                 >
@@ -411,9 +411,9 @@ export default async function Page() {
                             alt="User Journeys"
                         />
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[4].id}
                     title={technicianAppMenu[4].title}
                 >
@@ -424,9 +424,9 @@ export default async function Page() {
                             alt="User flow"
                         />
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[5].id}
                     title={technicianAppMenu[5].title}
                     className="px-0 pb-0"
@@ -454,9 +454,9 @@ export default async function Page() {
                             </div>
                         ))}
                     </div>
-                </WashUpSection>
+                </ProjectSectionWrapper>
 
-                <WashUpSection
+                <ProjectSectionWrapper
                     id={technicianAppMenu[6].id}
                     title={technicianAppMenu[6].title}
                 >
@@ -472,8 +472,8 @@ export default async function Page() {
                             />
                         </div>
                     </div>
-                </WashUpSection>
-            </WashUpLayout>
+                </ProjectSectionWrapper>
+            </ProjectLayout>
         </>
     )
 }

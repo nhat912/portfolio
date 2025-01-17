@@ -36,7 +36,7 @@ export default function DesktopAboutPage() {
                 <AboutPageSection
                     title="More about me"
                     className="space-y-3"
-                    wrapperClassName="pt-8 px-8 h-full"
+                    divClassName="pt-8 px-8 h-full"
                     sectionClassName="h-full"
                 >
                     <p>
@@ -52,7 +52,7 @@ export default function DesktopAboutPage() {
                 <AboutPageSection
                     title="Education"
                     className="space-y-3"
-                    wrapperClassName="p-8"
+                    divClassName="p-8"
                     sectionClassName="h-full"
                 >
                     <div className="relative w-full h-[237.23px] rounded-[4.84px]">
@@ -112,7 +112,7 @@ export default function DesktopAboutPage() {
                 <AboutPageSection
                     title="Skills"
                     className="space-y-4 text-f7"
-                    wrapperClassName="pt-8 px-8 h-full"
+                    divClassName="pt-8 px-8 h-full"
                     sectionClassName="h-full"
                 >
                     {Skills.map((item, index) => (
@@ -130,7 +130,7 @@ export default function DesktopAboutPage() {
                 <AboutPageSection
                     title="Project area"
                     className="space-y-3"
-                    wrapperClassName="pt-8 px-8 h-full"
+                    divClassName="pt-8 px-8 h-full"
                     sectionClassName="h-full"
                 >
                     {DesktopProjectArea.map((item, index) => (

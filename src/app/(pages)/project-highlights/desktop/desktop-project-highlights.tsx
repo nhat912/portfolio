@@ -18,7 +18,7 @@ export default function DesktopProjectHighLightsPage() {
     const { toast } = useToast()
 
     return (
-        <main className="p-10 overflow-hidden">
+        <main className="p-10 overflow-hidden flex flex-col justify-center">
             <h1 className="text-32 font-bold text-f7 text-center">
                 Project Highlights
             </h1>

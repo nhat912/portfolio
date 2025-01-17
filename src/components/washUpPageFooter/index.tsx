@@ -4,7 +4,7 @@ import ChildSectionLayout from '@/src/components/childSectionLayout';
 import FeatureCard from '@/src/components/featureCard';
 import FooterNote from '@/src/components/footerNote';
 import { cn } from '@/src/lib/utils';
-import { WASHUP_FEATURES } from '@/src/lib/wash-up/constants';
+import { WASHUP_FEATURES } from '@/src/utils';
 import { usePathname } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 

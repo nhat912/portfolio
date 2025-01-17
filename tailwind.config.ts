@@ -13,6 +13,7 @@ const config: Config = {
 	theme: {
 		screens: {
 			'xs': '390px',
+			'3xl': '1920px',
 			...defaultTheme.screens,
 		},
 		container: {

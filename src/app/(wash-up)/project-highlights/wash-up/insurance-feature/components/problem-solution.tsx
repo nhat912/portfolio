@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import WashUpSection from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-section";
+import ProjectSectionWrapper from "@/src/components/projectSectionWrapper";
 import { cn } from "@/src/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
@@ -73,7 +73,7 @@ function ProblemSolutionItem({
 function ProblemSolution({ id, title, items }: ProblemSolutionProps) {
 
     return (
-        <WashUpSection
+        <ProjectSectionWrapper
             id={id}
             title={title}
         >
@@ -86,7 +86,7 @@ function ProblemSolution({ id, title, items }: ProblemSolutionProps) {
                     />
                 ))}
             </div>
-        </WashUpSection>
+        </ProjectSectionWrapper>
     );
 }
 

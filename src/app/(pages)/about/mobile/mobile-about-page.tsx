@@ -1,5 +1,5 @@
 import { HomePageTitle } from "@/src/app/(pages)/(home)/components/desktop/desktop-home-page";
-import { SectionWrapper } from "@/src/app/(pages)/(home)/components/mobile/mobile-home-page";
+import { SectionWrapper } from "@/src/components/sectionWrapper";
 import { cn } from "@/src/lib/utils";
 import Image from "next/image";
 import { PropsWithChildren } from "react";
@@ -55,15 +55,15 @@ const MobileProjectArea = [
 interface AboutPageSectionProps extends PropsWithChildren {
     title: string;
     className?: string;
-    wrapperClassName?: string;
+    divClassName?: string;
     sectionClassName?: string;
 }
 
-export function AboutPageSection({ title, children, className = '', wrapperClassName = '', sectionClassName = '' }: AboutPageSectionProps) {
+export function AboutPageSection({ title, children, className = '', divClassName = '', sectionClassName = '' }: AboutPageSectionProps) {
     return (
         <SectionWrapper
             wrapperClassName={cn(sectionClassName)}
-            divClassName={cn(wrapperClassName)}>
+            divClassName={cn(divClassName)}>
             <HomePageTitle value={title} />
             <div className={cn('mt-6 lg:mt-5', className)}>
                 {children}

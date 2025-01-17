@@ -1,12 +1,12 @@
 import { cn } from "@/src/lib/utils";
-import { Item } from "@/src/lib/wash-up/constants";
+import { Item } from "@/src/utils";
 import { useEffect, useState } from "react";
 
-export interface WashUpSidebarProps {
+export interface ProjectSidebarProps {
     items: Item[]
 }
 
-function WashUpSidebar({ items }: WashUpSidebarProps) {
+function ProjectSidebar({ items }: ProjectSidebarProps) {
     const [activeId, setActiveId] = useState<string>(items[0].id);
 
     useEffect(() => {
@@ -88,4 +88,4 @@ function WashUpSidebar({ items }: WashUpSidebarProps) {
     );
 }
 
-export default WashUpSidebar;
+export default ProjectSidebar;

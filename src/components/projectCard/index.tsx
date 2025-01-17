@@ -1,7 +1,7 @@
 'use client'
 
 import { useToast } from "@/hooks/use-toast";
-import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
+import BorderGradientWrapper from "@/src/components/borderGradientWrapper";
 import { cn } from "@/src/lib/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -20,7 +20,7 @@ function ProjectCard({ img, title, description, isReady, href, className = '' }:
     const { toast } = useToast()
 
     return (
-        <WashUpWrapper className={cn("rounded-[16px] md:rounded-[24px] lg:rounded-[32px] w-[272px] h-[267px] md:w-[408px] md:h-[394.5px] lg:w-[544px] lg:h-[516px]", className)}>
+        <BorderGradientWrapper className={cn("rounded-[16px] md:rounded-[24px] lg:rounded-[32px] w-[272px] h-[267px] md:w-[408px] md:h-[394.5px] lg:w-[544px] lg:h-[516px]", className)}>
             <div className="bg-24 rounded-[16px] md:rounded-[24px] lg:rounded-[32px] overflow-hidden">
                 <div className="w-full overflow-hidden h-[153px] md:h-[229.5px] lg:h-[306px] relative">
                     <Image
@@ -55,7 +55,7 @@ function ProjectCard({ img, title, description, isReady, href, className = '' }:
                     </div>
                 </div>
             </div>
-        </WashUpWrapper>
+        </BorderGradientWrapper>
     );
 }
 

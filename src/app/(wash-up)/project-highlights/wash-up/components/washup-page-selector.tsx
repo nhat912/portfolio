@@ -1,8 +1,8 @@
 'use client'
 
-import WashUpWrapper from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-wrapper";
+import BorderGradientWrapper from "@/src/components/borderGradientWrapper";
 import { cn } from "@/src/lib/utils";
-import { WASHUP_FEATURES } from "@/src/lib/wash-up/constants";
+import { WASHUP_FEATURES } from "@/src/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,7 +11,7 @@ function WashUpPageSelector() {
     const pathName = usePathname()
 
     return (
-        <WashUpWrapper className="flex-1">
+        <BorderGradientWrapper className="flex-1">
             <div className="flex justify-around items-center bg-24 h-[100px] w-full rounded-md">
                 {WASHUP_FEATURES.map((page, index) => (
                     <Link key={index} href={page.href}
@@ -21,7 +21,7 @@ function WashUpPageSelector() {
                     </Link>
                 ))}
             </div>
-        </WashUpWrapper>
+        </BorderGradientWrapper>
     );
 }
 
