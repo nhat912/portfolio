@@ -1,9 +1,9 @@
 'use client'
 
 import { useToast } from '@/hooks/use-toast';
-import { ProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
+import { DesktopProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
 import { cn } from '@/src/lib/utils';
-import { useAppContext } from '@/src/providers/app-provider';
+// import { useAppContext } from '@/src/providers/app-provider';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -13,11 +13,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useRef } from 'react';
+import { Swiper as SwiperType } from 'swiper/types';
 
 export default function DesktopProjectHighLightsPage() {
     const router = useRouter();
     const { toast } = useToast();
-    const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext();
+    const swiperRef = useRef<SwiperType | null>(null);
+    // const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext();
 
     return (
         <main className="p-10 overflow-hidden flex flex-col justify-center">
@@ -51,9 +54,16 @@ export default function DesktopProjectHighLightsPage() {
                         enabled: true,
 
                     }}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper;
+                    }}
                 >
-                    {ProjectHighLights.map(({ id, img, title, description, isReady, href }) => (
-                        <SwiperSlide key={id} className='rounded-[16px] md:rounded-[24px] lg:rounded-[32px] !w-[272px] !h-[267px] md:!w-[408px] md:!h-[394.5px] lg:!w-[544px] lg:!h-[516px] !relative overflow-hidden'>
+                    {DesktopProjectHighLights.map(({ id, img, title, description, isReady, href }, index) => (
+                        <SwiperSlide
+                            key={id}
+                            className='rounded-[16px] md:rounded-[24px] lg:rounded-[32px] !w-[272px] !h-[267px] md:!w-[408px] md:!h-[394.5px] lg:!w-[544px] lg:!h-[516px] !relative overflow-hidden'
+                            onClick={() => swiperRef.current?.slideTo(index)}
+                        >
                             <div className="w-full h-[153px] md:h-[229.5px] lg:h-[306px] relative rounded-t-[32px]">
                                 <Image
                                     fill
@@ -76,18 +86,18 @@ export default function DesktopProjectHighLightsPage() {
                                         type="button"
                                         onClick={() => {
                                             if (isReady) {
-                                                if (!keyValue) {
-                                                    onChangeCbUrl(href)
-                                                    onChangeOpenPasswordDialog(true);
-                                                    return;
-                                                }
+                                                // if (!keyValue) {
+                                                //     onChangeCbUrl(href)
+                                                //     onChangeOpenPasswordDialog(true);
+                                                //     return;
+                                                // }
                                                 router.push(href)
                                             }
                                             return toast({
                                                 description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
                                             })
                                         }}
-                                        className={cn('rounded-[4px] md:rounded-[5.82px] lg:rounded-[8px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
+                                        className={cn('rounded-[4px] md:rounded-[5.82px] lg:rounded-[8px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs z-10', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
                                     >
                                         {isReady ? 'Ready to view' : 'Coming soon'}
                                     </button>
