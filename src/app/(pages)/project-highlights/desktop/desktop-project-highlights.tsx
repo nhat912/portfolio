@@ -26,6 +26,7 @@ export default function DesktopProjectHighLightsPage() {
             </h1>
             <div className="mt-[60px] overflow-hidden">
                 <Swiper
+                    loop
                     draggable
                     grabCursor
                     centeredSlides

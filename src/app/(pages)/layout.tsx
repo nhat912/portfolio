@@ -38,7 +38,7 @@ export default async function RootLayout({
 							<BottomNavigation />
 						</div>
 					) : (
-						<div className="grid grid-cols-[84px,1fr] min-h-screen">
+						<div className="grid grid-cols-[100px,1fr] min-h-screen">
 							<Sidebar />
 							{children}
 						</div>
