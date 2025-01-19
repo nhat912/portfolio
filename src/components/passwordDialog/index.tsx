@@ -90,7 +90,7 @@ function PasswordDialog() {
 			onOpenChange={onChangeOpenPasswordDialog}
 		>
 			<DialogContent
-				className={cn("w-[410px] p-0 text-sm lg:text-lg bg-24 border-none !rounded-[24px] overflow-hidden", step === Step.SUCCESS ? "h-[190px]" : "h-[345px]")}
+				className={cn("w-[410px] p-0 text-sm lg:text-lg bg-24 !border-none !rounded-[24px] overflow-hidden focus-visible:outline-none", step === Step.SUCCESS ? "h-[190px]" : "h-[345px]")}
 				onInteractOutside={() => router.replace(pathName)}
 			>
 				{step === Step.FORM ? (
