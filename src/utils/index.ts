@@ -21,7 +21,7 @@ export const SidebarItems: ISidebarItem[] = [
         href: siteConfig.pageList.home.href,
         status: {
             normal: {
-                icon: '/home/icons/hn.svg',
+                icon: '/home/icons/ha.svg',
                 alt: 'Home'
             },
             hover: {
@@ -29,7 +29,7 @@ export const SidebarItems: ISidebarItem[] = [
                 alt: 'Home'
             },
             active: {
-                icon: '/home/icons/ha.svg',
+                icon: '/home/icons/hn.svg',
                 alt: 'Home'
             },
         }
@@ -39,7 +39,7 @@ export const SidebarItems: ISidebarItem[] = [
         href: siteConfig.pageList.projectHighlights.href,
         status: {
             normal: {
-                icon: '/home/icons/bn.svg',
+                icon: '/home/icons/ba.svg',
                 alt: 'Home'
             },
             hover: {
@@ -47,7 +47,7 @@ export const SidebarItems: ISidebarItem[] = [
                 alt: 'Home'
             },
             active: {
-                icon: '/home/icons/ba.svg',
+                icon: '/home/icons/bn.svg',
                 alt: 'Home'
             },
         }
@@ -57,7 +57,7 @@ export const SidebarItems: ISidebarItem[] = [
         href: siteConfig.pageList.caseStudies.href,
         status: {
             normal: {
-                icon: '/home/icons/ln.svg',
+                icon: '/home/icons/la.svg',
                 alt: 'Home'
             },
             hover: {
@@ -65,7 +65,7 @@ export const SidebarItems: ISidebarItem[] = [
                 alt: 'Home'
             },
             active: {
-                icon: '/home/icons/la.svg',
+                icon: '/home/icons/ln.svg',
                 alt: 'Home'
             },
         }
