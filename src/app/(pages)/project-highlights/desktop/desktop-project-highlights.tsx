@@ -3,19 +3,21 @@
 import { useToast } from '@/hooks/use-toast';
 import { ProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
 import { cn } from '@/src/lib/utils';
+import { useAppContext } from '@/src/providers/app-provider';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function DesktopProjectHighLightsPage() {
     const router = useRouter();
-    const { toast } = useToast()
+    const { toast } = useToast();
+    const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext();
 
     return (
         <main className="p-10 overflow-hidden flex flex-col justify-center">
@@ -24,6 +26,7 @@ export default function DesktopProjectHighLightsPage() {
             </h1>
             <div className="mt-[60px] overflow-hidden">
                 <Swiper
+                    draggable
                     grabCursor
                     centeredSlides
                     preventClicks
@@ -70,9 +73,19 @@ export default function DesktopProjectHighLightsPage() {
                                 <div className="mt-2 md:mt-4 lg:mt-5 flex justify-center">
                                     <button
                                         type="button"
-                                        onClick={() => isReady ? router.push(href) : toast({
-                                            description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
-                                        })}
+                                        onClick={() => {
+                                            if (isReady) {
+                                                if (!keyValue) {
+                                                    onChangeCbUrl(href)
+                                                    onChangeOpenPasswordDialog(true);
+                                                    return;
+                                                }
+                                                router.push(href)
+                                            }
+                                            return toast({
+                                                description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
+                                            })
+                                        }}
                                         className={cn('rounded-[4px] md:rounded-[5.82px] lg:rounded-[8px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
                                     >
                                         {isReady ? 'Ready to view' : 'Coming soon'}

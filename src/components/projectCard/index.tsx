@@ -3,6 +3,7 @@
 import { useToast } from "@/hooks/use-toast";
 import BorderGradientWrapper from "@/src/components/borderGradientWrapper";
 import { cn } from "@/src/lib/utils";
+import { useAppContext } from "@/src/providers/app-provider";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -18,6 +19,7 @@ interface ProjectCardProps {
 function ProjectCard({ img, title, description, isReady, href, className = '' }: ProjectCardProps) {
     const router = useRouter()
     const { toast } = useToast()
+    const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext()
 
     return (
         <BorderGradientWrapper className={cn("rounded-[16px] md:rounded-[24px] lg:rounded-[32px] w-[272px] h-[267px] md:w-[408px] md:h-[394.5px] lg:w-[544px] lg:h-[516px]", className)}>
@@ -43,8 +45,15 @@ function ProjectCard({ img, title, description, isReady, href, className = '' }:
                         <button
                             type="button"
                             onClick={() => {
-                                if (isReady) { }
-                                return isReady ? router.push(href) : toast({
+                                if (isReady) {
+                                    if (!keyValue) {
+                                        onChangeCbUrl(href)
+                                        onChangeOpenPasswordDialog(true);
+                                        return;
+                                    }
+                                    router.push(href)
+                                }
+                                return toast({
                                     description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
                                 })
                             }}

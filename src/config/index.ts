@@ -56,14 +56,14 @@ export const siteConfig = {
         caseStudies: {
             href: '/case-studies',
             as: 'Case Studies',
-            vpBank: {
-                href: '/case-studies/vp-bank',
-                as: 'VP Bank'
-            },
-            waveB: {
-                href: '/case-studies/wave-b',
-                as: 'Wave B'
-            }
+        },
+        vpBank: {
+            href: '/case-studies/vp-bank',
+            as: 'VP Bank'
+        },
+        waveB: {
+            href: '/case-studies/wave-b',
+            as: 'Wave B'
         },
         about: {
             href: '/about',

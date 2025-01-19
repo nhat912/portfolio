@@ -3,9 +3,12 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 const privatePaths: string[] = [
-    // siteConfig.pageList.caseStudies.href,
-    // siteConfig.pageList.washUp.href,
-    // siteConfig.pageList.dakoli.href,
+    siteConfig.pageList.insuranceFeature.href,
+    siteConfig.pageList.technicianApp.href,
+    siteConfig.pageList.technicianOrder.href,
+    siteConfig.pageList.vehicleWashApp.href,
+    siteConfig.pageList.vpBank.href,
+    siteConfig.pageList.waveB.href,
 ];
 
 

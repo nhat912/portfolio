@@ -35,6 +35,7 @@ const FormSchema = z.object({
 function PasswordDialog() {
 	const router = useRouter();
 	const pathName = usePathname();
+	const { cbUrl } = useAppContext()
 	const [step, setStep] = useState<Step>(Step.FORM)
 
 	const {
@@ -60,8 +61,8 @@ function PasswordDialog() {
 
 			setTimeout(() => {
 				onChangeOpenPasswordDialog(false);
-				router.replace(pathName);
-			}, 2000);
+				router.push(cbUrl || pathName);
+			}, 1500);
 		} else {
 			form.setError('key', {
 				type: 'manual',

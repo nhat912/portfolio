@@ -17,7 +17,7 @@ interface ProjectBreadcrumbsProps {
 
 function ProjectBreadcrumbs({ items }: ProjectBreadcrumbsProps) {
     return (
-        <nav className="flex items-center gap-x-5 absolute top-[108px] left-4">
+        <nav className="flex items-center gap-x-5 absolute top-[108px] left-6">
             <Link href={siteConfig.pageList.home.href} className="size-5 relative">
                 <Image
                     fill

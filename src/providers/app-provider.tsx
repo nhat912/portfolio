@@ -15,6 +15,8 @@ export interface IAppContext {
 	onChangeOpenPasswordDialog: (_f: boolean) => void;
 	isPasswordCorrect: boolean;
 	onChangePasswordCorrect: (_f: boolean) => void;
+	cbUrl: string;
+	onChangeCbUrl: (_f: string) => void;
 }
 
 export interface IAppParams extends PropsWithChildren {
@@ -30,6 +32,7 @@ export const AppProvider = ({ children, keyValue }: IAppParams) => {
 	const callbackUrl = searchParams.get('callbackUrl');
 	const [openPasswordDialog, setOpenPasswordDialog] = useState(false);
 	const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
+	const [cbUrl, setCbUrl] = useState('');
 
 	const onChangeOpenPasswordDialog = (open: boolean) => {
 		setOpenPasswordDialog(open);
@@ -38,6 +41,10 @@ export const AppProvider = ({ children, keyValue }: IAppParams) => {
 	const onChangePasswordCorrect = (isCorrect: boolean) => {
 		setIsPasswordCorrect(isCorrect);
 	};
+
+	const onChangeCbUrl = (url: string) => {
+		setCbUrl(url);
+	}
 
 	useEffect(() => {
 		if (callbackUrl) {
@@ -49,6 +56,11 @@ export const AppProvider = ({ children, keyValue }: IAppParams) => {
 		}
 	}, [callbackUrl, keyValue, router]);
 
+
+	useEffect(() => {
+		setCbUrl(callbackUrl || '');
+	}, [callbackUrl]);
+
 	return (
 		// eslint-disable-next-line react/jsx-no-constructed-context-values
 		<AppContext.Provider
@@ -57,7 +69,9 @@ export const AppProvider = ({ children, keyValue }: IAppParams) => {
 				openPasswordDialog,
 				onChangeOpenPasswordDialog,
 				isPasswordCorrect,
-				onChangePasswordCorrect
+				onChangePasswordCorrect,
+				cbUrl,
+				onChangeCbUrl
 			}}
 		>
 			{children}
