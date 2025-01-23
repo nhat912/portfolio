@@ -72,7 +72,7 @@ export function HomePageTitle({ value, className = '' }: { value: string; classN
 
 function DesktopHomePage() {
     return (
-        <div className="grid place-items-center w-full p-2 3xl:p-4">
+        <div className="grid place-items-center w-full px-2 lg:px-5 py-2 md:py-5 xl:py-16 2xl:py-20">
             <div className="gap-3 3xl:gap-5 w-[1236px] 3xl:w-[1660px] space-y-3 3xl:space-y-4 overflow-hidden">
                 <div className="flex gap-x-3 justify-between overflow-hidden h-[590px] 3xl:h-[674px] w-full">
                     <motion.div
@@ -105,17 +105,18 @@ function DesktopHomePage() {
                                 <div className="p-3 3xl:p-4 pr-0 pb-0 3xl:pb-0 bg-0f w-full h-full rounded-tl-[36px] 3xl:rounded-tl-[42px]">
                                     <div className="rounded-tl-[24px] bg-0f h-[139px] 3xl:h-[191px] w-[286px] 3xl:w-[409px]">
                                         <Link
-                                            href="/files/NhatNguyen_Resume.pdf"
+                                            href={siteConfig.contact.resume.href}
                                             target="_blank"
                                             className="bg-24 rounded-[24px] 3xl:rounded-[28px] grid place-items-center h-full w-full group hover:bg-gradient-to-r from-[#CE80FF] via-[#80F0FF] to-[#B1FF80] transition-all"
                                         >
-                                            <div className="text-32 font-extrabold text-gradient group-hover:text-[#26262B] transition-all">My Resume</div>
+                                            <div className="text-32 font-extrabold text-gradient group-hover:text-[#26262B] transition-all">{siteConfig.contact.resume.as}</div>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </motion.div>
+
                     <motion.div
                         className="flex-1 bg-24 rounded-[24px] 3xl:rounded-[28px] p-6 3xl:p-7 flex flex-col gap-5 3xl:gap-7"
                         initial={{ opacity: 0 }}

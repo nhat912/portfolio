@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function DesktopCaseStudiesPage() {
     return (
-        <main className="flex flex-col gap-[60px] items-center justify-center">
+        <main className="flex flex-col gap-[60px] items-center mt-10">
             <h1 className="text-32 font-bold text-f7 text-center">
                 Case Studies
             </h1>

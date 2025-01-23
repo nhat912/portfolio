@@ -7,14 +7,15 @@ import { cn } from '@/src/lib/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import { Swiper as SwiperType } from 'swiper/types';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function DesktopProjectHighLightsPage() {
     const router = useRouter();
@@ -29,7 +30,6 @@ export default function DesktopProjectHighLightsPage() {
             </h1>
             <div className="mt-[60px] overflow-hidden">
                 <Swiper
-                    loop
                     draggable
                     grabCursor
                     centeredSlides

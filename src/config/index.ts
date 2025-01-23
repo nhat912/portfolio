@@ -45,6 +45,10 @@ export const siteConfig = {
             href: 'https://dribbble.com/nhatnguyen_wk',
             as: 'Dribble'
         },
+        resume: {
+            href: 'https://drive.google.com/file/d/1NtQrQSp3dCASxeqFD2CXemCV07IPNSOZ/view?usp=drive_link',
+            as: 'My Resume'
+        }
     },
     url: 'http://jamesnguyendesign.com',
     mobileWidth: '(max-width: 640px)',
