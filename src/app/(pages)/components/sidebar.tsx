@@ -51,7 +51,7 @@ function SidebarItem({ item }: SidebarItemProps) {
 function Sidebar() {
     return (
         <div
-            className="bg-24 pt-10"
+            className="bg-24 pt-10 lg:pt-20"
         >
             {SidebarItems.map((item) => (
                 <SidebarItem key={item.id} item={item} />
