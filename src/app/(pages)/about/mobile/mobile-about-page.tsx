@@ -6,16 +6,16 @@ import { PropsWithChildren } from "react";
 
 export const Skills = [
     {
-        before: 'Storytelling',
-        after: 'User Interviews'
-    },
-    {
         before: 'User experience',
-        after: 'Design system building'
+        after: 'User Interface',
     },
     {
-        before: 'User Interface',
-        after: 'Figma Prototyping '
+        before: 'User Interviews',
+        after: 'Storytelling',
+    },
+    {
+        before: 'Figma Prototyping ',
+        after: 'Design system'
     },
 ]
 

@@ -31,8 +31,8 @@ const DesktopProjectArea = [
 
 export default function DesktopAboutPage() {
     return (
-        <div className="p-10 text-d9">
-            <div className="grid grid-cols-[54%,1fr] auto-rows-fr gap-x-3">
+        <div className="p-2 md:p-5 lg:p-8 xl:p-10 2xl:p-20 text-d9">
+            <div className="grid grid-cols-[64%,1fr] auto-rows-fr gap-x-3">
                 <AboutPageSection
                     title="More about me"
                     className="space-y-3"
@@ -52,10 +52,10 @@ export default function DesktopAboutPage() {
                 <AboutPageSection
                     title="Education"
                     className="space-y-3"
-                    divClassName="p-8"
+                    divClassName="p-8 h-full"
                     sectionClassName="h-full"
                 >
-                    <div className="relative w-full h-[237.23px] rounded-[4.84px]">
+                    <div className="relative w-full h-auto aspect-[520/300] rounded-[9.24px]">
                         <Image
                             fill
                             src="/about/dueh.webp"
@@ -108,7 +108,7 @@ export default function DesktopAboutPage() {
                 </AboutPageSection>
             </div>
 
-            <div className="grid grid-cols-[37%,1fr] auto-rows-fr gap-x-3 mt-[11.87px]">
+            <div className="grid grid-cols-[36%,1fr] auto-rows-fr gap-x-3 mt-[11.87px]">
                 <AboutPageSection
                     title="Skills"
                     className="space-y-4 text-f7"
