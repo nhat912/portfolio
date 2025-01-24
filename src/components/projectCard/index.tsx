@@ -52,6 +52,7 @@ function ProjectCard({ img, title, description, isReady, href, className = '' }:
                                     //     return;
                                     // }
                                     router.push(href)
+                                    return
                                 }
                                 return toast({
                                     description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'

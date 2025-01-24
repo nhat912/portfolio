@@ -126,8 +126,8 @@ body {
 
 	.slider-controller .slider-arrow {
 		color: white;
-		width: 3.5rem;
-		height: 3.5rem;
+		width: 2rem;
+		height: 2rem;
 		border-radius: 50%;
 		left: 42%;
 		bottom: 4px !important;
@@ -146,7 +146,7 @@ body {
 	.swiper-pagination {
 		position: relative !important;
 		width: 200px !important;
-		bottom: 0 !important;
+		bottom: 10px !important;
 		left: 50%;
 	}
 
@@ -173,18 +173,21 @@ body {
 		}
 
 		.slider-controller .swiper-button-prev {
+			left: 35% !important;
+		}
+
+		.slider-controller .swiper-button-next {
+			left: 65% !important;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.slider-controller .swiper-button-prev {
 			left: 40% !important;
 		}
 
 		.slider-controller .swiper-button-next {
 			left: 60% !important;
-		}
-	}
-
-	@media (min-width: 1024px) {
-		.swiper-pagination .swiper-pagination-bullet {
-			width: 12px;
-			height: 12px;
 		}
 	}
 }

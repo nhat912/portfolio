@@ -92,6 +92,7 @@ export default function DesktopProjectHighLightsPage() {
                                                 //     return;
                                                 // }
                                                 router.push(href)
+                                                return;
                                             }
                                             return toast({
                                                 description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
@@ -108,10 +109,10 @@ export default function DesktopProjectHighLightsPage() {
 
                     <div className="slider-controller">
                         <div className="swiper-button-prev slider-arrow">
-                            <ChevronLeft className="" size={38} strokeWidth={2} />
+                            <ChevronLeft className="" strokeWidth={2} />
                         </div>
                         <div className="swiper-button-next slider-arrow">
-                            <ChevronRight className="" size={38} strokeWidth={2} />
+                            <ChevronRight className="" strokeWidth={2} />
                         </div>
                         <div className="swiper-pagination"></div>
                     </div>
