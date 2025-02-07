@@ -51,11 +51,13 @@ function SidebarItem({ item }: SidebarItemProps) {
 function Sidebar() {
     return (
         <div
-            className="bg-24 pt-10 lg:pt-20"
+            className="bg-24"
         >
-            {SidebarItems.map((item) => (
-                <SidebarItem key={item.id} item={item} />
-            ))}
+            <div className="fixed top-10 lg:top-10 w-[100px]">
+                {SidebarItems.map((item) => (
+                    <SidebarItem key={item.id} item={item} />
+                ))}
+            </div>
         </div>
     );
 }

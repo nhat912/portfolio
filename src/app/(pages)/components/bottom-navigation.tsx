@@ -34,7 +34,7 @@ function BottomNavigationItem({ item }: BottomNavigationItemProps) {
                 isActive ? "bg-39" : "bg-transparent"
             )}
         >
-            <div className={cn("relative size-5")}>
+            <div className={cn("relative size-11")}>
                 <Image
                     fill
                     src={item.status[currentStatus].icon}

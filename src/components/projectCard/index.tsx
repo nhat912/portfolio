@@ -14,17 +14,20 @@ interface ProjectCardProps {
     isReady: boolean;
     href: string;
     className?: string;
+    imgClassName?: string;
+    titleClassName?: string;
+    descClassName?: string;
 }
 
-function ProjectCard({ img, title, description, isReady, href, className = '' }: ProjectCardProps) {
+function ProjectCard({ img, title, description, isReady, href, className = '', imgClassName = '', titleClassName = '', descClassName = '' }: ProjectCardProps) {
     const router = useRouter()
     const { toast } = useToast()
     // const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext()
 
     return (
         <BorderGradientWrapper className={cn("rounded-[16px] md:rounded-[24px] lg:rounded-[32px] w-[272px] h-[267px] md:w-[408px] md:h-[394.5px] lg:w-[544px] lg:h-[516px]", className)}>
-            <div className="bg-24 rounded-[16px] md:rounded-[24px] lg:rounded-[32px] overflow-hidden">
-                <div className="w-full overflow-hidden h-[153px] md:h-[229.5px] lg:h-[306px] relative">
+            <div className="bg-24 rounded-[16px] md:rounded-[24px] lg:rounded-[32px] h-full overflow-hidden">
+                <div className={cn("w-full overflow-hidden h-[153px] md:h-[229.5px] lg:h-[306px] relative", imgClassName)}>
                     <Image
                         fill
                         src={img}
@@ -32,12 +35,12 @@ function ProjectCard({ img, title, description, isReady, href, className = '' }:
                         className="object-cover"
                     />
                 </div>
-                <div className="py-4 md:py-5 lg:py-6 px-5 md:px-8 lg:px-10">
+                <div className="py-4 md:py-5 lg:py-6 px-5 md:px-8 lg:px-10 h-full">
                     <div className="space-y-2 text-center">
-                        <div className="text-xs md:text-lg lg:text-2xl font-bold md:font-semibold lg:font-bold text-f7">
+                        <div className={cn("text-xs md:text-lg lg:text-2xl font-bold md:font-semibold lg:font-bold text-f7 line-clamp-1", titleClassName)}>
                             {title}
                         </div>
-                        <div className="text-d9 text-pretty lg:text-lg md:text-sm text-2xs">
+                        <div className={cn("text-d9 text-pretty lg:text-lg md:text-sm text-2xs line-clamp-2", descClassName)}>
                             {description}
                         </div>
                     </div>

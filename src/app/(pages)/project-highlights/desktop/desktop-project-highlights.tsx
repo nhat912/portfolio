@@ -1,16 +1,8 @@
 'use client'
 
-import { useToast } from '@/hooks/use-toast';
-import { DesktopProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
-import { cn } from '@/src/lib/utils';
+import { ProjectHighLights } from '@/src/app/(pages)/project-highlights/constants';
+import ProjectCard from '@/src/components/projectCard';
 // import { useAppContext } from '@/src/providers/app-provider';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { useRef } from 'react';
-import { Swiper as SwiperType } from 'swiper/types';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -18,105 +10,22 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function DesktopProjectHighLightsPage() {
-    const router = useRouter();
-    const { toast } = useToast();
-    const swiperRef = useRef<SwiperType | null>(null);
-    // const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext();
 
     return (
-        <main className="p-10 overflow-hidden flex flex-col justify-center">
-            <h1 className="text-32 font-bold text-f7 text-center">
+        <main className="p-20 flex flex-col gap-10">
+            <h1 className="text-40 font-bold text-f7">
                 Project Highlights
             </h1>
-            <div className="mt-[60px] overflow-hidden">
-                <Swiper
-                    draggable
-                    grabCursor
-                    centeredSlides
-                    preventClicks
-                    initialSlide={2}
-                    speed={600}
-                    slidesPerView={'auto'}
-                    effect={'coverflow'}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 80,
-                        depth: 350,
-                        modifier: 1,
-                        slideShadows: true,
-                    }}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
-                    className="!h-[379px] md:!h-[506.5px] lg:!h-[628px] !relative !w-full"
-                    pagination={{ el: '.swiper-pagination', clickable: true }}
-                    navigation={{
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                        enabled: true,
-
-                    }}
-                    onSwiper={(swiper) => {
-                        swiperRef.current = swiper;
-                    }}
-                >
-                    {DesktopProjectHighLights.map(({ id, img, title, description, isReady, href }, index) => (
-                        <SwiperSlide
-                            key={id}
-                            className='rounded-[16px] md:rounded-[24px] lg:rounded-[32px] !w-[272px] !h-[267px] md:!w-[408px] md:!h-[394.5px] lg:!w-[544px] lg:!h-[516px] !relative overflow-hidden'
-                            onClick={() => swiperRef.current?.slideTo(index)}
-                        >
-                            <div className="w-full h-[153px] md:h-[229.5px] lg:h-[306px] relative rounded-t-[32px]">
-                                <Image
-                                    fill
-                                    src={img}
-                                    alt={title}
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="py-4 md:py-5 lg:py-6 px-5 md:px-8 lg:px-10 bg-24 h-full">
-                                <div className="space-y-2 text-center">
-                                    <div className="text-xs md:text-lg lg:text-2xl font-bold md:font-semibold lg:font-bold text-f7">
-                                        {title}
-                                    </div>
-                                    <div className="text-d9 text-pretty lg:text-lg md:text-sm text-2xs">
-                                        {description}
-                                    </div>
-                                </div>
-                                <div className="mt-2 md:mt-4 lg:mt-5 flex justify-center">
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            if (isReady) {
-                                                // if (!keyValue) {
-                                                //     onChangeCbUrl(href)
-                                                //     onChangeOpenPasswordDialog(true);
-                                                //     return;
-                                                // }
-                                                router.push(href)
-                                                return;
-                                            }
-                                            return toast({
-                                                description: 'The project is not ready for viewing, but you can contact me to see the preview ~ 😄'
-                                            })
-                                        }}
-                                        className={cn('rounded-[4px] md:rounded-[5.82px] lg:rounded-[8px] font-semibold text-2xs md:text-sm w-[104px] h-8 md:w-[139px] md:h-[44px] text-xs z-10', isReady ? 'bg-gradient-2 text-26' : 'text-92 bg-3a')}
-                                    >
-                                        {isReady ? 'Ready to view' : 'Coming soon'}
-                                    </button>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-
-                    <div className="slider-controller">
-                        <div className="swiper-button-prev slider-arrow">
-                            <ChevronLeft className="" strokeWidth={2} />
-                        </div>
-                        <div className="swiper-button-next slider-arrow">
-                            <ChevronRight className="" strokeWidth={2} />
-                        </div>
-                        <div className="swiper-pagination"></div>
-                    </div>
-                </Swiper>
+            <div className="grid grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-10 w-full">
+                {ProjectHighLights.map((project) => (
+                    <ProjectCard
+                        key={project.id}
+                        className="!w-fit"
+                        titleClassName='lg:text-xl'
+                        descClassName='lg:text-base'
+                        {...project}
+                    />
+                ))}
             </div>
         </main>
     )
