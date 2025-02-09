@@ -15,7 +15,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ id = '', value, tag = 'h2',
     return (
         <Tag
             id={id}
-            className={cn("text-[32px] text-accent font-extrabold text-3xl capitalize", hasBottomBorder && "pb-4 border-b border-[#42424A]", className)}
+            className={cn("text-xl lg:text-[32px] text-accent font-extrabold capitalize", hasBottomBorder && "pb-3 lg:pb-4 border-b border-[#42424A]", className)}
         >
             {value}
         </Tag>

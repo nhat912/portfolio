@@ -1,3 +1,4 @@
+import MobileWashUpHeader from "@/src/app/(wash-up)/project-highlights/wash-up/components/mobile-washup-header";
 import WashUpPageSelector from "@/src/app/(wash-up)/project-highlights/wash-up/components/washup-page-selector";
 import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 import Image from "next/image";
@@ -10,9 +11,12 @@ export default async function Layout({ children }: PropsWithChildren) {
 
     if (isMobile) {
         return (
-            <>
-                {children}
-            </>
+            <main className="container relative text-sm">
+                <MobileWashUpHeader />
+                <div className="mb-10 space-y-6 -mt-2.5">
+                    {children}
+                </div>
+            </main>
         )
     }
 

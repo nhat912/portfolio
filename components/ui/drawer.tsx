@@ -43,14 +43,14 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950",
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col !rounded-t-[24px] overflow-hidden bg-24 dark:border-gray-800 dark:bg-gray-950 text-f7 text-sm",
         className
       )}
       {...props}
     >
-      <div className="grid place-items-center w-full !h-7 min-h-7 max-h-7 bg-24">
-        <div className="h-2 w-[52px] rounded-full bg-white" />
-      </div>
+      {/* <div className="grid place-items-center w-full !h-7 min-h-7 max-h-7 bg-24">
+        <div className="h-2 w-[52px] rounded-full bg-24" />
+      </div> */}
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
@@ -62,7 +62,7 @@ const DrawerHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}
+    className={cn("grid gap-1.5 p-4 text-left", className)}
     {...props}
   />
 )
@@ -100,7 +100,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-gray-500 dark:text-gray-400", className)}
+    className={cn("text-sm text-d9", className)}
     {...props}
   />
 ))

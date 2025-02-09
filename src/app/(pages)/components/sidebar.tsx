@@ -53,7 +53,7 @@ function Sidebar() {
         <div
             className="bg-24"
         >
-            <div className="fixed top-10 lg:top-10 w-[100px]">
+            <div className="fixed top-10 lg:top-20 w-[100px]">
                 {SidebarItems.map((item) => (
                     <SidebarItem key={item.id} item={item} />
                 ))}

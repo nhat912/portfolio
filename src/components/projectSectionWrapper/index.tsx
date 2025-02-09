@@ -14,8 +14,8 @@ interface ProjectSectionWrapperProps extends PropsWithChildren {
 
 function ProjectSectionWrapper({ id, tag = 'h2', title, children, className = '', hasBottomBorder = true, titleClassName = '' }: ProjectSectionWrapperProps) {
     return (
-        <BorderGradientWrapper className="w-full">
-            <section className={cn("p-8 rounded-[8px] bg-24 text-lg", className)}>
+        <BorderGradientWrapper className="w-full rounded-[16px] lg:rounded-[8px]">
+            <section className={cn("px-4 py-5 lg:p-8 rounded-[16px] lg:rounded-[8px] bg-24 text-sm lg:text-lg", className)}>
                 <SectionTitle
                     id={id}
                     tag={tag}

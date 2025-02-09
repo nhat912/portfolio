@@ -1,6 +1,8 @@
+import DesktopVehicleWashApp from "@/src/app/(wash-up)/project-highlights/wash-up/vehicle-wash-app/components/desktop";
+import MobileVehicleWashApp from "@/src/app/(wash-up)/project-highlights/wash-up/vehicle-wash-app/components/mobile";
 import ProjectBreadcrumbs from "@/src/components/projectBreadcumbs";
 import { siteConfig } from "@/src/config";
-import VehicleWashAppPage from "@/src/lib/wash-up/vehicle-wash-app";
+import { isMobileDevice } from "@/src/helpers/isMobileDevice";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,19 +10,17 @@ export const metadata: Metadata = {
     title: 'Vehicle Wash App',
 };
 
-export default function Page() {
+export default async function Page() {
+    const isMobile = await isMobileDevice()
+
     return (
         <>
             <ProjectBreadcrumbs items={[
                 {
-                    label: siteConfig.pageList.projectHighlights.as,
-                    href: siteConfig.pageList.projectHighlights.href,
-                },
-                {
                     label: siteConfig.pageList.vehicleWashApp.as,
                 },
             ]} />
-            <VehicleWashAppPage />
+            {isMobile ? <MobileVehicleWashApp /> : <DesktopVehicleWashApp />}
         </>
     )
 }
